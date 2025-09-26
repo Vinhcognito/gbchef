@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Diagnostics;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -19,6 +20,19 @@ namespace gbchef
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private async void MainGrid_Initialized(object sender, EventArgs e)
+        {
+            using (var dbService = new DatabaseService())
+            {
+                var results = await dbService.ExecuteSelectAllAsync("Recipes");
+                foreach (var row in results)
+                {
+                    // Process each row
+                    Debug.WriteLine(string.Join(", ", row));
+                }
+            }
         }
     }
 }

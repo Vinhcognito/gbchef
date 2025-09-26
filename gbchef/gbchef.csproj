@@ -6,7 +6,7 @@
 	  <PublishSingleFile>true</PublishSingleFile>
 	  <SelfContained>true</SelfContained>
 	  <RuntimeIdentifier>win-x64</RuntimeIdentifier>
-      <RootNamespace>wpf_starter</RootNamespace>
+      <RootNamespace>gbchef</RootNamespace>
 	  <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
       <Nullable>enable</Nullable>
       <ImplicitUsings>enable</ImplicitUsings>
@@ -14,5 +14,9 @@
 	  <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
 	  <IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
   </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.0-rc.1.25451.107" />
+    </ItemGroup>
 
 </Project>
