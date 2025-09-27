@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:gbchef"
         xmlns:uc="clr-namespace:gbchef.Controls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="720" Width="1280">
+        Title="MainWindow" Height="720" Width="1280" Initialized="Window_Initialized">
     <StackPanel Orientation="Vertical">
         <StackPanel Orientation="Horizontal" Height="195">
             <uc:SelectableListBox x:Name="itemList1" Items="{Binding Vegetables}" />
@@ -16,7 +16,7 @@
             <uc:SelectableListBox x:Name="itemList5" Items="{Binding Fish}" />
             <uc:SelectableListBox x:Name="itemList6" Items="{Binding Others}" />
         </StackPanel>
-        <DataGrid  d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <DataGrid x:Name="resultsDataGrid" ItemsSource="{Binding Recipes}" AutoGenerateColumns="True" Height="431"/>
     </StackPanel>
     
 </Window>

@@ -15,8 +15,7 @@ public class DatabaseService : IDisposable
 
     private void InitializeDatabase()
     {
-        try
-        {
+        try {
             // Verify file exists
             if (!File.Exists(_dbPath))
                 throw new FileNotFoundException($"Database file not found: {_dbPath}");
@@ -29,13 +28,12 @@ public class DatabaseService : IDisposable
             _connection = new SqliteConnection($"Data Source={_dbPath}");
             _connection.Open();
         }
-        catch (Exception ex)
-        {
+        catch (Exception) {
             throw;
         }
     }
 
-    private bool HasWriteAccess(string path)
+    private static bool HasWriteAccess(string path)
     {
         try
         {
@@ -68,6 +66,7 @@ public class DatabaseService : IDisposable
 
     public void Dispose()
     {
+        GC.SuppressFinalize(this);
         _connection?.Dispose();
     }
 }

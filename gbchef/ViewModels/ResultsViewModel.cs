@@ -8,35 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Data;
+using gbchef.Models;
 
 namespace gbchef.ViewModels
 {
     public class ResultsViewModel
     {
-        private readonly ObservableCollection<Recipe> _recipes = new();
-        private readonly CollectionViewSource _recipeViewSource;
+        public ObservableCollection<Recipe> Recipes { get; } = new();
         private string _searchText = string.Empty;
 
-        public ResultsViewModel()
+        public ResultsViewModel(IEnumerable<Recipe> recipes)
         {
-            _recipeViewSource = new CollectionViewSource { Source = _recipes };
-            _recipeViewSource.Filter += RecipeFilter;
-        }
-
-        public ICollectionView Recipes => _recipeViewSource.View;
-        public string SearchText
-        {
-            get => _searchText;
-            set
-            {
-                if (_searchText != value)
-                {
-                    _searchText = value;
-                    OnPropertyChanged(nameof(SearchText));
-                    _recipeViewSource.View.Refresh();
-                }
+            foreach (var recipe in recipes) {
+                Recipes.Add(recipe);
             }
         }
+
 
         private void RecipeFilter(object sender, FilterEventArgs e)
         {
@@ -47,7 +34,8 @@ namespace gbchef.ViewModels
             }
 
             var selectedIngredients = GetSelectedIngredients();
-            e.Accepted = recipe.Ingredients.Any(i => selectedIngredients.Contains(i));
+
+
         }
 
         private HashSet<string> GetSelectedIngredients()
@@ -68,12 +56,5 @@ namespace gbchef.ViewModels
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-    }
-
-    public class Recipe
-    {
-        public string Name { get; set; }
-        public List<string> Ingredients { get; set; }
-        public string Instructions { get; set; }
     }
 }

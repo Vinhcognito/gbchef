@@ -1,4 +1,5 @@
-﻿using gbchef.ViewModels;
+﻿using gbchef.Models;
+using gbchef.ViewModels;
 using System.Diagnostics;
 using System.Text;
 using System.Windows;
@@ -22,18 +23,18 @@ namespace gbchef
         {
             InitializeComponent();
             DataContext = new ItemsViewModel();
+
         }
 
-        private async void MainGrid_Initialized(object sender, EventArgs e)
+        private async void Window_Initialized(object sender, EventArgs e)
         {
             using (var dbService = new DatabaseService())
             {
                 var results = await dbService.ExecuteSelectAllAsync("Recipes");
-                foreach (var row in results)
-                {
-                    // Process each row
-                    Debug.WriteLine(string.Join(", ", row));
-                }
+                var recipes = results.Select(row => Recipe.ProcessRow(row)).ToList();
+                Debug.WriteLine(recipes.Count);
+                var resultsVM = new ResultsViewModel(recipes);
+                resultsDataGrid.DataContext = resultsVM;
             }
         }
 
@@ -48,5 +49,6 @@ namespace gbchef
                 item.IsSelected = !item.IsSelected;
             }
         }
+
     }
 }
