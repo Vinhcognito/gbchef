@@ -22,8 +22,14 @@
         <DataGrid 
             x:Name="resultsDataGrid" 
             AutoGenerateColumns="True" 
-            Height="431" ItemsSource="{Binding ViewSource.View}"/>
+            Height="431" ItemsSource="{Binding ViewSource.View}"
+            CanUserAddRows="False"
+            CanUserDeleteRows="False"/>
         
+        
+        <Label Content="{Binding ElementName=resultsDataGrid, Path=Items.Count}" Width="45" HorizontalAlignment="Left" RenderTransformOrigin="1.176,0.61"/>
+        <Label Content="Recipes Found" Width="89" HorizontalAlignment="Left"/>
+
     </StackPanel>
     
 </Window>
