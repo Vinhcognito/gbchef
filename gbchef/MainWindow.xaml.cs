@@ -41,9 +41,15 @@ namespace gbchef
         private async void Window_Initialized(object sender, EventArgs e)
         {
             using (var dbService = new DatabaseService()) {
-                var queryResults = await dbService.ExecuteSelectAllAsync("Recipes");
-                var recipes = queryResults.Select(row => Recipe.ProcessRow(row)).ToList();
+                var results = await dbService.ExecuteSelectAllAsync("Recipes");
+                var recipes = results.Select(row => Recipe.ProcessRow(row)).ToList();
+
+                var ingredients = await GetAllIngredients(dbService);
+                AddSelectionChangedHandlerInRecipes(recipes, ingredients);
+
                 _mainViewModel = new MainViewModel(recipes);
+                _mainViewModel.Vegetables = new ObservableCollection<SelectableIngredient>(ingredients);
+
             }
 
 
@@ -69,6 +75,51 @@ namespace gbchef
 
         }
 
+        private void AddSelectionChangedHandlerInRecipes(List<Recipe> recipes, List<SelectableIngredient> ingredients)
+        {
+            foreach (SelectableIngredient ingredient in ingredients)
+            {
+                foreach (var (recipeId,  slot) in ingredient.RecipeIdSlotMap)
+                {
+                    int recipeIndex = recipeId - 1;
+                    Recipe recipe = recipes[recipeIndex];
+
+                    if (slot == 1)
+                    {
+                        ingredient.PropertyChanged += recipe.HandleSlot1Changed;
+                        recipe.Slot1.Add(ingredient);
+                    }
+                    else if (slot == 2)
+                    {
+                        ingredient.PropertyChanged += recipe.HandleSlot2Changed;
+                        recipe.Slot2.Add(ingredient);
+                    }
+                    else if (slot == 3)
+                    {
+                        ingredient.PropertyChanged += recipe.HandleSlot3Changed;
+                        recipe.Slot3.Add(ingredient);
+                    }
+                    else if (slot == 4)
+                    {
+                        ingredient.PropertyChanged += recipe.HandleSlot4Changed;
+                        recipe.Slot4.Add(ingredient);
+                    }
+                }
+            }
+        }
+
+        private async Task<List<SelectableIngredient>> GetAllIngredients(DatabaseService dbService)
+        {
+            var results = await dbService.ExecuteSelectAllAsync("Items");
+            var ingredients = results.Select(row => new SelectableIngredient(Convert.ToInt32(row[0]), (string)row[1], false)).ToList();
+
+            foreach (SelectableIngredient ingredient in ingredients)
+            {
+                // Recipe ID, Slot
+                ingredient.RecipeIdSlotMap = await dbService.ExecuteSelectRecipeSlotMapByIngredientId(ingredient.Id);
+            }
+            return ingredients;
+        }
 
         private void MainVM_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
@@ -77,10 +128,6 @@ namespace gbchef
 
         }
 
-        private void YourMethod(string msg)
-        {
-            Debug.WriteLine(msg);
-        }
 
     }
 }

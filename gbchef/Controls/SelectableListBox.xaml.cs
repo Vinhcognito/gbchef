@@ -1,4 +1,5 @@
-﻿using gbchef.ViewModels;
+﻿using gbchef.Models;
+using gbchef.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;

@@ -1,4 +1,7 @@
-﻿using Microsoft.Data.Sqlite;
+﻿using gbchef.Models;
+using Microsoft.Data.Sqlite;
+using System.CodeDom.Compiler;
+using System.Collections.ObjectModel;
 using System.IO;
 
 public class DatabaseService : IDisposable
@@ -68,5 +71,38 @@ public class DatabaseService : IDisposable
     {
         GC.SuppressFinalize(this);
         _connection?.Dispose();
+    }
+
+    public async Task<IEnumerable<Tuple<int,int>>> ExecuteSelectRecipeSlotMapByIngredientId(int id)
+    {
+        var results = new List<Tuple<int, int>>();
+        
+        using var command = _connection.CreateCommand();
+        command.CommandText = $"SELECT * FROM recipe_item_map WHERE item_id = {id}";
+
+        using var reader = await command.ExecuteReaderAsync();
+        while (await reader.ReadAsync())
+        {
+            object[] row = new object[reader.FieldCount];
+            reader.GetValues(row);
+
+            int recipeId = Convert.ToInt32(row[0]);
+            int ingredientId = Convert.ToInt32(row[1]);
+            int in1 = Convert.ToInt32(row[2]);
+            int in2 = Convert.ToInt32(row[3]);
+            int in3 = Convert.ToInt32(row[4]);
+            int in4 = Convert.ToInt32(row[5]);
+            
+            var slots = new List<int> { in1, in2, in3, in4 };
+            for (int i = 1; i <= 4; i++)
+            {
+                if (slots.Contains(i))
+                {
+                    results.Add(new Tuple<int, int>(recipeId, i));
+                }
+            }
+        }
+        
+        return results;
     }
 }

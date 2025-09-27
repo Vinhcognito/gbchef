@@ -7,13 +7,14 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Data;
 using gbchef.Models;
 
 namespace gbchef.ViewModels
 {
-    public class MainViewModel : INotifyPropertyChanged
+    public class MainViewModel
     {
-        public ObservableCollection<SelectableIngredient> Vegetables { get; } = new()
+        public ObservableCollection<SelectableIngredient> Vegetables { get; set; } = new()
         {
             new SelectableIngredient("Radish",false),
             new SelectableIngredient("Tomato",false),
@@ -67,78 +68,44 @@ namespace gbchef.ViewModels
         };
 
 
-        public ObservableCollection<Recipe> Recipes { get; } = new();
+        private ObservableCollection<Recipe> _recipes { get; } = new();
 
-        public ObservableCollection<Recipe> Results { get; } = new();
-
+        public CollectionViewSource ViewSource { get; } = new();
 
         public MainViewModel(IEnumerable<Recipe> recipes)
         {
             foreach (var recipe in recipes) {
-                Recipes.Add(recipe);
-            }    
-        }
+                recipe.PropertyChanged += HandleRecipeChanged;
 
+                _recipes.Add(recipe);
 
-
-        public event PropertyChangedEventHandler? PropertyChanged;
-        protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null)
-        {
-            Debug.WriteLine("MainVM propertychanged");
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-
-
-
-
-
-
-
-
-        private HashSet<string> GetSelectedIngredients()
-        {
-            
-            return new HashSet<string>(
-                Vegetables.Where(i => i.IsSelected).Select(i => i.Name)
-                .Concat(Fruits.Where(i => i.IsSelected).Select(i => i.Name))
-                .Concat(Products.Where(i => i.IsSelected).Select(i => i.Name))
-                .Concat(Foragables.Where(i => i.IsSelected).Select(i => i.Name))
-                .Concat(Fish.Where(i => i.IsSelected).Select(i => i.Name))
-                .Concat(Others.Where(i => i.IsSelected).Select(i => i.Name))
-            );
-        }
-    }
-
-
-    public class SelectableIngredient : INotifyPropertyChanged
-    {
-        public string Name { get; set; }
-        public bool isSelected;
-
-        public SelectableIngredient(string name, bool isSelected)
-        {
-            Name = name;
-            this.isSelected = isSelected;
-        }
-
-        public bool IsSelected
-        {
-            get => isSelected;
-            set
-            {
-                if (value != isSelected)
-                {
-                    isSelected = value;
-                    OnPropertyChanged(nameof(IsSelected));
-                }
             }
+
+            ViewSource.Source = recipes;
+
+            ApplyFilter();
         }
 
-        public event PropertyChangedEventHandler? PropertyChanged;
-        protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null)
+        private void ApplyFilter()
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            ViewSource.View.Filter = item =>
+            {
+                var recipe = item as Recipe;
+                return recipe.IsSatisfied;
+            };
+            ViewSource.View.Refresh();
         }
+
+        private void HandleRecipeChanged(object? sender, PropertyChangedEventArgs e)
+        {
+            if (sender is not Recipe)
+            {
+                throw new InvalidOperationException("Handle Recipes only.");
+            }
+
+            ApplyFilter();
+        }
+
     }
+
 }
