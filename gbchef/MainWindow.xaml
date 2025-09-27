@@ -7,27 +7,20 @@
         xmlns:uc="clr-namespace:gbchef.Controls"
         mc:Ignorable="d"
         Title="MainWindow" Height="720" Width="1280" Initialized="Window_Initialized">
-    
-    <Window.Resources>
-        <CollectionViewSource x:Key="RecipesViewSource"
-                              Source="{Binding ResultsVM.Recipes}"
-                              Filter="ResultsVM_RecipeFilter"/>
-    </Window.Resources>
-        
+
     <StackPanel Orientation="Vertical">
         
         <StackPanel Orientation="Horizontal" Height="195">
-            <uc:SelectableListBox x:Name="itemList1" Items="{Binding ItemsVM.Vegetables}" />
-            <uc:SelectableListBox x:Name="itemList2" Items="{Binding ItemsVM.Fruits}" />
-            <uc:SelectableListBox x:Name="itemList3" Items="{Binding ItemsVM.Products}" />
-            <uc:SelectableListBox x:Name="itemList4" Items="{Binding ItemsVM.Foragables}" />
-            <uc:SelectableListBox x:Name="itemList5" Items="{Binding ItemsVM.Fish}" />
-            <uc:SelectableListBox x:Name="itemList6" Items="{Binding ItemsVM.Others}" />
+            <uc:SelectableListBox x:Name="itemList1" Items="{Binding MainVM.Vegetables}" />
+            <uc:SelectableListBox x:Name="itemList2" Items="{Binding MainVM.Fruits}" />
+            <uc:SelectableListBox x:Name="itemList3" Items="{Binding MainVM.Products}" />
+            <uc:SelectableListBox x:Name="itemList4" Items="{Binding MainVM.Foragables}" />
+            <uc:SelectableListBox x:Name="itemList5" Items="{Binding MainVM.Fish}" />
+            <uc:SelectableListBox x:Name="itemList6" Items="{Binding MainVM.Others}" />
         </StackPanel>
         
         <DataGrid 
             x:Name="resultsDataGrid" 
-            ItemsSource="{Binding Source={StaticResource RecipesViewSource}}"
             AutoGenerateColumns="True" 
             Height="431"/>
         

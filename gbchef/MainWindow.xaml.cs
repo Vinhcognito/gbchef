@@ -13,17 +13,28 @@ using System.Windows.Shapes;
 using gbchef.Models;
 using gbchef.ViewModels;
 
+// start with zero ingredients => zero results
+
+//  ADD OR SUBTRACT AN INGREDIENT
+// click an ingredient
+// find all recipes that include that ingredient => roughlist
+//  for each item in roughlist
+//      we mark that recipes ingredientslot as fulfilled or unfillled
+//         //then check if recipe is fully satisfied:
+//         if item is fully satisfied => add to results
+//         else REMOVE from results if is in results
+
+
 namespace gbchef
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
-        private CompositeViewModel _viewModel;
+        private MainViewModel _mainViewModel;
         public MainWindow()
         {
             InitializeComponent();
+
+
         }
 
         private async void Window_Initialized(object sender, EventArgs e)
@@ -31,34 +42,11 @@ namespace gbchef
             using (var dbService = new DatabaseService()) {
                 var results = await dbService.ExecuteSelectAllAsync("Recipes");
                 var recipes = results.Select(row => Recipe.ProcessRow(row)).ToList();
-                _viewModel = new CompositeViewModel(recipes);
+                _mainViewModel = new MainViewModel(recipes);
             }
-
-            DataContext = _viewModel;
-            RefreshFilters();
+            DataContext = _mainViewModel;
         }
 
-
-        private void ListBox_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            var listBox = (ListBox)sender;
-            var item = listBox.SelectedItem as SelectableIngredient;
-
-            if (item != null)
-            {
-                item.IsSelected = !item.IsSelected;
-            }
-        }
-
-        private void RefreshFilters()
-        {
-            _viewModel.RefreshFilters();
-        }
-
-        private void ResultsVM_RecipeFilter(object sender, FilterEventArgs e)
-        {
-            _viewModel.ResultsVM.RecipeFilter(sender, e);
-        }
 
     }
 }

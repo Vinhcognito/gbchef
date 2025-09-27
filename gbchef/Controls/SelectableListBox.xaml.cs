@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,10 +40,13 @@ namespace gbchef.Controls
             var listBox = (ListBox)sender;
             var item = listBox.SelectedItem as SelectableIngredient;
 
-            if (item != null)
-            {
+            if (item != null) {
                 item.IsSelected = !item.IsSelected;
             }
         }
+
+
+
+
     }
 }

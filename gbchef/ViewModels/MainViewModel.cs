@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using gbchef.Models;
 
 namespace gbchef.ViewModels
 {
-    public class ItemsViewModel : INotifyPropertyChanged
+    public class MainViewModel : INotifyPropertyChanged
     {
         public ObservableCollection<SelectableIngredient> Vegetables { get; } = new()
         {
@@ -65,8 +67,49 @@ namespace gbchef.ViewModels
         };
 
 
+        public ObservableCollection<Recipe> Recipes { get; } = new();
+
+
+        public MainViewModel(IEnumerable<Recipe> recipes)
+        {
+            foreach (var recipe in recipes) {
+                Recipes.Add(recipe);
+            }    
+        }
+
+
+
+
+
+
 
         public event PropertyChangedEventHandler? PropertyChanged;
+        protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null)
+        {
+            Debug.WriteLine("itemviewmodel propertychanged");
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+
+
+
+
+
+
+
+
+        private HashSet<string> GetSelectedIngredients()
+        {
+            
+            return new HashSet<string>(
+                Vegetables.Where(i => i.IsSelected).Select(i => i.Name)
+                .Concat(Fruits.Where(i => i.IsSelected).Select(i => i.Name))
+                .Concat(Products.Where(i => i.IsSelected).Select(i => i.Name))
+                .Concat(Foragables.Where(i => i.IsSelected).Select(i => i.Name))
+                .Concat(Fish.Where(i => i.IsSelected).Select(i => i.Name))
+                .Concat(Others.Where(i => i.IsSelected).Select(i => i.Name))
+            );
+        }
     }
 
 
@@ -110,6 +153,7 @@ namespace gbchef.ViewModels
         public event PropertyChangedEventHandler? PropertyChanged;
         protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null)
         {
+            Debug.WriteLine("selectable ingredient propertychanged");
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
