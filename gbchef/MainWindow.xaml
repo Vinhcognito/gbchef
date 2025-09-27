@@ -11,12 +11,12 @@
     <StackPanel Orientation="Vertical">
         
         <StackPanel Orientation="Horizontal" Height="195">
-            <uc:SelectableListBox x:Name="itemList1" Items="{Binding MainVM.Vegetables}" />
-            <uc:SelectableListBox x:Name="itemList2" Items="{Binding MainVM.Fruits}" />
-            <uc:SelectableListBox x:Name="itemList3" Items="{Binding MainVM.Products}" />
-            <uc:SelectableListBox x:Name="itemList4" Items="{Binding MainVM.Foragables}" />
-            <uc:SelectableListBox x:Name="itemList5" Items="{Binding MainVM.Fish}" />
-            <uc:SelectableListBox x:Name="itemList6" Items="{Binding MainVM.Others}" />
+            <uc:SelectableListBox x:Name="itemList1" Items="{Binding Vegetables}" />
+            <uc:SelectableListBox x:Name="itemList2" Items="{Binding Fruits}" />
+            <uc:SelectableListBox x:Name="itemList3" Items="{Binding Products}" />
+            <uc:SelectableListBox x:Name="itemList4" Items="{Binding Foragables}" />
+            <uc:SelectableListBox x:Name="itemList5" Items="{Binding Fish}" />
+            <uc:SelectableListBox x:Name="itemList6" Items="{Binding Others}" />
         </StackPanel>
         
         <DataGrid 
