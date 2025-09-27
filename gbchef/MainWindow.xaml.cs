@@ -1,5 +1,4 @@
-﻿using gbchef.Models;
-using gbchef.ViewModels;
+﻿using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Text;
 using System.Windows;
@@ -11,6 +10,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using gbchef.Models;
+using gbchef.ViewModels;
 
 namespace gbchef
 {
@@ -19,23 +20,22 @@ namespace gbchef
     /// </summary>
     public partial class MainWindow : Window
     {
+        private CompositeViewModel _viewModel;
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new ItemsViewModel();
-
         }
 
         private async void Window_Initialized(object sender, EventArgs e)
         {
-            using (var dbService = new DatabaseService())
-            {
+            using (var dbService = new DatabaseService()) {
                 var results = await dbService.ExecuteSelectAllAsync("Recipes");
                 var recipes = results.Select(row => Recipe.ProcessRow(row)).ToList();
-                Debug.WriteLine(recipes.Count);
-                var resultsVM = new ResultsViewModel(recipes);
-                resultsDataGrid.DataContext = resultsVM;
+                _viewModel = new CompositeViewModel(recipes);
             }
+
+            DataContext = _viewModel;
+            RefreshFilters();
         }
 
 
@@ -48,6 +48,16 @@ namespace gbchef
             {
                 item.IsSelected = !item.IsSelected;
             }
+        }
+
+        private void RefreshFilters()
+        {
+            _viewModel.RefreshFilters();
+        }
+
+        private void ResultsVM_RecipeFilter(object sender, FilterEventArgs e)
+        {
+            _viewModel.ResultsVM.RecipeFilter(sender, e);
         }
 
     }
