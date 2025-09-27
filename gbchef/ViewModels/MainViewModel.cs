@@ -113,12 +113,12 @@ namespace gbchef.ViewModels
 
     public class SelectableIngredient : INotifyPropertyChanged
     {
-        private string name;
-        private bool isSelected;
+        public string Name;
+        public bool isSelected;
 
         public SelectableIngredient(string name, bool isSelected)
         {
-            this.name = name;
+            this.Name = name;
             this.isSelected = isSelected;
         }
 
