@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using gbchef.ViewModels;
+using System.Diagnostics;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -20,6 +21,13 @@ namespace gbchef
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new Items();
+            var vm = (Items)DataContext;
+            Debug.WriteLine($"MainItems count: {vm.MainItems.Count}");
+            foreach (var item in vm.MainItems)
+            {
+                Debug.WriteLine($"Item: {item.Name}, Selected: {item.IsSelected}");
+            }
         }
 
         private async void MainGrid_Initialized(object sender, EventArgs e)
@@ -32,6 +40,18 @@ namespace gbchef
                     // Process each row
                     Debug.WriteLine(string.Join(", ", row));
                 }
+            }
+        }
+
+
+        private void ListBox_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            var listBox = (ListBox)sender;
+            var item = listBox.SelectedItem as SelectableIngredient;
+
+            if (item != null)
+            {
+                item.IsSelected = !item.IsSelected;
             }
         }
     }

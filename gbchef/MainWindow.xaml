@@ -4,13 +4,18 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:gbchef"
+        xmlns:uc="clr-namespace:gbchef.Controls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid x:Name="MainGrid" Initialized="MainGrid_Initialized">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="27*"/>
-            <ColumnDefinition Width="133*"/>
-        </Grid.ColumnDefinitions>
-
-    </Grid>
+        Title="MainWindow" Height="720" Width="1280">
+    <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Horizontal" Height="195">
+            <uc:SelectableListBox x:Name="itemList1" Items="{Binding MainItems}" />
+            <uc:SelectableListBox x:Name="itemList2" Items="{Binding SecondaryItems}" />
+            <uc:SelectableListBox x:Name="itemList3" Items="{Binding TertiaryItems}" />
+            <uc:SelectableListBox x:Name="itemList4" Items="{Binding Items4}" />
+            <uc:SelectableListBox x:Name="itemList5" Items="{Binding Items5}" />
+        </StackPanel>
+        <DataGrid  d:ItemsSource="{d:SampleData ItemCount=5}"/>
+    </StackPanel>
+    
 </Window>

@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="gbchef.Controls.SelectableListBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ListBox x:Name="InnerListBox" 
+             ItemsSource="{Binding Items, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"
+             MouseLeftButtonUp="ListBox_MouseLeftButtonUp">
+        <ListBox.ItemTemplate>
+            <DataTemplate>
+                <TextBlock Text="{Binding Name}">
+                    <TextBlock.Style>
+                        <Style TargetType="TextBlock">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding IsSelected}" Value="True">
+                                    <Setter Property="Foreground" Value="Green"/>
+                                    <Setter Property="FontWeight" Value="Bold"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding IsSelected}" Value="False">
+                                    <Setter Property="Foreground" Value="Red"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBlock.Style>
+                </TextBlock>
+            </DataTemplate>
+        </ListBox.ItemTemplate>
+    </ListBox>
+</UserControl>
