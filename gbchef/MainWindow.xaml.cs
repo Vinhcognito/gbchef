@@ -35,8 +35,6 @@ namespace gbchef
         {
             InitializeComponent();
 
-            // Subscribe to PropertyChanged event
-            ((MainViewModel)DataContext).PropertyChanged += MainVM_PropertyChanged;
 
         }
 
@@ -47,21 +45,41 @@ namespace gbchef
                 var recipes = queryResults.Select(row => Recipe.ProcessRow(row)).ToList();
                 _mainViewModel = new MainViewModel(recipes);
             }
+
+
             DataContext = _mainViewModel;
+
+            // listen to each selectable ingredient property change
+            var li = new List<ObservableCollection<SelectableIngredient>>(
+                [
+                    _mainViewModel.Vegetables,
+                    _mainViewModel.Fruits,
+                    _mainViewModel.Products,
+                    _mainViewModel.Foragables,
+                    _mainViewModel.Fish,
+                    _mainViewModel.Others,
+            ]);
+
+            foreach (var collection in li) {
+                foreach (var ingredient in collection) {
+                    ingredient.PropertyChanged += MainVM_PropertyChanged;
+                }
+            }
+                
+
         }
 
 
         private void MainVM_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            // Check which property changed
-            if (e.PropertyName == nameof(MainViewModel.Vegetables)) {
-                YourMethod();
-            }
+            Debug.WriteLine($"{(sender as SelectableIngredient).IsSelected}");
+            Debug.WriteLine($"{(sender as SelectableIngredient).Name}");
+
         }
 
-        private void YourMethod()
+        private void YourMethod(string msg)
         {
-            Debug.WriteLine("vegetable");
+            Debug.WriteLine(msg);
         }
 
     }

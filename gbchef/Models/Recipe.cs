@@ -109,7 +109,7 @@ namespace gbchef.Models
         public event PropertyChangedEventHandler? PropertyChanged;
         protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null)
         {
-            Debug.WriteLine("selectable ingredient propertychanged");
+            Debug.WriteLine("Recipe propertychanged");
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }

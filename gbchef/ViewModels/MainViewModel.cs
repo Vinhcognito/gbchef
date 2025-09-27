@@ -84,7 +84,7 @@ namespace gbchef.ViewModels
         public event PropertyChangedEventHandler? PropertyChanged;
         protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null)
         {
-            Debug.WriteLine("itemviewmodel propertychanged");
+            Debug.WriteLine("MainVM propertychanged");
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
@@ -113,12 +113,12 @@ namespace gbchef.ViewModels
 
     public class SelectableIngredient : INotifyPropertyChanged
     {
-        public string Name;
+        public string Name { get; set; }
         public bool isSelected;
 
         public SelectableIngredient(string name, bool isSelected)
         {
-            this.Name = name;
+            Name = name;
             this.isSelected = isSelected;
         }
 
@@ -138,7 +138,6 @@ namespace gbchef.ViewModels
         public event PropertyChangedEventHandler? PropertyChanged;
         protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null)
         {
-            Debug.WriteLine("selectable ingredient propertychanged");
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
