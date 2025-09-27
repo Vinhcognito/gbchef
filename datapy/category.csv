@@ -1,0 +1,209 @@
+id,name,category
+1,Amur Minnow,Fish
+2,Apple,Fruits
+3,Apple Jam,Recipes
+4,Apple Juice,Recipes
+5,Apple Tea Tin,Others
+6,Asparagus,Vegetables
+7,Autumn Blend Tea Tin,Others
+8,Autumn Juice,Recipes
+9,Avocado,Vegetables
+10,Baguettes,Recipes
+11,Banana,Fruits
+12,Banana Juice,Recipes
+13,Banana Tea Tin,Others
+14,Barbel Steed,Fish
+15,Basa,Fish
+16,Bighead Carp,Fish
+17,Bitterling,Fish
+18,Black Bass,Fish
+19,Black Tea,Vegetables
+20,Black Tea Tin,Others
+21,Blueberry,Fruits
+22,Blueberry Jam,Recipes
+23,Blueberry Juice,Recipes
+24,Blueberry Tea Tin,Others
+25,Bluegill,Fish
+26,Bok Choy,Vegetables
+27,Bottled Chestnuts,Others
+28,Bottled Walnuts,Others
+29,Bread,Recipes
+30,Breadcrumbs,Others
+31,Broccoli,Vegetables
+32,Brown Trout,Fish
+33,Buckwheat Flour,Others
+34,Buffalo Milk,Products
+35,Buffalo Milk+,Products
+36,Burdock,Vegetables
+37,Butter,Products
+38,Butter+,Products
+39,Cabbage,Vegetables
+40,Carrot,Vegetables
+41,Castella,Recipes
+42,Cauliflower,Vegetables
+43,Chamomile,Forageables
+44,Chamomile Tea Tin,Others
+45,Char,Fish
+46,Cheese,Products
+47,Cheese+,Products
+48,Cherry,Fruits
+49,Cherry Juice,Recipes
+50,Cherry Salmon,Recipes
+51,Cherry Tea Tin,Others
+52,Chestnut,Forageables
+53,Chili Pepper,Vegetables
+54,Chocolate,Others
+55,Coffee Pack,Others
+56,Common Mushroom,Forageables
+57,Cooked Rice,Recipes
+58,Corn,Vegetables
+59,Crucian Carp,Fish
+60,Cucumber,Vegetables
+61,Curled Chili Pepper,Vegetables
+62,Curry Powder,Others
+63,Curry Rice,Recipes
+64,Dace,Fish
+65,Daikon Radish,Vegetables
+66,Dark Chub,Fish
+67,Eel,Fish
+68,Egg,Products
+69,Egg+,Products
+70,Eggplant,Vegetables
+71,Fish Cake,Recipes
+72,Focaccia Bread,Recipes
+73,Fried Tofu,Recipes
+74,Garlic,Vegetables
+75,Giant Tomato,Vegetables
+76,Golden Blend Tea Tin,Others
+77,Goldfish,Fish
+78,Grape Jam,Recipes
+79,Grape Juice,Recipes
+80,Grape Oil,Others
+81,Grayling,Fish
+82,Green Bell Pepper,Vegetables
+83,Green Grape Tea Tin,Others
+84,Green Grapes,Fruits
+85,Green Onion,Vegetables
+86,Green Tea Tin,Others
+87,Heart Watermelon,Fruits
+88,Herb Butter,Others
+89,Herb Cheese,Others
+90,Herb Mayonnaise,Others
+91,Herb Oil,Others
+92,Honey,Forageables
+93,Hot Coffee,Recipes
+94,Icefish,Fish
+95,Invigorating Honey,Forageables
+96,Jewel Pineapple,Fruits
+97,Killifish,Fish
+98,Lavender,Forageables
+99,Lavender Tea Tin,Others
+100,Lemon,Fruits
+101,Lemon Juice,Recipes
+102,Lemon Tea Tin,Others
+103,Mango,Fruits
+104,Mango Tea Tin,Others
+105,Marbled Eel,Fish
+106,Masu Trout,Fish
+107,Matcha Tea Tin,Others
+108,Matsutake Mushroom,Forageables
+109,Mayonnaise,Products
+110,Mayonnaise+,Products
+111,Mellow Honey,Forageables
+112,Melon,Fruits
+113,Melon Tea Tin,Others
+114,Milk,Products
+115,Milk+,Products
+116,Mint,Forageables
+117,Mint Tea Tin,Others
+118,Miso,Others
+119,Mixed Salad,Recipes
+120,Mochi,Others
+121,Monarch Mushroom,Forageables
+122,Morel Mushroom,Forageables
+123,Mugitsuku,Fish
+124,Napa Cabbage,Vegetables
+125,Nile Perch,Fish
+126,Nut Oil,Others
+127,Oil,Others
+128,Olive Oil,Others
+129,Olive Tea Tin,Others
+130,Omelet,Recipes
+131,Onigiri,Recipes
+132,Onion,Vegetables
+133,Oolong Tea Tin,Others
+134,Orange,Fruits
+135,Orange Juice,Recipes
+136,Orange Tea Tin,Others
+137,Pale Chub,Fish
+138,Pasta,recipes
+139,Peach,Fruits
+140,Peach Juice,recipes
+141,Peach Tea Tin,Others
+142,Pepper,Vegetables
+143,Pineapple,Fruits
+144,Pineapple Tea Tin,Others
+145,Pond Smelt,Fish
+146,Porcini Mushroom,Forageables
+147,Potato,Vegetables
+148,Pu'er Tea Tin,Others
+149,Pumpkin,Vegetables
+150,Radish,Vegetables
+151,Rainbow Trout,Fish
+152,Red Bell Pepper,Vegetables
+153,Red Grape Tea Tin,Others
+154,Red Grapes,Fruits
+155,Refined Rice Flour,Others
+156,Rice,Vegetables
+157,Rice Flour,Others
+158,Royal Honey,Forageables
+159,Salmon,Fish
+160,Salt,Others
+161,Sashimi,Recipes
+162,Sculpin,Fish
+163,Seaweed,Others
+164,Sencha Tea Tin,Others
+165,Shiitake Mushroom,Forageables
+166,Shimeji Mushroom,Forageables
+167,Silkie Egg,Products
+168,Silkie Egg+,Products
+169,Silver Carp,Fish
+170,Snakehead,Fish
+171,Soy Milk,Recipes
+172,Soy Sauce,Others
+173,Soybean,Vegetables
+174,Spice,Others
+175,Spinach,Vegetables
+176,Spring Blend Tea Tin,Others
+177,Spring Juice,Recipes
+178,Star Potato,Vegetables
+179,Stone Moroko,Fish
+180,Strawberry,Fruits
+181,Strawberry Jam,Recipes
+182,Strawberry Juice,Recipes
+183,Strawberry Tea Tin,Others
+184,Sugar,Others
+185,Summer Blend Tea Tin,Others
+186,Summer Juice,Recipes
+187,Summer Tea Leaves,Others
+188,Supreme Curry,Recipes
+189,Sweet Potato,Vegetables
+190,Sweetfish,Fish
+191,Tamoroko,Fish
+192,Tempura,Recipes
+193,Three-Forked Carrot,Vegetables
+194,Three-Lips Carp,Fish
+195,Tofu,Recipes
+196,Tomato,Vegetables
+197,Turnip,Vegetables
+198,Urchin,Others
+199,Vinegar,Others
+200,Walnut,Forageables
+201,Watermelon,Fruits
+202,Watermelon Tea Tin,Others
+203,Wheat Flour,Others
+204,White Bread,Recipes
+205,White Breadcrumbs,Others
+206,Willow Shiner,Fish
+207,Yellow Perch,Fish
+208,Yogurt+,Products

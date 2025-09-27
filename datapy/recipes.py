@@ -211,8 +211,13 @@ def create_filter_categories():
             # execute statements
             cursor.execute("SELECT * FROM items")
             rows = cursor.fetchall()
-            pprint.pprint(rows)
-            print(len(rows))
+
+            with open('category.csv', 'w', newline='') as file:
+                writer = csv.writer(file)
+                writer.writerow(["id", "name", "category"])
+                for row in rows:
+                    id, name, category = row
+                    writer.writerow([id, name, category])
 
     except sqlite3.OperationalError as e:
         pprint.pprint(e)
@@ -224,4 +229,7 @@ if __name__ == "__main__":
     # print_db()
     # clean_ingredients_data()
     # map_recipes_to_items()
-    create_filter_categories()
+    # create_filter_categories()
+
+    # todo: create script to apply categries to items table if needed
+    pass
