@@ -21,13 +21,7 @@ namespace gbchef
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new Items();
-            var vm = (Items)DataContext;
-            Debug.WriteLine($"MainItems count: {vm.MainItems.Count}");
-            foreach (var item in vm.MainItems)
-            {
-                Debug.WriteLine($"Item: {item.Name}, Selected: {item.IsSelected}");
-            }
+            DataContext = new ItemsViewModel();
         }
 
         private async void MainGrid_Initialized(object sender, EventArgs e)
