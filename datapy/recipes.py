@@ -203,11 +203,25 @@ def _get_item_id_by_name(name, cursor):
 
 def create_filter_categories():
     # Vegetables, Fruits, Products, Forageable, Fish, Others
+    try:
+        with sqlite3.connect('app.db') as conn:
+            # create a cursor
+            cursor = conn.cursor()
+
+            # execute statements
+            cursor.execute("SELECT * FROM items")
+            rows = cursor.fetchall()
+            pprint.pprint(rows)
+            print(len(rows))
+
+    except sqlite3.OperationalError as e:
+        pprint.pprint(e)
     pass
 
 
 if __name__ == "__main__":
-    create_db_from_datacsv()
+    # create_db_from_datacsv()
     # print_db()
-    clean_ingredients_data()
-    map_recipes_to_items()
+    # clean_ingredients_data()
+    # map_recipes_to_items()
+    create_filter_categories()
