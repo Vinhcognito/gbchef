@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Text;
 using System.Windows;
@@ -34,19 +35,34 @@ namespace gbchef
         {
             InitializeComponent();
 
+            // Subscribe to PropertyChanged event
+            ((MainViewModel)DataContext).PropertyChanged += MainVM_PropertyChanged;
 
         }
 
         private async void Window_Initialized(object sender, EventArgs e)
         {
             using (var dbService = new DatabaseService()) {
-                var results = await dbService.ExecuteSelectAllAsync("Recipes");
-                var recipes = results.Select(row => Recipe.ProcessRow(row)).ToList();
+                var queryResults = await dbService.ExecuteSelectAllAsync("Recipes");
+                var recipes = queryResults.Select(row => Recipe.ProcessRow(row)).ToList();
                 _mainViewModel = new MainViewModel(recipes);
             }
             DataContext = _mainViewModel;
         }
 
+
+        private void MainVM_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            // Check which property changed
+            if (e.PropertyName == nameof(MainViewModel.Vegetables)) {
+                YourMethod();
+            }
+        }
+
+        private void YourMethod()
+        {
+            Debug.WriteLine("vegetable");
+        }
 
     }
 }

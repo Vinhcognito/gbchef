@@ -15,55 +15,55 @@ namespace gbchef.ViewModels
     {
         public ObservableCollection<SelectableIngredient> Vegetables { get; } = new()
         {
-            new SelectableIngredient("Radish",true),
-            new SelectableIngredient("Tomato",true),
-            new SelectableIngredient("Corn",true),
-            new SelectableIngredient("Cucumber",true),
-            new SelectableIngredient("Onion",true),
-            new SelectableIngredient("Carrot",true),
-            new SelectableIngredient("Avocado",true),
-            new SelectableIngredient("1",true),
-            new SelectableIngredient("2",true),
-            new SelectableIngredient("3",true),
-            new SelectableIngredient("4",true),
-            new SelectableIngredient("5",true),
+            new SelectableIngredient("Radish",false),
+            new SelectableIngredient("Tomato",false),
+            new SelectableIngredient("Corn",false),
+            new SelectableIngredient("Cucumber",false),
+            new SelectableIngredient("Onion",false),
+            new SelectableIngredient("Carrot",false),
+            new SelectableIngredient("Avocado",false),
+            new SelectableIngredient("1",false),
+            new SelectableIngredient("2",false),
+            new SelectableIngredient("3",false),
+            new SelectableIngredient("4",false),
+            new SelectableIngredient("5",false),
 
         };
 
         public ObservableCollection<SelectableIngredient> Fruits { get; } = new()
         {
-            new SelectableIngredient("Apple", true),
-            new SelectableIngredient("Orange", true),
-            new SelectableIngredient("Peach", true),
+            new SelectableIngredient("Apple", false),
+            new SelectableIngredient("Orange", false),
+            new SelectableIngredient("Peach", false),
         };
 
         public ObservableCollection<SelectableIngredient> Products { get; } = new()
         {
-            new SelectableIngredient("Cheese", true),
-            new SelectableIngredient("Milk", true),
-            new SelectableIngredient("Butter", true),
-            new SelectableIngredient("Mayonnaise", true),
+            new SelectableIngredient("Cheese", false),
+            new SelectableIngredient("Milk", false),
+            new SelectableIngredient("Butter", false),
+            new SelectableIngredient("Mayonnaise", false),
         };
 
         public ObservableCollection<SelectableIngredient> Foragables { get; } = new()
         {
-            new SelectableIngredient("Shiitake Mushroom", true),
-            new SelectableIngredient("Honey", true),
-            new SelectableIngredient("Enoki", true),
+            new SelectableIngredient("Shiitake Mushroom", false),
+            new SelectableIngredient("Honey", false),
+            new SelectableIngredient("Enoki", false),
         };
 
         public ObservableCollection<SelectableIngredient> Fish { get; } = new()
         {
-            new SelectableIngredient("Salmon", true),
-            new SelectableIngredient("Yellow Perch", true),
-            new SelectableIngredient("Snakehead", true),
+            new SelectableIngredient("Salmon", false),
+            new SelectableIngredient("Yellow Perch", false),
+            new SelectableIngredient("Snakehead", false),
         };
 
         public ObservableCollection<SelectableIngredient> Others { get; } = new()
         {
-            new SelectableIngredient("Rice Flour", true),
-            new SelectableIngredient("Salt", true),
-            new SelectableIngredient("Oil", true),
+            new SelectableIngredient("Rice Flour", false),
+            new SelectableIngredient("Salt", false),
+            new SelectableIngredient("Oil", false),
         };
 
 
