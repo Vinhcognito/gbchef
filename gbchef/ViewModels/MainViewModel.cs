@@ -69,6 +69,8 @@ namespace gbchef.ViewModels
 
         public ObservableCollection<Recipe> Recipes { get; } = new();
 
+        public ObservableCollection<Recipe> Results { get; } = new();
+
 
         public MainViewModel(IEnumerable<Recipe> recipes)
         {
@@ -76,10 +78,6 @@ namespace gbchef.ViewModels
                 Recipes.Add(recipe);
             }    
         }
-
-
-
-
 
 
 
@@ -122,19 +120,6 @@ namespace gbchef.ViewModels
         {
             this.name = name;
             this.isSelected = isSelected;
-        }
-
-        public string Name
-        {
-            get => name;
-            set
-            {
-                if (value != name)
-                {
-                    name = value;
-                    OnPropertyChanged(nameof(Name));
-                }
-            }
         }
 
         public bool IsSelected

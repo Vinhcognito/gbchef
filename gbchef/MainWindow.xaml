@@ -22,7 +22,7 @@
         <DataGrid 
             x:Name="resultsDataGrid" 
             AutoGenerateColumns="True" 
-            Height="431"/>
+            Height="431" ItemsSource="{Binding Results}"/>
         
     </StackPanel>
     
