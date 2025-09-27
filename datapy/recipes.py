@@ -133,7 +133,6 @@ def map_recipes_to_items():
                 rows = cursor.fetchall()
                 print(f"Creating records for ingredient{ingredient_slot}....")
 
-                all_items = set()
                 for recipe_id, row in rows:
                     for item in row.split(', '):
                         item = str(item).strip()
@@ -142,41 +141,57 @@ def map_recipes_to_items():
                             item_name = str(item).replace(any_tag, '')
                             # print(f"Create record for item types: {item}, name: {item_name}")
                             if item_name == 'Honey':
-                                all_items.add("Honey")
-                                all_items.add("Invigorating Honey")
-                                all_items.add("Mellow Honey")
-                                all_items.add("Royal Honey")
+                                _insert_or_update_map(cursor, ingredient_slot, recipe_id, item="Honey")
+
+                                _insert_or_update_map(cursor, ingredient_slot, recipe_id, "Invigorating Honey")
+
+                                _insert_or_update_map(cursor, ingredient_slot, recipe_id, "Mellow Honey")
+
+                                _insert_or_update_map(cursor, ingredient_slot, recipe_id, item="Royal Honey")
+
                             elif item_name in ['Mushroom', 'Mushrom']:
-                                all_items.add("Shimeji Mushroom")
-                                all_items.add("Common Mushroom")
-                                all_items.add("Porcini Mushroom")                            
-                                all_items.add("Morel Mushroom")
-                                all_items.add("Monarch Mushroom")
-                                all_items.add("Matsutake Mushroom")
+                                _insert_or_update_map(cursor, ingredient_slot, recipe_id, "Shimeji Mushroom")
+
+                                _insert_or_update_map(cursor, ingredient_slot, recipe_id, "Common Mushroom")
+
+                                _insert_or_update_map(cursor, ingredient_slot, recipe_id, "Porcini Mushroom")
+
+                                _insert_or_update_map(cursor, ingredient_slot, recipe_id, "Morel Mushroom")
+
+                                _insert_or_update_map(cursor, ingredient_slot, recipe_id, "Monarch Mushroom")
+
+                                _insert_or_update_map(cursor, ingredient_slot, recipe_id, "Matsutake Mushroom")
+
                             elif item_name in ['Cheese', 'Butter', 'Mayonnaise']:
-                                all_items.add(f"{item_name}")
-                                all_items.add(f"Herb {item_name}")
-                                all_items.add(f"{item_name}+")
+                                _insert_or_update_map(cursor, ingredient_slot, recipe_id, item_name)
+
+                                _insert_or_update_map(cursor, ingredient_slot, recipe_id, f"Herb {item_name}")
+
+                                _insert_or_update_map(cursor, ingredient_slot, recipe_id, f"{item_name}+")
+
                             else:
                                 print(f"TODO: CREATE ENTRIES FOR THIS: {item}")
                         else:
                             # all_items.add(item)
-                            print(f"Inserting record: {recipe_id}, {item}...")
-                            try:
-                                cursor.execute(f"INSERT INTO recipe_item_map(recipe_id, item_id, is_in{ingredient_slot}) SELECT {recipe_id}, id, 1 FROM items WHERE name = \"{item}\"")
-                            except sqlite3.IntegrityError as e:
-                                pprint.pprint(e)
-                                if ingredient_slot > 1:
-                                    # PK already exists: update is_in<2/3/4> value to 1
-                                    item_id = _get_item_id_by_name(item, cursor)
-                                    cursor.execute(f"UPDATE recipe_item_map SET is_in{ingredient_slot} = 1 WHERE recipe_id = {recipe_id} AND item_id = {item_id}")
-                                else:
-                                    raise Exception('FIX THIS! THIS SHOULD NOT BE!!!')
+                            _insert_or_update_map(cursor, ingredient_slot, recipe_id, item)
                             
                             conn.commit()
 
     except sqlite3.OperationalError as e:
         pprint.pprint(e)
+
+def _insert_or_update_map(cursor, ingredient_slot, recipe_id, item):
+    print(f"Inserting record: {recipe_id}, {item}...")
+    try:
+        cursor.execute(f"INSERT INTO recipe_item_map(recipe_id, item_id, is_in{ingredient_slot}) SELECT {recipe_id}, id, 1 FROM items WHERE name = \"{item}\"")
+    except sqlite3.IntegrityError as e:
+        pprint.pprint(e)
+        if ingredient_slot > 1:
+                                    # PK already exists: update is_in<2/3/4> value to 1
+            item_id = _get_item_id_by_name(item, cursor)
+            cursor.execute(f"UPDATE recipe_item_map SET is_in{ingredient_slot} = 1 WHERE recipe_id = {recipe_id} AND item_id = {item_id}")
+        else:
+            raise Exception('FIX THIS! THIS SHOULD NOT BE!!!')
 
 
 def _get_item_id_by_name(name, cursor):
