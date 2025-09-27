@@ -1,0 +1,273 @@
+Recipe Image,Recipe Name,Ingredient 1,Ingredient 2,Ingredient 3,Ingredient 4,Base Value,Effect,Where to Unlock,Used for Festivals
+Salads,,,,,,,,,
+,Macaroni Salad,Pasta,Cucumber,Mayonnaise (any),Carrot,"1,859G",Stamina Saver Lv. 4,Nadine's Bistro,
+,Guacamole Salad,Avocado,Onion,Tomato,Salt,"1,309G",Stamina Saver Lv. 3,"Plower title, Nadine's Bistro",
+,Kinpira Gobo,Burdock,Carrot,Chili Pepper,,909G,Stamina Saver Lv. 3,Clara's Diner,
+,Marinated Peppers,Red Bell Pepper,Vinegar,"Oil, Nut Oil, Herb Oil, Olive Oil, Grape Oil",,598G,Stamina Saver Lv. 2,Mini Madeleine's,
+,Mixed Salad,Tomato,Cucumber,"Cucumber, Onion, Asparagus, Tomato, Red Bell Pepper, Carrot, Turnip, Sweet Potato, Pumpkin, Eggplant",,404G,Stamina Saver Lv. 1,Clara's Diner,
+,Turnip Salad,Turnip,,,,260G,Stamina Saver Lv. 1,Available at the start,
+,Herb Salad,"Mint, Chamomile, Lavender","Mint, Chamomile, Lavender",,,137G,Stamina Saver Lv. 1,Available at the start,
+,Tomato Salad,Tomato,"Mint, Chamomile, Lavender",,,126G,Stamina Saver Lv. 1,Mini Madeleine's,
+,Caprese Salad,Tomato,Cheese (any),Olive Oil,Salt,"2,429G",Watering Rare Crop % Lv. 4,Avant-Garde Crops request from Erik,
+,Poke,Avocado,Salmon,Soy Sauce,,"1,197G",Watering Rare Crop % Lv. 3,Mini Madeleine's,
+,Mashed Potatoes,Potato,Butter (any),,,677G,Watering Rare Crop % Lv. 2,Café Madeleine,
+,Onion Salad,Onion,,,,325G,Watering Rare Crop % Lv. 1,Café Madeleine,
+Soups,,,,,,,,,
+,Asparagus Soup,Asparagus,"Milk, Buffalo Milk","Oil, Nut Oil, Herb Oil, Olive Oil, Grape Oil",Onion,"1,728G",Rod Durability Up Lv. 4,Clara's Diner,Hearth Day
+,Onion Soup,Onion,Butter (any),,,"1,024G",Rod Durability Up Lv. 3,Mini Madeleine's,Hearth Day
+,Radish Soup,Radish,"Milk, Buffalo Milk",Salt,,770G,Rod Durability Up Lv. 2,Pantry Patron request from Mina,Hearth Day
+,Miso Soup,Miso,"Tofu, Green Onion, Fried Tofu, Potato, Shimeji Mushroom",,,260G,Rod Durability Up Lv. 1,Clara's Diner,Hearth Day
+,Corn Soup,Corn,"Milk, Buffalo Milk",Butter (any),Onion,"1,815G",Run Speed Up Lv. 4,Mini Madeleine's,Hearth Day
+,Pumpkin Soup,Pumpkin,"Milk, Buffalo Milk",Onion,,"1,320G",Run Speed Up Lv. 3,Clara's Calamity request from Clara,Hearth Day
+,Vichyssoise Soup,Potato,Onion,"Milk, Buffalo Milk",,709G,Run Speed Up Lv. 2,Nadine's Bistro,
+,Gazpacho Soup,Tomato,Garlic,"Bread, White Bread, Baguettes, Focaccia Bread",,490G,Run Speed Up Lv. 1,Café Madeleine,
+,Herb Soup,"Mint, Chamomile, Lavender","Mint, Chamomile, Lavender",,,137G,Run Speed Up Lv. 1,Available at the start,Hearth Day
+,Egg Drop Soup,"Egg, Silkie Egg",,,,117G,Run Speed Up Lv. 1,Available at the start,Hearth Day
+Sides,,,,,,,,,
+,Khachapuri,Wheat Flour,Cheese+,Yogurt+,Butter+,"10,098G",Double Forage,A Homemade Meal request from Samir,
+,Morel Cream Stew,Morel Mushroom,Buffalo Milk,Butter (any),Urchin,"2,592G",Max Stamina Up Lv. 4,Nadine's Bistro,Hearth Day
+,Quiche,Wheat Flour,Spinach,Pumpkin,Mushroom (any),"1,892G",Max Stamina Up Lv. 4,Main Mushroom request from Mina,
+,Fish & Chips,"Yellow Perch, Snakehead, Masu Trout, Char, Salmon, Icefish, Cherry Salmon",Potato,"Wheat Flour, Rice Flour","Oil, Nut Oil, Herb Oil, Olive Oil, Grape Oil","1,584G",Max Stamina Up Lv. 3,Mini Madeleine's,
+,Spring Rolls,Wheat Flour,Shiitake Mushroom,Carrot,"Oil, Nut Oil, Herb Oil, Olive Oil, Grape Oil","1,530G",Max Stamina Up Lv. 3,Clara's Diner,
+,Steamed Bun,Wheat Flour,Napa Cabbage,Shiitake Mushroom,Green Onion,1377G,Max Stamina Up Lv. 3,Mini Madeleine's,
+,Gyoza,Wheat Flour,Cabbage,"Oil, Nut Oil, Herb Oil, Olive Oil, Grape Oil",,"1,353G",Max Stamina Up Lv. 3,Clara's Diner,
+,Stir-Fried Vegetables,Cabbage,Napa Cabbage,,,"1,276G",Max Stamina Up Lv. 3,Clara's Diner,
+,Stuffed Cabbage,Cabbage,Carrot,,,"1,213G",Max Stamina Up Lv. 3,Famed Foodie request from Madeleine,
+,Scones,Wheat Flour,Butter (any),"Milk, Buffalo Milk",,"1,155G",Max Stamina Up Lv. 3,Café Madeleine,
+,Galette,Buckwheat Flour,Potato,"Oil, Nut Oil, Herb Oil, Olive Oil, Grape Oil",,"1,122G",Max Stamina Up Lv. 3,Mini Madeleine's,
+,Buttered Roll,Wheat Flour,"Egg, Silkie Egg",Butter (any),,"1,056G",Max Stamina Up Lv. 3,Café Madeleine,
+,Chili con Carne,Tomato,Soybean,Chili Pepper,Pepper,911G,Max Stamina Up Lv. 2,Nadine's Bistro,Hearth Day
+,Sauteed Turnips,Turnip,Butter (any),,,882G,Max Stamina Up Lv. 2,Café Madeleine,
+,Focaccia Bread,Wheat Flour,Olive Oil,,,843G,Max Stamina Up Lv. 2,Bookshelves in Lloyd's House,
+,Freeze-Dried Tofu,Tofu,Soy Sauce,"Oil, Nut Oil, Herb Oil, Olive Oil, Grape Oil",,824G,Max Stamina Up Lv. 2,Clara's Diner,
+,Lightly Fried Tofu,Tofu,"Wheat Flour, Rice Flour","Oil, Nut Oil, Herb Oil, Olive Oil, Grape Oil",,809G,Max Stamina Up Lv. 2,Clara's Diner,
+,Rolled Egg,"Egg, Silkie Egg",Soy Sauce,Sugar,,801G,Max Stamina Up Lv. 2,Clara's Diner,
+,Steamed Egg Custard,"Egg, Silkie Egg",Shiitake Mushroom,Fish Cake,,747G,Max Stamina Up Lv. 2,Clara's Diner,
+,Soy Okara,Tofu,Carrot,,,743G,Max Stamina Up Lv. 2,Clara's Diner,
+,Buttered Potato,Potato,Butter (any),,,677G,Max Stamina Up Lv. 2,Count on Coach! request from Freya,
+,Baguettes,Wheat Flour,Salt,,,662G,Max Stamina Up Lv. 2,Mini Madeleine's,
+,Hash Browns,Potato,Wheat Flour,"Oil, Nut Oil, Herb Oil, Olive Oil, Grape Oil",,632G,Max Stamina Up Lv. 2,Mini Madeleine's,
+,Steamed Muffin,Wheat Flour,"Egg, Silkie Egg",Sweet Potato,,609G,Max Stamina Up Lv. 2,"Bug Collector title, Generous Bug Catcher title, Clara's Diner",
+,Sauteed Cauliflower,Cauliflower,,,,602G,Max Stamina Up Lv. 2,Mini Madeleine's,
+,Broccoli & Garlic Saute,Broccoli,Garlic,"Oil, Nut Oil, Herb Oil, Olive Oil, Grape Oil",,563G,Max Stamina Up Lv. 2,Nadine's Bistro,
+,Chilled Tofu,Tofu,Soy Sauce,,,458G,Max Stamina Up Lv. 1,Clara's Diner,
+,Potato Pancakes,Potato,Wheat Flour,"Egg, Silkie Egg",,429G,Max Stamina Up Lv. 1,Café Madeleine,
+,Corn Flakes Cereal,Corn,"Milk, Buffalo Milk",,,403G,Max Stamina Up Lv. 1,Clara's Diner,
+,Fried Egg,"Egg, Silkie Egg","Oil, Nut Oil, Herb Oil, Olive Oil, Grape Oil",,,396G,Max Stamina Up Lv. 1,Café Madeleine,
+,Fried Tofu,Tofu,,,,267G,Max Stamina Up Lv. 1,Nadine's Bistro,
+,Miso Glazed Eggplant,Eggplant,Miso,,,246G,Max Stamina Up Lv. 1,Nadine's Bistro,
+,Toast,"Bread, White Bread",,,,234G,Max Stamina Up Lv. 1,Bookshelves in June's House,
+,Tofu,Soybean,Soy Milk,,,205G,Max Stamina Up Lv. 1,Mini Madeleine's,
+,Fried Mushrooms,Mushroom (any),,,,195G,Max Stamina Up Lv. 1,Felix’s Fixings (Autumn),
+,Boiled Egg,"Egg, Silkie Egg",,,,117G,Max Stamina Up Lv. 1,Available at the start,
+,Tofu Skin,Soy Milk,,,,111G,Max Stamina Up Lv. 1,Clara's Diner,
+,Shumai Dumplings,Wheat Flour,Onion,"Bluegill, Willow Shiner, Killifish, Stone Moroko, Pond Smelt, Sweetfish, Eel, Marbled Eel, Goldfish, Crucian Carp, ",,924G,Rod Durability Up Lv. 2,Reeling in a Meal request from Sonia,
+,Sashimi,"Amur Minnow, Dace, Pale Chub, Sculpin, Dark Chub, Bitterling, Tamoroko, Rainbow Trout, Silver Carp, Basa",,,,195G,Rod Durability Up Lv. 1,Available at the start,
+,Fish Cake,"Amur Minnow, Dace, Pale Chub, Sculpin, Dark Chub, Bitterling, Tamoroko, Rainbow Trout, Silver Carp, Basa",,,,195G,Rod Durability Up Lv. 1,Bottled Nuts Wanted request from Nadine,
+,Babaocai,Napa Cabbage,Carrot,Green Bell Pepper,Mushroom (any),"1,509G",Watering Rare Crop % Lv. 3,"Hydrator title, Nadine's Bistro",
+,Grilled Corn,Corn,Soy Sauce,Sugar,,886G,Watering Rare Crop % Lv. 2,Felix’s Fixings (Summer),
+,Curry Bun,Wheat Flour,Curry Powder,Onion,Carrot,"1,920G",Chat Friendship Boost Lv. 4,Clara's Diner,
+,Cheese Croquettes,Potato,"Breadcrumbs, White Breadcrumbs","Oil, Nut Oil, Herb Oil, Olive Oil, Grape Oil",Cheese (any),"1,844G",Chat Friendship Boost Lv. 4,Nadine's Bistro,
+,Cheese Bun,Wheat Flour,Cheese (any),Buffalo Milk,,"1,320G",Chat Friendship Boost Lv. 3,Mini Madeleine's,
+,Cream Croquettes,Potato,"Breadcrumbs, White Breadcrumbs","Oil, Nut Oil, Herb Oil, Olive Oil, Grape Oil","Milk, Buffalo Milk","1,098G",Chat Friendship Boost Lv. 3,Nadine's Bistro,
+,Stew,Wheat Flour,"Milk, Buffalo Milk","Potato, Asparagus, Carrot, Cabbage, Turnip, Cauliflower",,770G,Chat Friendship Boost Lv. 2,Nadine's Bistro,Hearth Day
+,Croquettes,Potato,"Breadcrumbs, White Breadcrumbs","Oil, Nut Oil, Herb Oil, Olive Oil, Grape Oil",,709G,Chat Friendship Boost Lv. 2,Clara's Diner,
+,French Toast,"Bread, White Bread","Egg, Silkie Egg","Milk, Buffalo Milk",,647G,Chat Friendship Boost Lv. 2,Nadine's Bistro,
+,Popcorn,Corn,"Oil, Nut Oil, Herb Oil, Olive Oil, Grape Oil",,,508G,Chat Friendship Boost Lv. 2,"Neighborly title, Mini Madeleine's",Pumpkin Festival
+,French Fries,Potato,"Oil, Nut Oil, Herb Oil, Olive Oil, Grape Oil",,,355G,Chat Friendship Boost Lv. 1,Mini Madeleine's,
+,Poached Egg,"Egg, Silkie Egg",Soy Sauce,,,301G,Chat Friendship Boost Lv. 1,Café Madeleine,
+,Baked Sweet Potato,Sweet Potato,,,,202G,Chat Friendship Boost Lv. 1,Felix’s Fixings (Autumn),
+,Bread,Wheat Flour,,,,195G,None,"Café Madeleine, Mini Madeleine's, Nadine's Bistro, Clara's Diner",
+,White Bread,Rice Flour,,,,182G,None,Nadine's Bistro,
+,Cooked Rice,Rice,,,,91G,None,"Café Madeleine, Mini Madeleine's, Nadine's Bistro, Clara's Diner",
+Main Dishes,,,,,,,,,
+,Ultimate Curry,Supreme Curry,Giant Tomato,Curled Chili Pepper,Yogurt+,"12,353G",None,Out of the Extra-Ordinary request from Madeleine,
+,Fried Rice Noodles,Rice Flour,Monarch Mushroom,Cabbage,Carrot,"7,508G",None,Remarkable Mushrooms request from Nadine,
+,Farmer's Breakfast,Potato,Onion,Cheese+,Mayonnaise+,"6,957G",None,Celebrated Cuisine request from Madeleine,
+,Supreme Curry,Curry Rice,Star Potato,Three-Forked Carrot,,"3,724G",None,Win the Cook-Off! Festival,
+,Pizzoccheri,Buckwheat Flour,Cheese (any),Cabbage,Potato,"2,784G",None,Nadine's Bistro,
+,Tempura Soba,Buckwheat Flour,Tempura,,,"2,641G",None,Clara's Diner,Hearth Day
+,Milk Hot Pot,Milk+,Carrot,Napa Cabbage,Spinach,"2,640G",None,Mini Madeleine's,Hearth Day
+,Macaroni & Cheese,Wheat Flour,Cheese (any),Butter (any),Mayonnaise (any),"2,592G",None,Nadine's Bistro,
+,Hot Pot,Daikon Radish,Napa Cabbage,Green Onion,"Nile Perch, Salmon, Masu Trout, Cherry Salmon, Brown Trout, Yellow Perch, Sweetfish","2,487G",None,Clara's Diner,Hearth Day
+,Ukha,"Nile Perch, Salmon, Masu Trout, Cherry Salmon, Brown Trout, Yellow Perch, Sweetfish",Carrot,Potato,Onion,"2,324G",None,Nadine's Bistro,Hearth Day
+,Mushroom Polenta,Mushroom (any),Corn,Butter (any),Cheese (any),"2,295G",None,Nadine's Bistro,
+,Tempura Udon,Wheat Flour,Tempura,,,"2,188G",None,Clara's Diner,Hearth Day
+,Marinated Fish,"Nile Perch, Salmon, Masu Trout, Cherry Salmon, Brown Trout, Yellow Perch, Sweetfish",Onion,Vinegar,Lemon,"2,160G",None,Mood Improver request from Mina,
+,Tempura Rice Bowl,Tempura,Cooked Rice,,,"2,089G",None,Clara's Diner,
+,Raclette Cheese,Cheese (any),Corn,Carrot,Broccoli,"1,901G",None,Nadine's Bistro,
+,Pasta Salad,Pasta,Mixed Salad,Mayonnaise (any),,"1,817G",None,A Selfish Request request from Jules,
+,Matsutake Rice,Rice,Matsutake Mushroom,Soy Sauce,,"1,760G",None,Clara's Diner,
+,Gratin,Wheat Flour,Cheese (any),Mayonnaise (any),,"1,568G",None,Milk Par Excellence request from Nadine,
+,Spaghetti Soup,Pasta,Tomato,"Grayling, Bighead Carp, Nile Perch, Barbel Steed, Three-Lips Carp, Brown Trout, Black Bass, Mugitsuku","Oil, Nut Oil, Herb Oil, Olive Oil, Grape Oil","1,568G",None,Café Madeleine,Hearth Day
+,Risotto,Rice,Cheese (any),Tomato,Onion,"1,552G",None,Café Madeleine,
+,Carpaccio,"Yellow Perch, Snakehead, Masu Trout, Char, Salmon, Icefish, Cherry Salmon",Onion,Vinegar,,"1,469G",None,Nadine's Bistro,
+,Cheese Fondue,Cheese (any),"Bread, White Bread, Baguettes, Focaccia Bread","Broccoli, Potato, Asparagus, Red Bell Pepper, Carrot, Common Mushroom, Pumpkin",,"1,452G",None,Nadine's Bistro,
+,Mushroom Pasta,Pasta,Mushroom (any),Butter (any),,"1,449G",None,Café Madeleine,
+,Inari Sushi,Cooked Rice,Fried Tofu,Vinegar,Sugar,"1,437G",None,Clara's Diner,
+,Fried Udon,Wheat Flour,Cabbage,Green Bell Pepper,Soy Sauce,"1,437G",None,Clara's Diner,
+,Spicy Curry,Cooked Rice,Curry Powder,Spice,"Potato, Carrot, Onion","1,424G",None,Fondue Fancy! request from Sophie,
+,Omelet Rice,Omelet,Cooked Rice,,,"1,410G",None,Bookshelves in Gabriel's House,
+,Spaghetti Peperoncino,Pasta,Chili Pepper,Garlic,"Oil, Nut Oil, Herb Oil, Olive Oil, Grape Oil","1,410G",None,Nadine's Bistro,
+,Seaweed Curry,Cooked Rice,Curry Powder,Seaweed,"Potato, Carrot, Onion","1,388G",None,Clara's Diner,
+,Jam-Filled Bun,Wheat Flour,"Apple Jam, Strawberry Jam, Grape Jam, Blueberry Jam",,,"1,339G",None,Café Madeleine,
+,Milk Curry,Cooked Rice,Curry Powder,"Milk, Buffalo Milk","Potato, Carrot, Onion","1,334G",None,Nadine's Bistro,
+,Burgundy Fondue,Olive Oil,"Bread, White Bread, Baguettes, Focaccia Bread","Broccoli, Potato, Asparagus, Red Bell Pepper, Carrot, Common Mushroom, Pumpkin",,"1,325G",None,Nadine's Bistro,
+,Fried Rice,Cooked Rice,"Egg, Silkie Egg",Onion,Carrot,"1,316G",None,Clara's Diner,
+,Rainbow Curry,Cooked Rice,Curry Powder,Spinach,Red Bell Pepper,"1,304G",None,Mini Madeleine's,
+,Yakisoba,Wheat Flour,Mushroom (any),Cabbage,,"1,271G",None,Clara's Diner,
+,Unadon,Cooked Rice,"Eel, Marbled Eel",Soy Sauce,Sugar,"1,262G",None,Clara's Diner,
+,Fried Matsutake Mushrooms,Matsutake Mushroom,,,,"1,200G",None,Felix’s Fixings (Autumn),
+,Rice Gratin,Rice,Cheese (any),Buffalo Milk,,"1,188G",None,Mini Madeleine's,
+,Herb Bread,Wheat Flour,Herb Butter,,,"1,182G",None,Mini Madeleine's,
+,Okonomiyaki,Wheat Flour,Cabbage,"Egg, Silkie Egg",,"1,172G",None,Clara's Diner,
+,Tempura,Wheat Flour,"Oil, Nut Oil, Herb Oil, Olive Oil, Grape Oil","Egg, Silkie Egg","Shiitake Mushroom, Pumpkin, Eggplant, Sweet Potato, Icefish, Pond Smelt","1,152G",None,Clara's Diner,
+,Paella,Cooked Rice,"Grayling, Bighead Carp, Nile Perch, Barbel Steed, Three-Lips Carp, Brown Trout, Black Bass, Mugitsuku",Red Bell Pepper,Spice,"1,151G",None,Mini Madeleine's,
+,Boiled Tofu,Tofu,Napa Cabbage,Mushroom (any),,"1,147G",None,High Quality's the Way to Go! request from Derek,Hearth Day
+,Pizza,Wheat Flour,Tomato,Cheese (any),,"1,142G",None,"Face of Zephyr Town title, Nadine's Bistro",
+,Bok Choy Soy Cream Stew,Bok Choy,Soy Milk,Butter (any),,"1,131G",None,Nadine's Bistro,Hearth Day
+,Curry Bread,Wheat Flour,Curry Powder,"Oil, Nut Oil, Herb Oil, Olive Oil, Grape Oil",,"1,073G",None,Nadine's Bistro,
+,Meuniere Fish,"Grayling, Bighead Carp, Nile Perch, Barbel Steed, Three-Lips Carp, Brown Trout, Black Bass, Mugitsuku",Wheat Flour,"Oil, Nut Oil, Herb Oil, Olive Oil, Grape Oil",,"1,073G",None,Mini Madeleine's,
+,Rice & Mixed Vegetables,Rice,Fried Tofu,Carrot,,"1,052G",None,Clara's Diner,
+,Pink Fondue,Grape Juice,"Bread, Baguettes, White Bread, Focaccia Bread","Broccoli, Potato, Asparagus, Red Bell Pepper, Carrot, Common Mushroom, Pumpkin",,937G,None,Nadine's Bistro,
+,Curry Rice,Cooked Rice,Curry Powder,"Potato, Carrot, Onion",,911G,None,"Clara's Diner, Flex it out! mail from Felix",
+,Vegetable Curry,Cooked Rice,Curry Powder,"Cucumber, Onion, Asparagus, Tomato, Red Bell Pepper, Carrot, Turnip, Sweet Potato, Pumpkin, Eggplant",,911G,None,First-Class Curry request from Diana,
+,Mushroom Rice,Rice,Mushroom (any),Mushroom (any),Mushroom (any),874G,None,Sharpen Those Skills request from Madeleine,
+,Chirashi Sushi,Sashimi,Cooked Rice,Vinegar,"Egg, Silkie Egg",867G,None,Clara's Diner,
+,Zaru Soba,Buckwheat Flour,Wheat Flour,,,838G,None,Clara's Diner,
+,Dry Curry,Cooked Rice,Curry Powder,Tomato,Soybean,837G,None,Fine Dining request from Erik,
+,Bouillabaisse,Tomato,"Grayling, Bighead Carp, Nile Perch, Barbel Steed, Three-Lips Carp, Brown Trout, Black Bass, Mugitsuku","Oil, Nut Oil, Herb Oil, Olive Oil, Grape Oil",,835G,None,Mini Madeleine's,Hearth Day
+,Steamed Mushrooms,Mushroom (any),Butter (any),,,809G,None,Heartening Mushrooms request from Clara,
+,Tofu Steak,Tofu,"Wheat Flour, Rice Flour","Oil, Nut Oil, Herb Oil, Olive Oil, Grape Oil",,809G,None,Mini Madeleine's,
+,Milk Rice Porridge,Rice,Salt,"Milk, Buffalo Milk",,801G,None,Mini Madeleine's,
+,Fried Onigiri,Onigiri,Soy Sauce,,,735G,None,Mini Madeleine's,
+,Omelet,"Egg, Silkie Egg",Butter (any),,,721G,None,Café Madeleine,
+,Donburi Rice Bowl,"Egg, Silkie Egg",Onion,Cooked Rice,,664G,None,Clara's Diner,
+,Sushi,Sashimi,Cooked Rice,Vinegar,,657G,None,"Let's get cooking! mail, Clara's Diner",
+,Tomato Fondue,Tomato,"Bread, White Bread, Baguettes, Focaccia Bread","Broccoli, Potato, Asparagus, Red Bell Pepper, Carrot, Common Mushroom, Pumpkin",,650G,None,Nadine's Bistro,
+,Fruit Sandwich,"Bread, White Bread, Baguettes, Focaccia Bread","Cherry, Blueberry, Green Grapes, Strawberry, Mango, Pineapple, Banana, Peach, Orange, Melon","Cherry, Blueberry, Green Grapes, Strawberry, Mango, Pineapple, Banana, Peach, Orange, Melon",,647G,None,Mini Madeleine's,
+,Herb Rice Porridge,Rice,Salt,"Mint, Chamomile, Lavender",,647G,None,"Some Herbs, Please? request from Sophie",
+,Udon,Wheat Flour,Fish Cake,Green Onion,,647G,None,Clara's Diner,Hearth Day
+,Herb Pasta,Wheat Flour,"Mint, Chamomile, Lavender","Oil, Nut Oil, Herb Oil, Olive Oil, Grape Oil",,616G,None,Bookshelves in Jules' and Derek's House,
+,Penne Pasta,Wheat Flour,"Oil, Nut Oil, Herb Oil, Olive Oil, Grape Oil",Tomato,,604G,None,Nadine's Bistro,
+,Rice Porridge,Rice,Salt,,,544G,None,Café Madeleine,
+,Simmered Fish,"Bluegill, Willow Shiner, Killifish, Stone Moroko, Pond Smelt, Sweetfish, Eel, Marbled Eel, Goldfish, Crucian Carp",Soy Sauce,,,451G,None,Clara's Diner,
+,Raisin Bread,Wheat Flour,Red Grapes,,,444G,None,Clara's Diner,
+,Sandwich,"Bread, White Bread, Baguettes, Focaccia Bread",Tomato,Cucumber,,375G,None,Café Madeleine,
+,Onigiri,Cooked Rice,Seaweed,,,370G,None,Café Madeleine,
+,Fried Eggplant,Eggplant,"Oil, Nut Oil, Herb Oil, Olive Oil, Grape Oil",,,342G,None,Felix’s Fixings (except Winter),
+,Chestnut Rice,Cooked Rice,Chestnut,,,329G,None,Clara's Diner,
+,Pasta,Wheat Flour,"Egg, Silkie Egg",,,328G,None,Café Madeleine,
+,Herb Sandwich,"Bread, White Bread, Baguettes, Focaccia Bread","Mint, Chamomile, Lavender",Mayonnaise (any),,817G,None,Secret Ingredient request from Mina,
+,Egg Over Rice,"Egg, Silkie Egg",Cooked Rice,,,248G,None,Available at the start,
+,Grilled Fish,"Amur Minnow, Dace, Pale Chub, Sculpin, Dark Chub, Bitterling, Tamoroko, Rainbow Trout, Silver Carp, Basa",,,,195G,None,Available at the start,
+Desserts,,,,,,,,,
+,Rüeblitorte (Rueblitorte),Wheat Flour,Silkie Egg,Three-Forked Carrot,Lemon,"2,506G",Jump Distance Up,It's Gotta Be PERFECT! request from Sylvia,Hearth Day
+,Trifle,Castella,Silkie Egg+,Yogurt+,"Cherry, Blueberry, Green Grapes, Strawberry, Mango, Pineapple, Banana, Peach, Orange, Melon","6,192G",Petting Happiness Up Lv. 4,The Gift of Gratitude request from Samir,Pumpkin Festival
+,Pineapple Pie,Wheat Flour,"Egg, Silkie Egg",Butter (any),Jewel Pineapple,"3,130G",Petting Happiness Up Lv. 4,Reward for giving high quality tea for the Tea Party Festival,Pumpkin Festival
+,Cheesecake,Wheat Flour,"Egg, Silkie Egg",Buffalo Milk,Cheese (any),"1,602G",Petting Happiness Up Lv. 3,"Dairy Driver title, Nadine's Bistro",Pumpkin Festival
+,Steamed Cake,Wheat Flour,"Egg, Silkie Egg","Milk, Buffalo Milk",Pumpkin,"1,422G",Petting Happiness Up Lv. 3,Mini Madeleine's,Pumpkin Festival
+,Cherry Pie,Wheat Flour,"Egg, Silkie Egg",Butter (any),Cherry,"1,404G",Petting Happiness Up Lv. 3,Making Something Special! request from Maple,Pumpkin Festival
+,Blueberry Pie,Wheat Flour,"Egg, Silkie Egg",Butter (any),Blueberry,"1,377G",Petting Happiness Up Lv. 3,Nadine's Bistro,Pumpkin Festival
+,Strawberry Pie,Wheat Flour,"Egg, Silkie Egg",Butter (any),Strawberry,"1,368G",Petting Happiness Up Lv. 3,"Acrobat title, Café Madeleine",Pumpkin Festival
+,Donuts,Wheat Flour,"Egg, Silkie Egg",Sugar,"Oil, Nut Oil, Herb Oil, Olive Oil, Grape Oil","1,332G",Petting Happiness Up Lv. 3,"Excellent Eggs request from Sylvia, Me and mom baked em! mail from Sylvia",Pumpkin Festival
+,Churros,Wheat Flour,"Egg, Silkie Egg","Oil, Nut Oil, Herb Oil, Olive Oil, Grape Oil",Sugar,"1,332G",Petting Happiness Up Lv. 3,"Scene Stealer title, Mini Madeleine's, A rare treat! mail from Maple",Pumpkin Festival
+,Chocolate Cake,Wheat Flour,"Egg, Silkie Egg","Milk, Buffalo Milk",Chocolate,"1,242G",Petting Happiness Up Lv. 3,Clara's Diner,Pumpkin Festival
+,Baumkuchen,Wheat Flour,"Egg, Silkie Egg","Milk, Buffalo Milk",Sugar,"1,242G",Petting Happiness Up Lv. 3,It's Gotta Be Yummy request from Laurie,Pumpkin Festival
+,Engadiner Nusstorte,Wheat Flour,Silkie Egg,Sugar,Walnut,"1,206G",Petting Happiness Up Lv. 3,Nadine's Bistro,Hearth Day
+,Pancakes,Wheat Flour,"Egg, Silkie Egg","Milk, Buffalo Milk",Honey (any),"1,152G",Petting Happiness Up Lv. 3,Café Madeleine,Pumpkin Festival
+,Fruit Dumplings,Refined Rice Flour,"Cherry, Blueberry, Green Grapes, Strawberry, Mango, Pineapple, Banana, Peach, Orange, Melon","Cherry, Blueberry, Green Grapes, Strawberry, Mango, Pineapple, Banana, Peach, Orange, Melon",,"1,089G",Petting Happiness Up Lv. 3,Mini Madeleine's,Pumpkin Festival
+,Sweet Potato Cakes,"Milk, Buffalo Milk",Sugar,Sweet Potato,,932G,Petting Happiness Up Lv. 2,Nadine's Bistro,Pumpkin Festival
+,Chocolate Fondue,Chocolate,"Bread, White Bread, Baguettes, Focaccia Bread","Apple, Red Grapes, Green Grapes, Strawberry, Mango, Pineapple, Banana, Peach, Orange, Melon",,924G,Petting Happiness Up Lv. 2,Nadine's Bistro,Pumpkin Festival
+,Baked Apple,Apple,Butter (any),,,838G,Petting Happiness Up Lv. 2,Felix’s Fixings (Autumn),Pumpkin Festival
+,Ice Cream,"Milk, Buffalo Milk","Egg, Silkie Egg",Sugar,,832G,Petting Happiness Up Lv. 2,Bookshelves in June's House,Pumpkin Festival
+,Castella,Wheat Flour,Silkie Egg,Honey (any),,801G,Petting Happiness Up Lv. 2,Clara's Diner,Pumpkin Festival
+,Strawberry Mochi,Mochi,Strawberry,,,618G,Petting Happiness Up Lv. 2,"Big Hops title, Clara's Diner, Hip ideas of the youth mail from Madeleine",Pumpkin Festival
+,Egg Tart,"Egg, Silkie Egg","Milk, Buffalo Milk",Wheat Flour,,601G,Petting Happiness Up Lv. 2,Milker title,Pumpkin Festival
+,Cake,Wheat Flour,"Egg, Silkie Egg","Milk, Buffalo Milk",,601G,Petting Happiness Up Lv. 2,"Cheer Captain title, Nadine's Bistro, Everything changes! mail from Gabriel",Pumpkin Festival
+,Dango,Refined Rice Flour,,,,588G,Petting Happiness Up Lv. 2,Café Madeleine,Pumpkin Festival
+,Wrapped Rice Cakes,Mochi,Summer Tea Leaves,,,544G,Petting Happiness Up Lv. 2,Clara's Diner,Pumpkin Festival
+,Walnut Cookies,Wheat Flour,"Egg, Silkie Egg",Walnut,,524G,Petting Happiness Up Lv. 2,"Ivy's Friend title, Café Madeleine",Pumpkin Festival
+,Soy Milk Pudding,"Milk, Buffalo Milk","Egg, Silkie Egg",Soy Milk,,501G,Petting Happiness Up Lv. 2,"Mini Madeleine's, Energies entwined mail from Kagetsu",Pumpkin Festival
+,Herb Cookies,Wheat Flour,"Egg, Silkie Egg","Mint, Chamomile, Lavender",,415G,Petting Happiness Up Lv. 1,"Mini Madeleine's, A kind gesture mail from Diana",Pumpkin Festival
+,Toasted Mochi,Mochi,,,,390G,Petting Happiness Up Lv. 1,Mini Madeleine's,Pumpkin Festival
+,Chestnut Paste,Bottled Chestnuts,,,,390G,Petting Happiness Up Lv. 1,Tempura Temptations request from Nadine,Pumpkin Festival
+,Whole Cheesecake,Wheat Flour,"Egg+, Silkie Egg+",Buffalo Milk+,Cheese (any),"2,746G",Petting Rare Item % Lv. 4,Nadine's Bistro,Pumpkin Festival
+,Whole Chocolate Cake,Wheat Flour,"Egg+, Silkie Egg+","Milk+, Buffalo Milk+",Chocolate,"1,786G",Petting Rare Item % Lv. 4,Win the Bake-Off! Festival,Pumpkin Festival
+,Apple Pie,Wheat Flour,"Egg, Silkie Egg",Butter (any),Apple,"1,458G",Petting Rare Item % Lv. 3,Calm Amongst Chaos request from Clara,Pumpkin Festival
+,Whole Cake,Wheat Flour,"Egg+, Silkie Egg+","Milk+, Buffalo Milk+",Strawberry,"1,350G",Petting Rare Item % Lv. 3,Nadine's Bistro,Pumpkin Festival
+,Mont Blanc Cake,Wheat Flour,"Egg, Silkie Egg","Milk, Buffalo Milk",Bottled Chestnuts,"1,242G",Petting Rare Item % Lv. 3,Nadine's Bistro,Pumpkin Festival
+,Pumpkin Pudding,"Milk, Buffalo Milk","Egg, Silkie Egg",Pumpkin,,986G,Petting Rare Item % Lv. 2,Nadine's Bistro,Pumpkin Festival
+,Chocolate Cookies,Wheat Flour,"Egg, Silkie Egg",Chocolate,,832G,Petting Rare Item % Lv. 2,Clara's Diner,Pumpkin Festival
+,Honey Cake,Wheat Flour,"Egg, Silkie Egg",Honey (any),,755G,Petting Rare Item % Lv. 2,First Honey Day,"Honey Day, Pumpkin Festival"
+,Chocolate-Covered Banana,Banana,Chocolate,,,735G,Petting Rare Item % Lv. 2,"Café Madeleine (seasonal, dunno which season)",Pumpkin Festival
+,Pudding,"Milk, Buffalo Milk","Egg, Silkie Egg",,,328G,Petting Rare Item % Lv. 1,"Generous Forager title, Nadine's Bistro, Family seal of approval! mail from Felix",Pumpkin Festival
+,Cookies,Wheat Flour,"Egg, Silkie Egg",,,328G,Petting Rare Item % Lv. 1,"Cheer Leader title, Café Madeleine",Pumpkin Festival
+Other Recipes,,,,,,,,,
+,Soy Milk,Soybean,,,,85G,Max Stamina Up Lv. 1,Café Madeleine,
+,Honey Juice,Honey (any),,,,325G,Stamina Saver Lv. 1,"Generous Beekeeper title, Café Madeleine",
+,Simmered Seaweed,Seaweed,Soy Sauce,,,424G,Rod Durability Up Lv. 1,Clara's Diner,
+,Summer Blend Tea,Summer Blend Tea Tin,,,,"1,287G",Run Speed Up Lv. 3,Café Madeleine (Summer Only),Hearth Day
+,Summer Juice,Banana Juice,Peach Juice,Lemon Juice,,"1,020G",Run Speed Up Lv. 3,Mini Madeleine's (Summer Only),
+,Black Tea,Black Tea Tin,,,,401G,Watering Rare Crop % Lv. 1,"Café Madeleine, A trip with a goddess mail from Erik",Hearth Day
+,Golden Blend Tea,Golden Blend Tea Tin,,,,"13,031G",Chat Friendship Boost Lv. 4,Apple Pie Award request from Clara,Hearth Day
+,Watermelon Tea,Watermelon Tea Tin,,,,"2,148G",Chat Friendship Boost Lv. 4,Mini Madeleine's,Hearth Day
+,Melon Tea,Melon Tea Tin,,,,"1,901G",Chat Friendship Boost Lv. 4,Mini Madeleine's,Hearth Day
+,Jam Tea,Black Tea,"Apple Jam, Strawberry Jam, Grape Jam, Blueberry Jam",,,"1,850G",Chat Friendship Boost Lv. 4,Mini Madeleine's,Hearth Day
+,Pineapple Tea,Pineapple Tea Tin,,,,"1,320G",Chat Friendship Boost Lv. 3,Mini Madeleine's,Hearth Day
+,Spring Blend Tea,Spring Blend Tea Tin,,,,"1,287G",Chat Friendship Boost Lv. 3,Café Madeleine (Spring Only),Hearth Day
+,Royal Milk Tea,Black Tea,Milk+,,,"1,194G",Chat Friendship Boost Lv. 3,Nadine's Bistro,Hearth Day
+,Spring Juice,Strawberry Juice,Orange Juice,Cherry Juice,,935G,Chat Friendship Boost Lv. 3,Mini Madeleine's (Spring Only),
+,Strawberry Jam,Strawberry,Sugar,Lemon,,855G,Chat Friendship Boost Lv. 2,Mini Madeleine's,
+,Fruit Juice,Grape Juice,Apple,Orange,,826G,Chat Friendship Boost Lv. 2,Nadine's Bistro,
+,Cafe au Lait,Hot Coffee,"Milk, Buffalo Milk",,,780G,Chat Friendship Boost Lv. 2,Bookshelves in Freya's House,Hearth Day
+,Cappuccino,Hot Coffee,"Milk, Buffalo Milk",,,780G,Chat Friendship Boost Lv. 2,Nadine's Bistro,Hearth Day
+,Watermelon Juice,Watermelon,,,,756G,Chat Friendship Boost Lv. 2,Nadine's Bistro,
+,Milk Tea,Black Tea Tin,"Milk, Buffalo Milk",,,674G,Chat Friendship Boost Lv. 2,Nadine's Bistro,Hearth Day
+,Melon Juice,Melon,,,,658G,Chat Friendship Boost Lv. 2,Nadine's Bistro,
+,Strawberry Tea,Strawberry Tea Tin,,,,586G,Chat Friendship Boost Lv. 2,Café Madeleine,Hearth Day
+,Pineapple Juice,Pineapple,,,,429G,Chat Friendship Boost Lv. 1,Mini Madeleine's,
+,Sencha Tea,Sencha Tea Tin,,,,401G,Chat Friendship Boost Lv. 1,Clara's Diner,Hearth Day
+,Pu'er Tea,Pu'er Tea Tin,,,,401G,Chat Friendship Boost Lv. 1,Clara's Diner,Hearth Day
+,Oolong Tea,Oolong Tea Tin,,,,401G,Chat Friendship Boost Lv. 1,Chill-Out Juice! request from Derek,Hearth Day
+,Chestnut Juice,Bottled Chestnuts,,,,390G,Chat Friendship Boost Lv. 1,Nadine's Bistro,
+,Hot Coffee,Coffee Pack,,,,380G,Chat Friendship Boost Lv. 1,Café Madeleine,Hearth Day
+,Matcha Tea,Matcha Tea Tin,,,,364G,Chat Friendship Boost Lv. 1,Clara's Diner,Hearth Day
+,Mint Tea,Mint Tea Tin,,,,344G,Chat Friendship Boost Lv. 1,Bringing the Cafe Home request from Freya,Hearth Day
+,Chamomile Tea,Chamomile Tea Tin,,,,344G,Chat Friendship Boost Lv. 1,"Bug Chaser title, Café Madeleine",Hearth Day
+,Lavender Tea,Lavender Tea Tin,,,,344G,Chat Friendship Boost Lv. 1,Nadine's Bistro,Hearth Day
+,Walnut Juice,Bottled Walnuts,,,,260G,Chat Friendship Boost Lv. 1,Available at the start,
+,Warm Milk,"Milk, Buffalo Milk",,,,195G,Chat Friendship Boost Lv. 1,"Available at the start, Café Madeleine",Hearth Day
+,Green Tea,Green Tea Tin,,,,182G,Chat Friendship Boost Lv. 1,Clara's Diner,Hearth Day
+,Strawberry Juice,Strawberry,,,,156G,Chat Friendship Boost Lv. 1,Café Madeleine,
+,Tomato Juice,Tomato,,,,55G,Chat Friendship Boost Lv. 1,Café Madeleine,
+,Specialty Juice,Spring Juice,Summer Juice,Autumn Juice,Royal Honey,"9,511G",Pet Training Up Lv. 4,Contribute (something high quality?) to the Juice Festival,
+,Autumn Blend Tea,Autumn Blend Tea Tin,,,,"1,452G",Pet Training Up Lv. 3,Café Madeleine (Autumn Only),Hearth Day
+,Autumn Juice,Blueberry Juice,Grape Juice,Apple Juice,,"1,010G",Pet Training Up Lv. 3,Mini Madeleine's (Autumn Only),
+,Grape Jam,Red Grapes,Sugar,Lemon,,"1,007G",Pet Training Up Lv. 3,Mini Madeleine's,
+,Apple Jam,Apple,Sugar,Lemon,,932G,Pet Training Up Lv. 2,Mini Madeleine's,
+,Blueberry Jam,Blueberry,Sugar,Lemon,,863G,Pet Training Up Lv. 2,Mini Madeleine's,
+,Banana Tea,Banana Tea Tin,,,,832G,Pet Training Up Lv. 2,Mini Madeleine's,Hearth Day
+,Mango Tea,Mango Tea Tin,,,,832G,Pet Training Up Lv. 2,Nadine's Bistro,Hearth Day
+,Green Grape Tea,Green Grape Tea Tin,,,,777G,Pet Training Up Lv. 2,Nadine's Bistro,Hearth Day
+,Red Grape Tea,Red Grape Tea Tin,,,,755G,Pet Training Up Lv. 2,Nadine's Bistro,Hearth Day
+,Apple Tea,Apple Tea Tin,,,,740G,Pet Training Up Lv. 2,Nadine's Bistro,Hearth Day
+,Cherry Tea,Cherry Tea Tin,,,,647G,Pet Training Up Lv. 2,Mini Madeleine's,Hearth Day
+,Peach Tea,Peach Tea Tin,,,,647G,Pet Training Up Lv. 2,Nadine's Bistro,Hearth Day
+,Orange Tea,Orange Tea Tin,,,,642G,Pet Training Up Lv. 2,Mini Madeleine's,Hearth Day
+,Lemon Tea,Lemon Tea Tin,,,,632G,Pet Training Up Lv. 2,Mini Madeleine's,Hearth Day
+,Blueberry Tea,Blueberry Tea Tin,,,,601G,Pet Training Up Lv. 2,Mini Madeleine's,Hearth Day
+,Olive Tea,Olive Tea Tin,,,,586G,Pet Training Up Lv. 2,Mini Madeleine's,Hearth Day
+,Mango Juice,Mango,,,,260G,Pet Training Up Lv. 1,Nadine's Bistro,
+,Banana Juice,Banana,,,,260G,Pet Training Up Lv. 1,Nadine's Bistro,
+,Grape Juice,Red Grapes,,,,228G,Pet Training Up Lv. 1,"First Juice Festival, Nadine's Bistro",
+,Apple Juice,Apple,,,,221G,Pet Training Up Lv. 1,Mini Madeleine's,
+,Peach Juice,Peach,,,,182G,Pet Training Up Lv. 1,Nadine's Bistro,
+,Cherry Juice,Cherry,,,,182G,Pet Training Up Lv. 1,Mini Madeleine's,
+,Orange Juice,Orange,,,,180G,Pet Training Up Lv. 1,Mini Madeleine's,
+,Lemon Juice,Lemon,,,,176G,Pet Training Up Lv. 1,Nadine's Bistro,
+,Blueberry Juice,Blueberry,,,,163G,Pet Training Up Lv. 1,Mini Madeleine's,
+,Happy Fruit Platter,Heart Watermelon,"Cherry, Blueberry, Green Grapes, Strawberry, Mango, Pineapple, Banana, Peach, Orange, Melon","Apple, Red Grapes, Green Grapes, Strawberry, Mango, Pineapple, Banana, Peach, Orange, Melon",,"3,274G",Happy Energy Gain Lv. 4,Sprite's Bazaar Stand,
+,Happy Chef Salad,"Egg, Silkie Egg",Corn,Onion,"Cucumber, Onion, Asparagus, Tomato, Red Bell Pepper, Carrot, Turnip, Sweet Potato, Pumpkin, Eggplant","1,233G",Happy Energy Gain Lv. 3,Sprite's Bazaar Stand,
+,Happy Mushroom Fry,Mushroom (any),Salt,,,662G,Happy Energy Gain Lv. 2,Sprite's Bazaar Stand,
+,Happy Forest Mix,Walnut,,,,130G,Happy Energy Gain Lv. 1,Sprite's Bazaar Stand,
