@@ -24,17 +24,17 @@ namespace gbchef.Models
         public static Recipe ProcessRow(params object[] items)
         {
             Recipe recipe = new() {
-                //Id = (int)items[0],
-                Type =          (string)items[0],
-                Name =          (string)items[1],
-                Ingredient1 =   (string)items[2],
-                Ingredient2 =   (string)items[3],
-                Ingredient3 =   (string)items[4],
-                Ingredient4 =   (string)items[5],
-                BaseValue =      Convert.ToInt32(items[6]),
-                Effect =        (string)items[7],
-                Unlock =        (string)items[8],
-                Festival =      (string)items[9]
+                Id = Convert.ToInt32(items[0]),
+                Type =          (string)items[1],
+                Name =          (string)items[2],
+                Ingredient1 =   (string)items[3],
+                Ingredient2 =   (string)items[4],
+                Ingredient3 =   (string)items[5],
+                Ingredient4 =   (string)items[6],
+                BaseValue = Convert.ToInt32(items[7]),
+                Effect =        (string)items[8],
+                Unlock =        (string)items[9],
+                Festival =      (string)items[10]
             };
 
             return recipe;
