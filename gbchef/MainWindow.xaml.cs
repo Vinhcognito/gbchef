@@ -118,6 +118,8 @@ namespace gbchef
                 // Recipe ID, Slot
                 ingredient.RecipeIdSlotMap = await dbService.ExecuteSelectRecipeSlotMapByIngredientId(ingredient.Id);
             }
+            // index 0 is blank
+            ingredients.RemoveAt(0);
             return ingredients;
         }
 
