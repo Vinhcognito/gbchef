@@ -94,11 +94,11 @@ public class DatabaseService : IDisposable
             int in4 = Convert.ToInt32(row[5]);
             
             var slots = new List<int> { in1, in2, in3, in4 };
-            for (int i = 1; i <= 4; i++)
+            for (var i = 0; i <= 3; i++)
             {
-                if (slots.Contains(i))
+                if (slots[i] == 1)
                 {
-                    results.Add(new Tuple<int, int>(recipeId, i));
+                    results.Add(new Tuple<int, int>(recipeId, i+1));
                 }
             }
         }
