@@ -33,6 +33,16 @@ namespace gbchef.Models
             get => Is1Filled && Is2Filled && Is3Filled && Is4Filled;
         }
 
+        public bool IsPartiallySatisfied
+        {
+            get {
+                return Slot1.Any(item => item.IsSelected)
+                    || Slot2.Any(item => item.IsSelected)
+                    || Slot3.Any(item => item.IsSelected)
+                    || Slot4.Any(item => item.IsSelected);
+            }
+        }
+
         public bool Is1Filled
         {
             get => is1Filled;

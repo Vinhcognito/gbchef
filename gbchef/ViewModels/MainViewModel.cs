@@ -14,6 +14,7 @@ namespace gbchef.ViewModels
 {
     public class MainViewModel
     {
+        public bool? ShowIncompleRecipes = false;
         public ObservableCollection<SelectableIngredient> Vegetables { get; set; } = new()
         {
             new SelectableIngredient("Radish",false),
@@ -31,41 +32,15 @@ namespace gbchef.ViewModels
 
         };
 
-        public ObservableCollection<SelectableIngredient> Fruits { get; set; } = new()
-        {
-            new SelectableIngredient("Apple", false),
-            new SelectableIngredient("Orange", false),
-            new SelectableIngredient("Peach", false),
-        };
+        public ObservableCollection<SelectableIngredient> Fruits { get; set; }
 
-        public ObservableCollection<SelectableIngredient> Products { get; set; } = new()
-        {
-            new SelectableIngredient("Cheese", false),
-            new SelectableIngredient("Milk", false),
-            new SelectableIngredient("Butter", false),
-            new SelectableIngredient("Mayonnaise", false),
-        };
+        public ObservableCollection<SelectableIngredient> Products { get; set; }
 
-        public ObservableCollection<SelectableIngredient> Forageables { get; set; } = new()
-        {
-            new SelectableIngredient("Shiitake Mushroom", false),
-            new SelectableIngredient("Honey", false),
-            new SelectableIngredient("Enoki", false),
-        };
+        public ObservableCollection<SelectableIngredient> Forageables { get; set; }
 
-        public ObservableCollection<SelectableIngredient> Fish { get; set; } = new()
-        {
-            new SelectableIngredient("Salmon", false),
-            new SelectableIngredient("Yellow Perch", false),
-            new SelectableIngredient("Snakehead", false),
-        };
+        public ObservableCollection<SelectableIngredient> Fish { get; set; }
 
-        public ObservableCollection<SelectableIngredient> Others { get; set; } = new()
-        {
-            new SelectableIngredient("Rice Flour", false),
-            new SelectableIngredient("Salt", false),
-            new SelectableIngredient("Oil", false),
-        };
+        public ObservableCollection<SelectableIngredient> Others { get; set; }
 
         // This is recipes that are also an ingredient
         public ObservableCollection<SelectableIngredient> Recipes { get; set; }
@@ -84,11 +59,15 @@ namespace gbchef.ViewModels
             ApplyFilter();
         }
 
-        private void ApplyFilter()
+        public void ApplyFilter()
         {
             ViewSource.View.Filter = item =>
             {
                 var recipe = item as Recipe;
+                if (ShowIncompleRecipes == true)
+                {
+                    return recipe.IsPartiallySatisfied;
+                }
                 return recipe.IsSatisfied;
             };
             ViewSource.View.Refresh();

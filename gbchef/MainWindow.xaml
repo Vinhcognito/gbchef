@@ -19,7 +19,10 @@
             <uc:SelectableListBox x:Name="Recipes" Items="{Binding Recipes}" />
             <uc:SelectableListBox x:Name="Others" Items="{Binding Others}" />
         </StackPanel>
-        
+
+        <CheckBox Content="Show Incomplete Recipes"
+             x:Name="ShowPartial" 
+             Click="ShowPartial_Click" />
         <DataGrid 
             x:Name="resultsDataGrid" 
             AutoGenerateColumns="True" 

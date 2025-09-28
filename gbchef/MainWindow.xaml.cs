@@ -107,6 +107,10 @@ namespace gbchef
             return ingredients;
         }
 
-
+        private void ShowPartial_Click(object sender, RoutedEventArgs e)
+        {
+            _mainViewModel.ShowIncompleRecipes = ShowPartial.IsChecked;
+            _mainViewModel.ApplyFilter();
+        }
     }
 }
