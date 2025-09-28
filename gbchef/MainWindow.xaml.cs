@@ -41,8 +41,24 @@ namespace gbchef
         private async void Window_Initialized(object sender, EventArgs e)
         {
             using (var dbService = new DatabaseService()) {
+
+                var ssService = new SpriteSheetService("sprite_sheet.png", "sprite_sheet.json");
+
                 var results = await dbService.ExecuteSelectAllAsync("Recipes");
                 var recipes = results.Select(row => Recipe.ProcessRow(row)).ToList();
+
+                foreach (var recipe in recipes)
+                {
+                    var possibleImageName = $"{recipe.Name.ToLower()}.png";
+                    try
+                    {
+                        recipe.Image = ssService.GetSprite(possibleImageName);
+                    }
+                    catch (Exception ex)
+                    {
+                        Debug.WriteLine($"Missing recipe image for: {recipe.Name}. Tried: {possibleImageName}");
+                    }
+                }
 
                 var ingredients = await GetAllIngredients(dbService);
                 AddSelectionChangedHandlerInRecipes(recipes, ingredients);
@@ -61,6 +77,8 @@ namespace gbchef
             DataContext = _mainViewModel;
 
         }
+
+
 
         private void AddSelectionChangedHandlerInRecipes(List<Recipe> recipes, List<SelectableIngredient> ingredients)
         {

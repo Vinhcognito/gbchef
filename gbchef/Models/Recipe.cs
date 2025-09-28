@@ -6,12 +6,14 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media.Imaging;
 
 namespace gbchef.Models
 {
     public class Recipe : INotifyPropertyChanged
     {
         public int Id { get; set; }
+        public CroppedBitmap Image { get; set; }
         public string Type { get; set; }
         public string Name { get; set; }
         public string Ingredient1 { get; set; }

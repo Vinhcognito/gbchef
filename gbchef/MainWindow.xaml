@@ -20,17 +20,91 @@
             <uc:SelectableListBox x:Name="Others" Items="{Binding Others}" />
         </StackPanel>
 
-        <CheckBox Content="Show Incomplete Recipes"
+        <CheckBox Content="Show Partially Satisfied Recipes"
              x:Name="ShowPartial" 
              Click="ShowPartial_Click" />
         <DataGrid 
             x:Name="resultsDataGrid" 
-            AutoGenerateColumns="True" 
+            AutoGenerateColumns="False" 
             Height="431" ItemsSource="{Binding ViewSource.View}"
             CanUserAddRows="False"
-            CanUserDeleteRows="False"/>
-        
-        
+            CanUserDeleteRows="False" 
+            IsReadOnly="True" HorizontalGridLinesBrush="#FFE6E6E6" VerticalGridLinesBrush="#FFE6E6E6">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image MinWidth="54" 
+                                   MinHeight="54"
+                                   MaxHeight="100"
+                                   MaxWidth="100"
+                                   Source="{Binding Image}"
+                                   Stretch="Uniform"
+                                   VerticalAlignment="Stretch"
+                                   HorizontalAlignment="Stretch"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+                
+                <DataGridTextColumn Header="Type" Binding="{Binding Type}" />
+                <DataGridTextColumn Header="Effect" Binding="{Binding Effect}" />
+                <DataGridTextColumn Header="Price" Binding="{Binding BaseValue}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="HorizontalAlignment" Value="Right"/>
+                            <Setter Property="TextAlignment" Value="Right"/>
+                            <Setter Property="Margin" Value="0,0,5,0"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn Header="Ingredient 1" Width="*" MaxWidth="200" Binding="{Binding Ingredient1}">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="TextWrapping" Value="Wrap"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Ingredient 2" Width="*" MaxWidth="200" Binding="{Binding Ingredient2}">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="TextWrapping" Value="Wrap"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Ingredient 3" Width="*" MaxWidth="200" Binding="{Binding Ingredient3}">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="TextWrapping" Value="Wrap"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Ingredient 4" Width="*" MaxWidth="200" Binding="{Binding Ingredient4}">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="TextWrapping" Value="Wrap"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                
+                <DataGridTextColumn Header="Festival" Binding="{Binding Festival}" />
+                <DataGridTextColumn Header="How to Unlock" Width="*" MaxWidth="220" Binding="{Binding Unlock}">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="TextWrapping" Value="Wrap"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+
         <Label Content="{Binding ElementName=resultsDataGrid, Path=Items.Count}" Width="45" HorizontalAlignment="Left" RenderTransformOrigin="1.176,0.61"/>
         <Label Content="Recipes Found" Width="89" HorizontalAlignment="Left"/>
 
