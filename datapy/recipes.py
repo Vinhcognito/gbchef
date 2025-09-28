@@ -51,11 +51,11 @@ def clean_ingredients_data():
         with sqlite3.connect('app.db') as conn:
             # create a cursor
             cursor = conn.cursor()
-            cursor.execute("CREATE TABLE items (id INTEGER PRIMARY KEY, name type UNIQUE)")
+            cursor.execute("CREATE TABLE items (id INTEGER PRIMARY KEY, name type UNIQUE NOT NULL)")
             conn.commit()
 
             # execute statements
-            cursor.execute("SELECT DISTINCT trim(name) as name FROM (" \
+            cursor.execute("SELECT DISTINCT name FROM (" \
                 "SELECT DISTINCT ingredient1 as name FROM recipes UNION ALL " \
                 "SELECT DISTINCT ingredient2 as name FROM recipes WHERE ingredient2 IS NOT NULL UNION ALL " \
                 "SELECT DISTINCT ingredient3 as name FROM recipes WHERE ingredient3 IS NOT NULL UNION ALL " \
@@ -70,8 +70,10 @@ def clean_ingredients_data():
             all_items = set()
             for row in rows:
                 # print(row)
-                for item in row[0].split(', '):
+                for item in row[0].strip().split(', '):
                     item = str(item).strip()
+                    if (len(item) == 0):
+                        continue
                     any_tag = ' (any)'
                     if str(item).endswith(any_tag):
                         item_name = str(item).replace(any_tag, '')
@@ -201,11 +203,33 @@ def _get_item_id_by_name(name, cursor):
 
 def create_filter_categories():
     # Vegetables, Fruits, Products, Forageable, Fish, Others
+    try:
+        with sqlite3.connect('app.db') as conn:
+            # create a cursor
+            cursor = conn.cursor()
+
+            # execute statements
+            cursor.execute("SELECT * FROM items")
+            rows = cursor.fetchall()
+
+            with open('category.csv', 'w', newline='') as file:
+                writer = csv.writer(file)
+                writer.writerow(["id", "name", "category"])
+                for row in rows:
+                    id, name, category = row
+                    writer.writerow([id, name, category])
+
+    except sqlite3.OperationalError as e:
+        pprint.pprint(e)
     pass
 
 
 if __name__ == "__main__":
-    create_db_from_datacsv()
+    # create_db_from_datacsv()
     # print_db()
-    clean_ingredients_data()
-    map_recipes_to_items()
+    # clean_ingredients_data()
+    # map_recipes_to_items()
+    # create_filter_categories()
+
+    # todo: create script to apply categries to items table if needed
+    pass

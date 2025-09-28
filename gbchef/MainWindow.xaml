@@ -7,30 +7,30 @@
         xmlns:uc="clr-namespace:gbchef.Controls"
         mc:Ignorable="d"
         Title="MainWindow" Height="720" Width="1280" Initialized="Window_Initialized">
-    
-    <Window.Resources>
-        <CollectionViewSource x:Key="RecipesViewSource"
-                              Source="{Binding ResultsVM.Recipes}"
-                              Filter="ResultsVM_RecipeFilter"/>
-    </Window.Resources>
-        
+
     <StackPanel Orientation="Vertical">
         
         <StackPanel Orientation="Horizontal" Height="195">
-            <uc:SelectableListBox x:Name="itemList1" Items="{Binding ItemsVM.Vegetables}" />
-            <uc:SelectableListBox x:Name="itemList2" Items="{Binding ItemsVM.Fruits}" />
-            <uc:SelectableListBox x:Name="itemList3" Items="{Binding ItemsVM.Products}" />
-            <uc:SelectableListBox x:Name="itemList4" Items="{Binding ItemsVM.Foragables}" />
-            <uc:SelectableListBox x:Name="itemList5" Items="{Binding ItemsVM.Fish}" />
-            <uc:SelectableListBox x:Name="itemList6" Items="{Binding ItemsVM.Others}" />
+            <uc:SelectableListBox x:Name="Vegetables" Items="{Binding Vegetables}" />
+            <uc:SelectableListBox x:Name="Fruits" Items="{Binding Fruits}" />
+            <uc:SelectableListBox x:Name="Products" Items="{Binding Products}" />
+            <uc:SelectableListBox x:Name="Forageables" Items="{Binding Forageables}" />
+            <uc:SelectableListBox x:Name="Fish" Items="{Binding Fish}" />
+            <uc:SelectableListBox x:Name="Recipes" Items="{Binding Recipes}" />
+            <uc:SelectableListBox x:Name="Others" Items="{Binding Others}" />
         </StackPanel>
         
         <DataGrid 
             x:Name="resultsDataGrid" 
-            ItemsSource="{Binding Source={StaticResource RecipesViewSource}}"
             AutoGenerateColumns="True" 
-            Height="431"/>
+            Height="431" ItemsSource="{Binding ViewSource.View}"
+            CanUserAddRows="False"
+            CanUserDeleteRows="False"/>
         
+        
+        <Label Content="{Binding ElementName=resultsDataGrid, Path=Items.Count}" Width="45" HorizontalAlignment="Left" RenderTransformOrigin="1.176,0.61"/>
+        <Label Content="Recipes Found" Width="89" HorizontalAlignment="Left"/>
+
     </StackPanel>
     
 </Window>
