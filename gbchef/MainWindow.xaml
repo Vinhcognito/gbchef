@@ -11,7 +11,7 @@
     <StackPanel Orientation="Vertical">
 
         <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Height="195">
-            <StackPanel Orientation="Horizontal" Height="195">
+            <StackPanel Orientation="Horizontal">
                 <uc:SelectableListBox x:Name="Vegetables" Items="{Binding Vegetables}" />
                 <uc:SelectableListBox x:Name="Fruits" Items="{Binding Fruits}" />
                 <uc:SelectableListBox x:Name="Products" Items="{Binding Products}" />
