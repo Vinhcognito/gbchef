@@ -9,19 +9,22 @@
         Title="MainWindow" Height="720" Width="1280" Initialized="Window_Initialized">
 
     <StackPanel Orientation="Vertical">
-        
-        <StackPanel Orientation="Horizontal" Height="195">
-            <uc:SelectableListBox x:Name="Vegetables" Items="{Binding Vegetables}" />
-            <uc:SelectableListBox x:Name="Fruits" Items="{Binding Fruits}" />
-            <uc:SelectableListBox x:Name="Products" Items="{Binding Products}" />
-            <uc:SelectableListBox x:Name="Forageables" Items="{Binding Forageables}" />
-            <uc:SelectableListBox x:Name="Fish" Items="{Binding Fish}" />
-            <uc:SelectableListBox x:Name="Recipes" Items="{Binding Recipes}" />
-            <uc:SelectableListBox x:Name="Others" Items="{Binding Others}" />
-        </StackPanel>
+
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Height="195">
+            <StackPanel Orientation="Horizontal" Height="195">
+                <uc:SelectableListBox x:Name="Vegetables" Items="{Binding Vegetables}" />
+                <uc:SelectableListBox x:Name="Fruits" Items="{Binding Fruits}" />
+                <uc:SelectableListBox x:Name="Products" Items="{Binding Products}" />
+                <uc:SelectableListBox x:Name="Forageables" Items="{Binding Forageables}" />
+                <uc:SelectableListBox x:Name="Fish" Items="{Binding Fish}" />
+                <uc:SelectableListBox x:Name="Recipes" Items="{Binding Recipes}" />
+                <uc:SelectableListBox x:Name="Others" Items="{Binding Others}" />
+            </StackPanel>
+        </ScrollViewer>
 
         <CheckBox Content="Show Partially Satisfied Recipes"
              x:Name="ShowPartial" 
+             Margin="10 0 0 0"
              Click="ShowPartial_Click" />
         <DataGrid 
             x:Name="resultsDataGrid" 
