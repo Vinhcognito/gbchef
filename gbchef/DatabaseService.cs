@@ -12,7 +12,7 @@ public class DatabaseService : IDisposable
 
     public DatabaseService()
     {
-        _dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "app.db");
+        _dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "app.db");
         InitializeDatabase();
     }
 

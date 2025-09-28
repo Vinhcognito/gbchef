@@ -16,8 +16,15 @@
   </PropertyGroup>
 
     <ItemGroup>
+      <None Remove="Resources\app.db" />
       <None Remove="Resources\sprite_sheet.json" />
       <None Remove="Resources\sprite_sheet.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Include="Resources\app.db">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
     </ItemGroup>
 
     <ItemGroup>
