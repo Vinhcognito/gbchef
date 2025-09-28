@@ -1,0 +1,1850 @@
+{
+  "sprites": [
+    {
+      "fileName": "apple jam.png",
+      "width": 167,
+      "height": 202,
+      "x": 43,
+      "y": 14
+    },
+    {
+      "fileName": "apple juice.png",
+      "width": 154,
+      "height": 198,
+      "x": 304,
+      "y": 16
+    },
+    {
+      "fileName": "apple pie.png",
+      "width": 234,
+      "height": 198,
+      "x": 518,
+      "y": 16
+    },
+    {
+      "fileName": "apple tea.png",
+      "width": 232,
+      "height": 200,
+      "x": 773,
+      "y": 15
+    },
+    {
+      "fileName": "asparagus soup.png",
+      "width": 236,
+      "height": 183,
+      "x": 1025,
+      "y": 24
+    },
+    {
+      "fileName": "autumn blend tea.png",
+      "width": 232,
+      "height": 200,
+      "x": 1281,
+      "y": 15
+    },
+    {
+      "fileName": "autumn juice.png",
+      "width": 116,
+      "height": 200,
+      "x": 1593,
+      "y": 15
+    },
+    {
+      "fileName": "babaocai.png",
+      "width": 232,
+      "height": 180,
+      "x": 1789,
+      "y": 25
+    },
+    {
+      "fileName": "baguettes.png",
+      "width": 232,
+      "height": 180,
+      "x": 2043,
+      "y": 25
+    },
+    {
+      "fileName": "baked apple.png",
+      "width": 234,
+      "height": 196,
+      "x": 2296,
+      "y": 17
+    },
+    {
+      "fileName": "baked sweet potato.png",
+      "width": 232,
+      "height": 180,
+      "x": 11,
+      "y": 256
+    },
+    {
+      "fileName": "banana juice.png",
+      "width": 124,
+      "height": 198,
+      "x": 319,
+      "y": 247
+    },
+    {
+      "fileName": "banana tea.png",
+      "width": 232,
+      "height": 200,
+      "x": 519,
+      "y": 246
+    },
+    {
+      "fileName": "baumkuchen.png",
+      "width": 234,
+      "height": 196,
+      "x": 772,
+      "y": 248
+    },
+    {
+      "fileName": "black tea.png",
+      "width": 232,
+      "height": 200,
+      "x": 1027,
+      "y": 246
+    },
+    {
+      "fileName": "blueberry jam.png",
+      "width": 167,
+      "height": 202,
+      "x": 1313,
+      "y": 245
+    },
+    {
+      "fileName": "blueberry juice.png",
+      "width": 124,
+      "height": 199,
+      "x": 1589,
+      "y": 247
+    },
+    {
+      "fileName": "blueberry pie.png",
+      "width": 234,
+      "height": 198,
+      "x": 1788,
+      "y": 247
+    },
+    {
+      "fileName": "blueberry tea.png",
+      "width": 232,
+      "height": 200,
+      "x": 2043,
+      "y": 246
+    },
+    {
+      "fileName": "boiled egg.png",
+      "width": 232,
+      "height": 180,
+      "x": 2297,
+      "y": 256
+    },
+    {
+      "fileName": "boiled tofu.png",
+      "width": 235,
+      "height": 178,
+      "x": 9,
+      "y": 488
+    },
+    {
+      "fileName": "bok choy soy cream stew.png",
+      "width": 236,
+      "height": 183,
+      "x": 263,
+      "y": 486
+    },
+    {
+      "fileName": "bouillabaisse.png",
+      "width": 236,
+      "height": 183,
+      "x": 517,
+      "y": 486
+    },
+    {
+      "fileName": "bread.png",
+      "width": 232,
+      "height": 180,
+      "x": 773,
+      "y": 487
+    },
+    {
+      "fileName": "broccoli & garlic saute.png",
+      "width": 232,
+      "height": 180,
+      "x": 1027,
+      "y": 487
+    },
+    {
+      "fileName": "burgundy fondue.png",
+      "width": 254,
+      "height": 131,
+      "x": 1270,
+      "y": 512
+    },
+    {
+      "fileName": "buttered potato.png",
+      "width": 232,
+      "height": 180,
+      "x": 1535,
+      "y": 487
+    },
+    {
+      "fileName": "buttered roll.png",
+      "width": 232,
+      "height": 180,
+      "x": 1789,
+      "y": 487
+    },
+    {
+      "fileName": "cafe au lait.png",
+      "width": 212,
+      "height": 187,
+      "x": 2053,
+      "y": 484
+    },
+    {
+      "fileName": "cake.png",
+      "width": 234,
+      "height": 190,
+      "x": 2296,
+      "y": 482
+    },
+    {
+      "fileName": "cappuccino.png",
+      "width": 212,
+      "height": 187,
+      "x": 21,
+      "y": 715
+    },
+    {
+      "fileName": "caprese salad.png",
+      "width": 232,
+      "height": 180,
+      "x": 265,
+      "y": 718
+    },
+    {
+      "fileName": "carpaccio.png",
+      "width": 232,
+      "height": 180,
+      "x": 519,
+      "y": 718
+    },
+    {
+      "fileName": "castella.png",
+      "width": 234,
+      "height": 187,
+      "x": 772,
+      "y": 715
+    },
+    {
+      "fileName": "chamomile tea.png",
+      "width": 232,
+      "height": 200,
+      "x": 1027,
+      "y": 708
+    },
+    {
+      "fileName": "cheese bun.png",
+      "width": 195,
+      "height": 207,
+      "x": 1299,
+      "y": 705
+    },
+    {
+      "fileName": "cheese croquettes.png",
+      "width": 232,
+      "height": 180,
+      "x": 1535,
+      "y": 718
+    },
+    {
+      "fileName": "cheese fondue.png",
+      "width": 254,
+      "height": 131,
+      "x": 1778,
+      "y": 743
+    },
+    {
+      "fileName": "cheesecake.png",
+      "width": 234,
+      "height": 181,
+      "x": 2042,
+      "y": 718
+    },
+    {
+      "fileName": "cherry juice.png",
+      "width": 124,
+      "height": 198,
+      "x": 2351,
+      "y": 709
+    },
+    {
+      "fileName": "cherry pie.png",
+      "width": 234,
+      "height": 198,
+      "x": 10,
+      "y": 940
+    },
+    {
+      "fileName": "cherry tea.png",
+      "width": 232,
+      "height": 200,
+      "x": 265,
+      "y": 939
+    },
+    {
+      "fileName": "chestnut juice.png",
+      "width": 124,
+      "height": 198,
+      "x": 573,
+      "y": 940
+    },
+    {
+      "fileName": "chestnut paste.png",
+      "width": 232,
+      "height": 180,
+      "x": 773,
+      "y": 949
+    },
+    {
+      "fileName": "chestnut rice.png",
+      "width": 200,
+      "height": 194,
+      "x": 1043,
+      "y": 942
+    },
+    {
+      "fileName": "chili con carne.png",
+      "width": 235,
+      "height": 178,
+      "x": 1279,
+      "y": 950
+    },
+    {
+      "fileName": "chilled tofu.png",
+      "width": 235,
+      "height": 178,
+      "x": 1533,
+      "y": 950
+    },
+    {
+      "fileName": "chirashi sushi.png",
+      "width": 232,
+      "height": 180,
+      "x": 1789,
+      "y": 949
+    },
+    {
+      "fileName": "chocolate cake.png",
+      "width": 234,
+      "height": 193,
+      "x": 2042,
+      "y": 943
+    },
+    {
+      "fileName": "chocolate cookies.png",
+      "width": 234,
+      "height": 181,
+      "x": 2296,
+      "y": 949
+    },
+    {
+      "fileName": "chocolate fondue.png",
+      "width": 234,
+      "height": 120,
+      "x": 10,
+      "y": 1210
+    },
+    {
+      "fileName": "chocolate-covered banana.png",
+      "width": 234,
+      "height": 181,
+      "x": 264,
+      "y": 1180
+    },
+    {
+      "fileName": "churros.png",
+      "width": 234,
+      "height": 181,
+      "x": 518,
+      "y": 1180
+    },
+    {
+      "fileName": "cooked rice.png",
+      "width": 201,
+      "height": 194,
+      "x": 788,
+      "y": 1173
+    },
+    {
+      "fileName": "cookies.png",
+      "width": 234,
+      "height": 181,
+      "x": 1026,
+      "y": 1180
+    },
+    {
+      "fileName": "corn flakes cereal.png",
+      "width": 235,
+      "height": 192,
+      "x": 1279,
+      "y": 1174
+    },
+    {
+      "fileName": "corn soup.png",
+      "width": 236,
+      "height": 183,
+      "x": 1533,
+      "y": 1179
+    },
+    {
+      "fileName": "cream croquettes.png",
+      "width": 232,
+      "height": 180,
+      "x": 1789,
+      "y": 1180
+    },
+    {
+      "fileName": "croquettes.png",
+      "width": 232,
+      "height": 180,
+      "x": 2043,
+      "y": 1180
+    },
+    {
+      "fileName": "curry bread.png",
+      "width": 232,
+      "height": 180,
+      "x": 2297,
+      "y": 1180
+    },
+    {
+      "fileName": "curry bun.png",
+      "width": 195,
+      "height": 207,
+      "x": 29,
+      "y": 1398
+    },
+    {
+      "fileName": "curry rice.png",
+      "width": 232,
+      "height": 180,
+      "x": 265,
+      "y": 1411
+    },
+    {
+      "fileName": "dango.png",
+      "width": 232,
+      "height": 189,
+      "x": 519,
+      "y": 1407
+    },
+    {
+      "fileName": "donburi rice bowl.png",
+      "width": 202,
+      "height": 193,
+      "x": 788,
+      "y": 1405
+    },
+    {
+      "fileName": "donuts.png",
+      "width": 234,
+      "height": 181,
+      "x": 1026,
+      "y": 1411
+    },
+    {
+      "fileName": "dry curry.png",
+      "width": 232,
+      "height": 180,
+      "x": 1281,
+      "y": 1411
+    },
+    {
+      "fileName": "egg drop soup.png",
+      "width": 234,
+      "height": 201,
+      "x": 1534,
+      "y": 1401
+    },
+    {
+      "fileName": "egg over rice.png",
+      "width": 201,
+      "height": 194,
+      "x": 1804,
+      "y": 1404
+    },
+    {
+      "fileName": "egg tart.png",
+      "width": 234,
+      "height": 181,
+      "x": 2042,
+      "y": 1411
+    },
+    {
+      "fileName": "engadiner nusstorte.png",
+      "width": 234,
+      "height": 184,
+      "x": 2296,
+      "y": 1409
+    },
+    {
+      "fileName": "farmer's breakfast.png",
+      "width": 232,
+      "height": 180,
+      "x": 11,
+      "y": 1642
+    },
+    {
+      "fileName": "fish & chips.png",
+      "width": 232,
+      "height": 180,
+      "x": 265,
+      "y": 1642
+    },
+    {
+      "fileName": "fish cake.png",
+      "width": 232,
+      "height": 180,
+      "x": 519,
+      "y": 1642
+    },
+    {
+      "fileName": "focaccia bread.png",
+      "width": 232,
+      "height": 180,
+      "x": 773,
+      "y": 1642
+    },
+    {
+      "fileName": "freeze-dried tofu.png",
+      "width": 235,
+      "height": 178,
+      "x": 1025,
+      "y": 1643
+    },
+    {
+      "fileName": "french fries.png",
+      "width": 232,
+      "height": 180,
+      "x": 1281,
+      "y": 1642
+    },
+    {
+      "fileName": "french toast.png",
+      "width": 232,
+      "height": 180,
+      "x": 1535,
+      "y": 1642
+    },
+    {
+      "fileName": "fried egg.png",
+      "width": 232,
+      "height": 180,
+      "x": 1789,
+      "y": 1642
+    },
+    {
+      "fileName": "fried eggplant.png",
+      "width": 232,
+      "height": 180,
+      "x": 2043,
+      "y": 1642
+    },
+    {
+      "fileName": "fried matsutake mushrooms.png",
+      "width": 210,
+      "height": 161,
+      "x": 2308,
+      "y": 1652
+    },
+    {
+      "fileName": "fried mushrooms.png",
+      "width": 232,
+      "height": 180,
+      "x": 11,
+      "y": 1873
+    },
+    {
+      "fileName": "fried onigiri.png",
+      "width": 234,
+      "height": 200,
+      "x": 264,
+      "y": 1863
+    },
+    {
+      "fileName": "fried rice noodles.png",
+      "width": 232,
+      "height": 180,
+      "x": 519,
+      "y": 1873
+    },
+    {
+      "fileName": "fried rice.png",
+      "width": 232,
+      "height": 180,
+      "x": 773,
+      "y": 1873
+    },
+    {
+      "fileName": "fried tofu.png",
+      "width": 232,
+      "height": 180,
+      "x": 1027,
+      "y": 1873
+    },
+    {
+      "fileName": "fried udon.png",
+      "width": 232,
+      "height": 180,
+      "x": 1281,
+      "y": 1873
+    },
+    {
+      "fileName": "fruit dumplings.png",
+      "width": 175,
+      "height": 190,
+      "x": 1563,
+      "y": 1868
+    },
+    {
+      "fileName": "fruit juice.png",
+      "width": 124,
+      "height": 198,
+      "x": 1843,
+      "y": 1864
+    },
+    {
+      "fileName": "fruit sandwich.png",
+      "width": 232,
+      "height": 208,
+      "x": 2043,
+      "y": 1859
+    },
+    {
+      "fileName": "galette.png",
+      "width": 234,
+      "height": 181,
+      "x": 2296,
+      "y": 1873
+    },
+    {
+      "fileName": "gazpacho soup.png",
+      "width": 236,
+      "height": 183,
+      "x": 9,
+      "y": 2103
+    },
+    {
+      "fileName": "golden blend tea.png",
+      "width": 235,
+      "height": 213,
+      "x": 263,
+      "y": 2088
+    },
+    {
+      "fileName": "grape jam.png",
+      "width": 167,
+      "height": 202,
+      "x": 551,
+      "y": 2093
+    },
+    {
+      "fileName": "grape juice.png",
+      "width": 124,
+      "height": 198,
+      "x": 827,
+      "y": 2095
+    },
+    {
+      "fileName": "gratin.png",
+      "width": 235,
+      "height": 150,
+      "x": 1025,
+      "y": 2119
+    },
+    {
+      "fileName": "green grape tea.png",
+      "width": 232,
+      "height": 200,
+      "x": 1281,
+      "y": 2094
+    },
+    {
+      "fileName": "green tea.png",
+      "width": 166,
+      "height": 158,
+      "x": 1568,
+      "y": 2115
+    },
+    {
+      "fileName": "grilled corn.png",
+      "width": 232,
+      "height": 180,
+      "x": 1789,
+      "y": 2104
+    },
+    {
+      "fileName": "grilled fish.png",
+      "width": 228,
+      "height": 104,
+      "x": 2045,
+      "y": 2142
+    },
+    {
+      "fileName": "gyoza.png",
+      "width": 232,
+      "height": 182,
+      "x": 2297,
+      "y": 2103
+    },
+    {
+      "fileName": "happy chef salad.png",
+      "width": 211,
+      "height": 175,
+      "x": 21,
+      "y": 2338
+    },
+    {
+      "fileName": "happy forest mix.png",
+      "width": 167,
+      "height": 138,
+      "x": 297,
+      "y": 2356
+    },
+    {
+      "fileName": "happy fruit platter.png",
+      "width": 234,
+      "height": 194,
+      "x": 518,
+      "y": 2328
+    },
+    {
+      "fileName": "happy mushroom fry.png",
+      "width": 189,
+      "height": 158,
+      "x": 794,
+      "y": 2346
+    },
+    {
+      "fileName": "hash browns.png",
+      "width": 232,
+      "height": 180,
+      "x": 1027,
+      "y": 2335
+    },
+    {
+      "fileName": "herb bread.png",
+      "width": 232,
+      "height": 180,
+      "x": 1281,
+      "y": 2335
+    },
+    {
+      "fileName": "herb cookies.png",
+      "width": 234,
+      "height": 181,
+      "x": 1534,
+      "y": 2335
+    },
+    {
+      "fileName": "herb pasta.png",
+      "width": 232,
+      "height": 180,
+      "x": 1789,
+      "y": 2335
+    },
+    {
+      "fileName": "herb rice porridge.png",
+      "width": 201,
+      "height": 193,
+      "x": 2058,
+      "y": 2329
+    },
+    {
+      "fileName": "herb salad.png",
+      "width": 234,
+      "height": 203,
+      "x": 2296,
+      "y": 2324
+    },
+    {
+      "fileName": "herb sandwich.png",
+      "width": 232,
+      "height": 201,
+      "x": 11,
+      "y": 2556
+    },
+    {
+      "fileName": "herb soup.png",
+      "width": 236,
+      "height": 183,
+      "x": 263,
+      "y": 2565
+    },
+    {
+      "fileName": "honey cake.png",
+      "width": 234,
+      "height": 181,
+      "x": 518,
+      "y": 2566
+    },
+    {
+      "fileName": "honey juice.png",
+      "width": 130,
+      "height": 199,
+      "x": 824,
+      "y": 2557
+    },
+    {
+      "fileName": "hot coffee.png",
+      "width": 212,
+      "height": 187,
+      "x": 1037,
+      "y": 2563
+    },
+    {
+      "fileName": "hot pot.png",
+      "width": 236,
+      "height": 162,
+      "x": 1279,
+      "y": 2575
+    },
+    {
+      "fileName": "ice cream.png",
+      "width": 196,
+      "height": 190,
+      "x": 1553,
+      "y": 2561
+    },
+    {
+      "fileName": "inari sushi.png",
+      "width": 232,
+      "height": 180,
+      "x": 1789,
+      "y": 2566
+    },
+    {
+      "fileName": "jam tea.png",
+      "width": 232,
+      "height": 231,
+      "x": 2043,
+      "y": 2541
+    },
+    {
+      "fileName": "jam-filled bun.png",
+      "width": 232,
+      "height": 180,
+      "x": 2297,
+      "y": 2566
+    },
+    {
+      "fileName": "khachapuri.png",
+      "width": 232,
+      "height": 180,
+      "x": 11,
+      "y": 2797
+    },
+    {
+      "fileName": "lavender tea.png",
+      "width": 232,
+      "height": 200,
+      "x": 265,
+      "y": 2787
+    },
+    {
+      "fileName": "lemon juice.png",
+      "width": 124,
+      "height": 198,
+      "x": 573,
+      "y": 2788
+    },
+    {
+      "fileName": "lemon tea.png",
+      "width": 232,
+      "height": 200,
+      "x": 773,
+      "y": 2787
+    },
+    {
+      "fileName": "lightly fried tofu.png",
+      "width": 235,
+      "height": 178,
+      "x": 1025,
+      "y": 2798
+    },
+    {
+      "fileName": "macaroni & cheese.png",
+      "width": 235,
+      "height": 151,
+      "x": 1279,
+      "y": 2812
+    },
+    {
+      "fileName": "mango juice.png",
+      "width": 124,
+      "height": 198,
+      "x": 1589,
+      "y": 2788
+    },
+    {
+      "fileName": "mango tea.png",
+      "width": 232,
+      "height": 200,
+      "x": 1789,
+      "y": 2787
+    },
+    {
+      "fileName": "marinated fish.png",
+      "width": 232,
+      "height": 180,
+      "x": 2043,
+      "y": 2797
+    },
+    {
+      "fileName": "marinated peppers.png",
+      "width": 232,
+      "height": 180,
+      "x": 2297,
+      "y": 2797
+    },
+    {
+      "fileName": "mashed potatoes.png",
+      "width": 232,
+      "height": 180,
+      "x": 11,
+      "y": 3028
+    },
+    {
+      "fileName": "matcha tea.png",
+      "width": 171,
+      "height": 161,
+      "x": 295,
+      "y": 3038
+    },
+    {
+      "fileName": "matsutake rice.png",
+      "width": 200,
+      "height": 194,
+      "x": 535,
+      "y": 3021
+    },
+    {
+      "fileName": "melon juice.png",
+      "width": 136,
+      "height": 203,
+      "x": 821,
+      "y": 3017
+    },
+    {
+      "fileName": "melon tea.png",
+      "width": 232,
+      "height": 200,
+      "x": 1027,
+      "y": 3018
+    },
+    {
+      "fileName": "meuniere fish.png",
+      "width": 232,
+      "height": 180,
+      "x": 1281,
+      "y": 3028
+    },
+    {
+      "fileName": "milk curry.png",
+      "width": 232,
+      "height": 180,
+      "x": 1535,
+      "y": 3028
+    },
+    {
+      "fileName": "milk hot pot.png",
+      "width": 236,
+      "height": 162,
+      "x": 1787,
+      "y": 3037
+    },
+    {
+      "fileName": "milk rice porridge.png",
+      "width": 200,
+      "height": 193,
+      "x": 2059,
+      "y": 3022
+    },
+    {
+      "fileName": "milk tea.png",
+      "width": 232,
+      "height": 200,
+      "x": 2297,
+      "y": 3018
+    },
+    {
+      "fileName": "mint tea.png",
+      "width": 232,
+      "height": 200,
+      "x": 11,
+      "y": 3249
+    },
+    {
+      "fileName": "miso glazed eggplant.png",
+      "width": 211,
+      "height": 160,
+      "x": 275,
+      "y": 3269
+    },
+    {
+      "fileName": "miso soup.png",
+      "width": 209,
+      "height": 208,
+      "x": 530,
+      "y": 3245
+    },
+    {
+      "fileName": "mixed salad.png",
+      "width": 234,
+      "height": 203,
+      "x": 772,
+      "y": 3248
+    },
+    {
+      "fileName": "mont blanc cake.png",
+      "width": 234,
+      "height": 204,
+      "x": 1026,
+      "y": 3247
+    },
+    {
+      "fileName": "morel cream stew.png",
+      "width": 232,
+      "height": 180,
+      "x": 1281,
+      "y": 3259
+    },
+    {
+      "fileName": "mushroom pasta.png",
+      "width": 232,
+      "height": 180,
+      "x": 1535,
+      "y": 3259
+    },
+    {
+      "fileName": "mushroom polenta.png",
+      "width": 232,
+      "height": 180,
+      "x": 1789,
+      "y": 3259
+    },
+    {
+      "fileName": "mushroom rice.png",
+      "width": 200,
+      "height": 194,
+      "x": 2059,
+      "y": 3252
+    },
+    {
+      "fileName": "okonomiyaki.png",
+      "width": 232,
+      "height": 180,
+      "x": 2297,
+      "y": 3259
+    },
+    {
+      "fileName": "olive tea.png",
+      "width": 232,
+      "height": 200,
+      "x": 11,
+      "y": 3480
+    },
+    {
+      "fileName": "omelet rice.png",
+      "width": 232,
+      "height": 180,
+      "x": 265,
+      "y": 3490
+    },
+    {
+      "fileName": "omelet.png",
+      "width": 232,
+      "height": 180,
+      "x": 519,
+      "y": 3490
+    },
+    {
+      "fileName": "onigiri.png",
+      "width": 234,
+      "height": 200,
+      "x": 772,
+      "y": 3480
+    },
+    {
+      "fileName": "onion salad.png",
+      "width": 234,
+      "height": 203,
+      "x": 1026,
+      "y": 3479
+    },
+    {
+      "fileName": "onion soup.png",
+      "width": 236,
+      "height": 183,
+      "x": 1279,
+      "y": 3489
+    },
+    {
+      "fileName": "oolong tea.png",
+      "width": 167,
+      "height": 146,
+      "x": 1567,
+      "y": 3507
+    },
+    {
+      "fileName": "orange juice.png",
+      "width": 129,
+      "height": 198,
+      "x": 1840,
+      "y": 3481
+    },
+    {
+      "fileName": "orange tea.png",
+      "width": 232,
+      "height": 200,
+      "x": 2043,
+      "y": 3480
+    },
+    {
+      "fileName": "paella.png",
+      "width": 236,
+      "height": 148,
+      "x": 2295,
+      "y": 3506
+    },
+    {
+      "fileName": "pancakes.png",
+      "width": 234,
+      "height": 206,
+      "x": 10,
+      "y": 3708
+    },
+    {
+      "fileName": "pasta salad.png",
+      "width": 234,
+      "height": 203,
+      "x": 264,
+      "y": 3710
+    },
+    {
+      "fileName": "pasta.png",
+      "width": 232,
+      "height": 180,
+      "x": 519,
+      "y": 3721
+    },
+    {
+      "fileName": "peach juice.png",
+      "width": 128,
+      "height": 198,
+      "x": 825,
+      "y": 3712
+    },
+    {
+      "fileName": "peach tea.png",
+      "width": 232,
+      "height": 200,
+      "x": 1027,
+      "y": 3711
+    },
+    {
+      "fileName": "penne pasta.png",
+      "width": 232,
+      "height": 180,
+      "x": 1281,
+      "y": 3721
+    },
+    {
+      "fileName": "pineapple juice.png",
+      "width": 147,
+      "height": 198,
+      "x": 1577,
+      "y": 3712
+    },
+    {
+      "fileName": "pineapple pie.png",
+      "width": 234,
+      "height": 198,
+      "x": 1788,
+      "y": 3712
+    },
+    {
+      "fileName": "pineapple tea.png",
+      "width": 232,
+      "height": 200,
+      "x": 2043,
+      "y": 3711
+    },
+    {
+      "fileName": "pink fondue.png",
+      "width": 254,
+      "height": 131,
+      "x": 2286,
+      "y": 3746
+    },
+    {
+      "fileName": "pizza.png",
+      "width": 236,
+      "height": 183,
+      "x": 9,
+      "y": 3951
+    },
+    {
+      "fileName": "pizzoccheri.png",
+      "width": 232,
+      "height": 180,
+      "x": 265,
+      "y": 3952
+    },
+    {
+      "fileName": "poached egg.png",
+      "width": 235,
+      "height": 178,
+      "x": 517,
+      "y": 3953
+    },
+    {
+      "fileName": "poke.png",
+      "width": 232,
+      "height": 180,
+      "x": 773,
+      "y": 3952
+    },
+    {
+      "fileName": "popcorn.png",
+      "width": 170,
+      "height": 230,
+      "x": 1058,
+      "y": 3927
+    },
+    {
+      "fileName": "potato pancakes.png",
+      "width": 232,
+      "height": 180,
+      "x": 1281,
+      "y": 3952
+    },
+    {
+      "fileName": "pu'er tea.png",
+      "width": 167,
+      "height": 146,
+      "x": 1567,
+      "y": 3969
+    },
+    {
+      "fileName": "pudding.png",
+      "width": 234,
+      "height": 196,
+      "x": 1788,
+      "y": 3944
+    },
+    {
+      "fileName": "pumpkin pudding.png",
+      "width": 234,
+      "height": 211,
+      "x": 2042,
+      "y": 3937
+    },
+    {
+      "fileName": "pumpkin soup.png",
+      "width": 236,
+      "height": 183,
+      "x": 2295,
+      "y": 3951
+    },
+    {
+      "fileName": "quiche.png",
+      "width": 232,
+      "height": 189,
+      "x": 11,
+      "y": 4179
+    },
+    {
+      "fileName": "raclette cheese.png",
+      "width": 235,
+      "height": 150,
+      "x": 263,
+      "y": 4198
+    },
+    {
+      "fileName": "radish soup.png",
+      "width": 236,
+      "height": 183,
+      "x": 517,
+      "y": 4182
+    },
+    {
+      "fileName": "rainbow curry.png",
+      "width": 232,
+      "height": 180,
+      "x": 773,
+      "y": 4183
+    },
+    {
+      "fileName": "raisin bread.png",
+      "width": 232,
+      "height": 180,
+      "x": 1027,
+      "y": 4183
+    },
+    {
+      "fileName": "red grape tea.png",
+      "width": 232,
+      "height": 200,
+      "x": 1281,
+      "y": 4173
+    },
+    {
+      "fileName": "rice & mixed vegetables.png",
+      "width": 200,
+      "height": 194,
+      "x": 1551,
+      "y": 4176
+    },
+    {
+      "fileName": "rice gratin.png",
+      "width": 236,
+      "height": 150,
+      "x": 1787,
+      "y": 4198
+    },
+    {
+      "fileName": "rice porridge.png",
+      "width": 201,
+      "height": 193,
+      "x": 2058,
+      "y": 4177
+    },
+    {
+      "fileName": "risotto.png",
+      "width": 236,
+      "height": 183,
+      "x": 2295,
+      "y": 4182
+    },
+    {
+      "fileName": "rolled egg.png",
+      "width": 232,
+      "height": 180,
+      "x": 11,
+      "y": 4414
+    },
+    {
+      "fileName": "royal milk tea.png",
+      "width": 232,
+      "height": 200,
+      "x": 265,
+      "y": 4404
+    },
+    {
+      "fileName": "rüeblitorte.png",
+      "width": 234,
+      "height": 212,
+      "x": 518,
+      "y": 4398
+    },
+    {
+      "fileName": "sandwich.png",
+      "width": 232,
+      "height": 201,
+      "x": 773,
+      "y": 4404
+    },
+    {
+      "fileName": "sashimi.png",
+      "width": 232,
+      "height": 170,
+      "x": 1027,
+      "y": 4419
+    },
+    {
+      "fileName": "saut.png",
+      "width": 232,
+      "height": 180,
+      "x": 1281,
+      "y": 4414
+    },
+    {
+      "fileName": "sautéed cauliflower.png",
+      "width": 199,
+      "height": 203,
+      "x": 1551,
+      "y": 4403
+    },
+    {
+      "fileName": "sautéed turnips.png",
+      "width": 232,
+      "height": 180,
+      "x": 1789,
+      "y": 4414
+    },
+    {
+      "fileName": "scones.png",
+      "width": 232,
+      "height": 188,
+      "x": 2043,
+      "y": 4410
+    },
+    {
+      "fileName": "seaweed curry.png",
+      "width": 232,
+      "height": 180,
+      "x": 2297,
+      "y": 4414
+    },
+    {
+      "fileName": "sencha tea.png",
+      "width": 166,
+      "height": 159,
+      "x": 44,
+      "y": 4656
+    },
+    {
+      "fileName": "shumai dumplings.png",
+      "width": 232,
+      "height": 180,
+      "x": 265,
+      "y": 4645
+    },
+    {
+      "fileName": "simmered fish.png",
+      "width": 228,
+      "height": 103,
+      "x": 521,
+      "y": 4684
+    },
+    {
+      "fileName": "simmered seaweed.png",
+      "width": 142,
+      "height": 208,
+      "x": 818,
+      "y": 4631
+    },
+    {
+      "fileName": "soy milk pudding.png",
+      "width": 234,
+      "height": 196,
+      "x": 1026,
+      "y": 4637
+    },
+    {
+      "fileName": "soy milk.png",
+      "width": 124,
+      "height": 178,
+      "x": 1335,
+      "y": 4646
+    },
+    {
+      "fileName": "soy okara.png",
+      "width": 199,
+      "height": 203,
+      "x": 1551,
+      "y": 4634
+    },
+    {
+      "fileName": "spaghetti peperoncino.png",
+      "width": 232,
+      "height": 180,
+      "x": 1789,
+      "y": 4645
+    },
+    {
+      "fileName": "spaghetti soup.png",
+      "width": 236,
+      "height": 183,
+      "x": 2041,
+      "y": 4644
+    },
+    {
+      "fileName": "specialty juice.png",
+      "width": 116,
+      "height": 200,
+      "x": 2355,
+      "y": 4635
+    },
+    {
+      "fileName": "spicy curry.png",
+      "width": 232,
+      "height": 180,
+      "x": 11,
+      "y": 4876
+    },
+    {
+      "fileName": "spring blend tea.png",
+      "width": 232,
+      "height": 200,
+      "x": 265,
+      "y": 4866
+    },
+    {
+      "fileName": "spring juice.png",
+      "width": 116,
+      "height": 200,
+      "x": 577,
+      "y": 4866
+    },
+    {
+      "fileName": "spring rolls.png",
+      "width": 232,
+      "height": 180,
+      "x": 773,
+      "y": 4876
+    },
+    {
+      "fileName": "steamed bun.png",
+      "width": 194,
+      "height": 207,
+      "x": 1046,
+      "y": 4863
+    },
+    {
+      "fileName": "steamed cake.png",
+      "width": 234,
+      "height": 193,
+      "x": 1280,
+      "y": 4870
+    },
+    {
+      "fileName": "steamed egg custard.png",
+      "width": 179,
+      "height": 204,
+      "x": 1561,
+      "y": 4864
+    },
+    {
+      "fileName": "steamed muffin.png",
+      "width": 232,
+      "height": 190,
+      "x": 1789,
+      "y": 4871
+    },
+    {
+      "fileName": "steamed mushrooms.png",
+      "width": 235,
+      "height": 192,
+      "x": 2041,
+      "y": 4870
+    },
+    {
+      "fileName": "stew.png",
+      "width": 234,
+      "height": 175,
+      "x": 2296,
+      "y": 4879
+    },
+    {
+      "fileName": "stir-fried vegetables.png",
+      "width": 232,
+      "height": 180,
+      "x": 11,
+      "y": 5107
+    },
+    {
+      "fileName": "strawberry jam.png",
+      "width": 167,
+      "height": 202,
+      "x": 297,
+      "y": 5096
+    },
+    {
+      "fileName": "strawberry juice.png",
+      "width": 143,
+      "height": 198,
+      "x": 563,
+      "y": 5098
+    },
+    {
+      "fileName": "strawberry mochi.png",
+      "width": 232,
+      "height": 179,
+      "x": 773,
+      "y": 5108
+    },
+    {
+      "fileName": "strawberry pie.png",
+      "width": 234,
+      "height": 198,
+      "x": 1026,
+      "y": 5098
+    },
+    {
+      "fileName": "strawberry tea.png",
+      "width": 232,
+      "height": 200,
+      "x": 1281,
+      "y": 5097
+    },
+    {
+      "fileName": "stuffed cabbage.png",
+      "width": 232,
+      "height": 180,
+      "x": 1535,
+      "y": 5107
+    },
+    {
+      "fileName": "summer blend tea.png",
+      "width": 232,
+      "height": 200,
+      "x": 1789,
+      "y": 5097
+    },
+    {
+      "fileName": "summer juice.png",
+      "width": 133,
+      "height": 200,
+      "x": 2092,
+      "y": 5097
+    },
+    {
+      "fileName": "supreme curry.png",
+      "width": 232,
+      "height": 161,
+      "x": 2297,
+      "y": 5117
+    },
+    {
+      "fileName": "sushi.png",
+      "width": 230,
+      "height": 137,
+      "x": 12,
+      "y": 5360
+    },
+    {
+      "fileName": "sweet potato cakes.png",
+      "width": 234,
+      "height": 181,
+      "x": 264,
+      "y": 5338
+    },
+    {
+      "fileName": "tempura rice bowl.png",
+      "width": 202,
+      "height": 210,
+      "x": 534,
+      "y": 5323
+    },
+    {
+      "fileName": "tempura soba.png",
+      "width": 206,
+      "height": 178,
+      "x": 786,
+      "y": 5339
+    },
+    {
+      "fileName": "tempura udon.png",
+      "width": 206,
+      "height": 178,
+      "x": 1040,
+      "y": 5339
+    },
+    {
+      "fileName": "tempura.png",
+      "width": 232,
+      "height": 198,
+      "x": 1281,
+      "y": 5329
+    },
+    {
+      "fileName": "toast.png",
+      "width": 232,
+      "height": 180,
+      "x": 1535,
+      "y": 5338
+    },
+    {
+      "fileName": "toasted mochi.png",
+      "width": 232,
+      "height": 181,
+      "x": 1789,
+      "y": 5338
+    },
+    {
+      "fileName": "tofu skin.png",
+      "width": 229,
+      "height": 103,
+      "x": 2044,
+      "y": 5377
+    },
+    {
+      "fileName": "tofu steak.png",
+      "width": 232,
+      "height": 180,
+      "x": 2297,
+      "y": 5338
+    },
+    {
+      "fileName": "tofu.png",
+      "width": 232,
+      "height": 180,
+      "x": 11,
+      "y": 5569
+    },
+    {
+      "fileName": "tomato fondue.png",
+      "width": 254,
+      "height": 131,
+      "x": 254,
+      "y": 5594
+    },
+    {
+      "fileName": "tomato juice.png",
+      "width": 146,
+      "height": 198,
+      "x": 562,
+      "y": 5560
+    },
+    {
+      "fileName": "tomato salad.png",
+      "width": 234,
+      "height": 203,
+      "x": 772,
+      "y": 5558
+    },
+    {
+      "fileName": "trifle.png",
+      "width": 155,
+      "height": 167,
+      "x": 1065,
+      "y": 5576
+    },
+    {
+      "fileName": "turnip salad.png",
+      "width": 232,
+      "height": 180,
+      "x": 1281,
+      "y": 5569
+    },
+    {
+      "fileName": "udon.png",
+      "width": 206,
+      "height": 178,
+      "x": 1548,
+      "y": 5570
+    },
+    {
+      "fileName": "ukha.png",
+      "width": 236,
+      "height": 183,
+      "x": 1787,
+      "y": 5568
+    },
+    {
+      "fileName": "ultimate curry.png",
+      "width": 232,
+      "height": 161,
+      "x": 2043,
+      "y": 5579
+    },
+    {
+      "fileName": "unadon.png",
+      "width": 202,
+      "height": 183,
+      "x": 2312,
+      "y": 5568
+    },
+    {
+      "fileName": "vegetable curry.png",
+      "width": 232,
+      "height": 180,
+      "x": 11,
+      "y": 5800
+    },
+    {
+      "fileName": "vichyssoise soup.png",
+      "width": 236,
+      "height": 183,
+      "x": 263,
+      "y": 5799
+    },
+    {
+      "fileName": "walnut cookies.png",
+      "width": 234,
+      "height": 181,
+      "x": 518,
+      "y": 5800
+    },
+    {
+      "fileName": "walnut juice.png",
+      "width": 124,
+      "height": 198,
+      "x": 827,
+      "y": 5791
+    },
+    {
+      "fileName": "warm milk.png",
+      "width": 200,
+      "height": 205,
+      "x": 1043,
+      "y": 5788
+    },
+    {
+      "fileName": "watermelon juice.png",
+      "width": 140,
+      "height": 203,
+      "x": 1327,
+      "y": 5789
+    },
+    {
+      "fileName": "watermelon tea.png",
+      "width": 232,
+      "height": 200,
+      "x": 1535,
+      "y": 5790
+    },
+    {
+      "fileName": "whole cake.png",
+      "width": 234,
+      "height": 207,
+      "x": 1788,
+      "y": 5787
+    },
+    {
+      "fileName": "whole cheescake.png",
+      "width": 234,
+      "height": 200,
+      "x": 2042,
+      "y": 5790
+    },
+    {
+      "fileName": "whole chocolate cake.png",
+      "width": 234,
+      "height": 213,
+      "x": 2296,
+      "y": 5784
+    },
+    {
+      "fileName": "wrapped rice cakes.png",
+      "width": 232,
+      "height": 213,
+      "x": 11,
+      "y": 6015
+    },
+    {
+      "fileName": "yakisoba.png",
+      "width": 232,
+      "height": 180,
+      "x": 265,
+      "y": 6031
+    },
+    {
+      "fileName": "zaru soba.png",
+      "width": 229,
+      "height": 140,
+      "x": 520,
+      "y": 6051
+    }
+  ],
+  "packMode": "grid",
+  "padding": 0,
+  "backgroundColor": "rgba(0, 0, 0, 0)",
+  "spriteSheetWidth": 2540,
+  "spriteSheetHeight": 6237
+}
