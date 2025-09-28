@@ -51,7 +51,7 @@ namespace gbchef
                 _mainViewModel.Vegetables = new ObservableCollection<SelectableIngredient>(ingredients.Where(x => x.Category == "Vegetables"));
                 _mainViewModel.Fruits = new ObservableCollection<SelectableIngredient>(ingredients.Where(x => x.Category == "Fruits"));
                 _mainViewModel.Products = new ObservableCollection<SelectableIngredient>(ingredients.Where(x => x.Category == "Products"));
-                _mainViewModel.Foragables = new ObservableCollection<SelectableIngredient>(ingredients.Where(x => x.Category == "Foragables"));
+                _mainViewModel.Forageables = new ObservableCollection<SelectableIngredient>(ingredients.Where(x => x.Category == "Forageables"));
                 _mainViewModel.Fish = new ObservableCollection<SelectableIngredient>(ingredients.Where(x => x.Category == "Fish"));
                 _mainViewModel.Recipes = new ObservableCollection<SelectableIngredient>(ingredients.Where(x => x.Category == "Recipes"));
                 _mainViewModel.Others = new ObservableCollection<SelectableIngredient>(ingredients.Where(x => x.Category == "Others"));
@@ -67,7 +67,7 @@ namespace gbchef
                     _mainViewModel.Vegetables,
                     _mainViewModel.Fruits,
                     _mainViewModel.Products,
-                    _mainViewModel.Foragables,
+                    _mainViewModel.Forageables,
                     _mainViewModel.Fish,
                     _mainViewModel.Recipes,
                     _mainViewModel.Others,

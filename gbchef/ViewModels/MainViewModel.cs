@@ -46,7 +46,7 @@ namespace gbchef.ViewModels
             new SelectableIngredient("Mayonnaise", false),
         };
 
-        public ObservableCollection<SelectableIngredient> Foragables { get; set; } = new()
+        public ObservableCollection<SelectableIngredient> Forageables { get; set; } = new()
         {
             new SelectableIngredient("Shiitake Mushroom", false),
             new SelectableIngredient("Honey", false),

@@ -34,6 +34,7 @@ namespace gbchef.Controls
         public SelectableListBox()
         {
             InitializeComponent();
+
         }
 
         private void ListBox_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -46,8 +47,23 @@ namespace gbchef.Controls
             }
         }
 
+        private void ClearButton_ClickHandler(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("ClearButton click");
+            foreach (SelectableIngredient ingredient in Items)
+            {
+                ingredient.IsSelected = false;
+            }
+        }
 
-
+        private void SelectAllButton_ClickHandler(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("Select All click");
+            foreach (SelectableIngredient ingredient in Items)
+            {
+                ingredient.IsSelected = true;
+            }
+        }
 
     }
 }
