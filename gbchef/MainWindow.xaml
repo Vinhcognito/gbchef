@@ -8,9 +8,15 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="720" Width="1280" Initialized="Window_Initialized">
 
-    <StackPanel Orientation="Vertical">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
 
-        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Height="195">
+        <ScrollViewer Grid.Row="0" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Height="195">
             <StackPanel Orientation="Horizontal">
                 <uc:SelectableListBox x:Name="Vegetables" Items="{Binding Vegetables}" />
                 <uc:SelectableListBox x:Name="Fruits" Items="{Binding Fruits}" />
@@ -22,17 +28,20 @@
             </StackPanel>
         </ScrollViewer>
 
-        <CheckBox Content="Show Partially Satisfied Recipes"
+        <CheckBox Grid.Row="1"
+            Content="Show Partially Satisfied Recipes"
              x:Name="ShowPartial" 
              Margin="10 0 0 0"
              Click="ShowPartial_Click" />
-        <DataGrid 
+        <DataGrid Grid.Row="2"
             x:Name="resultsDataGrid" 
             AutoGenerateColumns="False" 
-            Height="431" ItemsSource="{Binding ViewSource.View}"
+            ItemsSource="{Binding ViewSource.View}"
             CanUserAddRows="False"
             CanUserDeleteRows="False" 
-            IsReadOnly="True" HorizontalGridLinesBrush="#FFE6E6E6" VerticalGridLinesBrush="#FFE6E6E6">
+            IsReadOnly="True" 
+            HorizontalGridLinesBrush="#FFE6E6E6" 
+            VerticalGridLinesBrush="#FFE6E6E6">
             <DataGrid.Columns>
                 <DataGridTemplateColumn Header="">
                     <DataGridTemplateColumn.CellTemplate>
@@ -107,10 +116,12 @@
             </DataGrid.Columns>
         </DataGrid>
 
+        <StackPanel Grid.Row="3" Orientation="Horizontal"
+             VerticalAlignment="Center">
 
-        <Label Content="{Binding ElementName=resultsDataGrid, Path=Items.Count}" Width="45" HorizontalAlignment="Left" RenderTransformOrigin="1.176,0.61"/>
-        <Label Content="Recipes Found" Width="89" HorizontalAlignment="Left"/>
+            <Label Content="{Binding ElementName=resultsDataGrid, Path=Items.Count}" Width="45" HorizontalAlignment="Left" RenderTransformOrigin="1.176,0.61" Margin="10 0 0 0"/>
+            <Label Content="Recipes Found" Width="89" HorizontalAlignment="Left"/>
+        </StackPanel>
 
-    </StackPanel>
-    
+    </Grid>
 </Window>
