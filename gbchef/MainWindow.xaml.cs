@@ -58,27 +58,7 @@ namespace gbchef
 
             }
 
-
             DataContext = _mainViewModel;
-
-            // listen to each selectable ingredient property change
-            var li = new List<ObservableCollection<SelectableIngredient>>(
-                [
-                    _mainViewModel.Vegetables,
-                    _mainViewModel.Fruits,
-                    _mainViewModel.Products,
-                    _mainViewModel.Forageables,
-                    _mainViewModel.Fish,
-                    _mainViewModel.Recipes,
-                    _mainViewModel.Others,
-            ]);
-
-            foreach (var collection in li) {
-                foreach (var ingredient in collection) {
-                    ingredient.PropertyChanged += MainVM_PropertyChanged;
-                }
-            }
-                
 
         }
 
@@ -125,13 +105,6 @@ namespace gbchef
                 ingredient.RecipeIdSlotMap = await dbService.ExecuteSelectRecipeSlotMapByIngredientId(ingredient.Id);
             }
             return ingredients;
-        }
-
-        private void MainVM_PropertyChanged(object sender, PropertyChangedEventArgs e)
-        {
-            Debug.WriteLine($"{(sender as SelectableIngredient).IsSelected}");
-            Debug.WriteLine($"{(sender as SelectableIngredient).Name}");
-
         }
 
 
