@@ -48,7 +48,13 @@ namespace gbchef
                 AddSelectionChangedHandlerInRecipes(recipes, ingredients);
 
                 _mainViewModel = new MainViewModel(recipes);
-                _mainViewModel.Vegetables = new ObservableCollection<SelectableIngredient>(ingredients);
+                _mainViewModel.Vegetables = new ObservableCollection<SelectableIngredient>(ingredients.Where(x => x.Category == "Vegetables"));
+                _mainViewModel.Fruits = new ObservableCollection<SelectableIngredient>(ingredients.Where(x => x.Category == "Fruits"));
+                _mainViewModel.Products = new ObservableCollection<SelectableIngredient>(ingredients.Where(x => x.Category == "Products"));
+                _mainViewModel.Foragables = new ObservableCollection<SelectableIngredient>(ingredients.Where(x => x.Category == "Foragables"));
+                _mainViewModel.Fish = new ObservableCollection<SelectableIngredient>(ingredients.Where(x => x.Category == "Fish"));
+                _mainViewModel.Recipes = new ObservableCollection<SelectableIngredient>(ingredients.Where(x => x.Category == "Recipes"));
+                _mainViewModel.Others = new ObservableCollection<SelectableIngredient>(ingredients.Where(x => x.Category == "Others"));
 
             }
 
@@ -63,6 +69,7 @@ namespace gbchef
                     _mainViewModel.Products,
                     _mainViewModel.Foragables,
                     _mainViewModel.Fish,
+                    _mainViewModel.Recipes,
                     _mainViewModel.Others,
             ]);
 
@@ -111,7 +118,7 @@ namespace gbchef
         private async Task<List<SelectableIngredient>> GetAllIngredients(DatabaseService dbService)
         {
             var results = await dbService.ExecuteSelectAllAsync("Items");
-            var ingredients = results.Select(row => new SelectableIngredient(Convert.ToInt32(row[0]), (string)row[1], false)).ToList();
+            var ingredients = results.Select(row => new SelectableIngredient(Convert.ToInt32(row[0]), (string)row[1], false) { Category = (string)row[2] }).ToList();
 
             foreach (SelectableIngredient ingredient in ingredients)
             {

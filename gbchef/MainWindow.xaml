@@ -16,7 +16,8 @@
             <uc:SelectableListBox x:Name="itemList3" Items="{Binding Products}" />
             <uc:SelectableListBox x:Name="itemList4" Items="{Binding Foragables}" />
             <uc:SelectableListBox x:Name="itemList5" Items="{Binding Fish}" />
-            <uc:SelectableListBox x:Name="itemList6" Items="{Binding Others}" />
+            <uc:SelectableListBox x:Name="itemList6" Items="{Binding Recipes}" />
+            <uc:SelectableListBox x:Name="itemList7" Items="{Binding Others}" />
         </StackPanel>
         
         <DataGrid 

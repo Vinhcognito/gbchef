@@ -31,14 +31,14 @@ namespace gbchef.ViewModels
 
         };
 
-        public ObservableCollection<SelectableIngredient> Fruits { get; } = new()
+        public ObservableCollection<SelectableIngredient> Fruits { get; set; } = new()
         {
             new SelectableIngredient("Apple", false),
             new SelectableIngredient("Orange", false),
             new SelectableIngredient("Peach", false),
         };
 
-        public ObservableCollection<SelectableIngredient> Products { get; } = new()
+        public ObservableCollection<SelectableIngredient> Products { get; set; } = new()
         {
             new SelectableIngredient("Cheese", false),
             new SelectableIngredient("Milk", false),
@@ -46,29 +46,30 @@ namespace gbchef.ViewModels
             new SelectableIngredient("Mayonnaise", false),
         };
 
-        public ObservableCollection<SelectableIngredient> Foragables { get; } = new()
+        public ObservableCollection<SelectableIngredient> Foragables { get; set; } = new()
         {
             new SelectableIngredient("Shiitake Mushroom", false),
             new SelectableIngredient("Honey", false),
             new SelectableIngredient("Enoki", false),
         };
 
-        public ObservableCollection<SelectableIngredient> Fish { get; } = new()
+        public ObservableCollection<SelectableIngredient> Fish { get; set; } = new()
         {
             new SelectableIngredient("Salmon", false),
             new SelectableIngredient("Yellow Perch", false),
             new SelectableIngredient("Snakehead", false),
         };
 
-        public ObservableCollection<SelectableIngredient> Others { get; } = new()
+        public ObservableCollection<SelectableIngredient> Others { get; set; } = new()
         {
             new SelectableIngredient("Rice Flour", false),
             new SelectableIngredient("Salt", false),
             new SelectableIngredient("Oil", false),
         };
 
+        // This is recipes that are also an ingredient
+        public ObservableCollection<SelectableIngredient> Recipes { get; set; }
 
-        private ObservableCollection<Recipe> _recipes { get; } = new();
 
         public CollectionViewSource ViewSource { get; } = new();
 
@@ -76,9 +77,6 @@ namespace gbchef.ViewModels
         {
             foreach (var recipe in recipes) {
                 recipe.PropertyChanged += HandleRecipeChanged;
-
-                _recipes.Add(recipe);
-
             }
 
             ViewSource.Source = recipes;
