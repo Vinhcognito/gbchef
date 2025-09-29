@@ -61,7 +61,7 @@ namespace gbchef.ViewModels
         {
             var recipeAsIngredient = recipe?.AsIngredient;
             if (recipeAsIngredient != null) {
-                recipeAsIngredient.IsAutoSelected = ShowAutoSelected == true ? show : false;
+                recipeAsIngredient.IsAutoSelected = ShowAutoSelected == true && show;
             }
         }
 

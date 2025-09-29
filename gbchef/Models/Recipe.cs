@@ -27,10 +27,10 @@ namespace gbchef.Models
 
         public SelectableIngredient? AsIngredient { get; set; }
 
-        public bool is1Filled;
-        public bool is2Filled;
-        public bool is3Filled;
-        public bool is4Filled;
+        private bool is1Filled;
+        private bool is2Filled;
+        private bool is3Filled;
+        private bool is4Filled;
 
         public bool IsSatisfied
         {
@@ -159,9 +159,9 @@ namespace gbchef.Models
             Is4Filled = Slot4.Any(item => item.IsSelected || item.IsAutoSelected);
         }
 
-        public List<SelectableIngredient> Slot1 = new List<SelectableIngredient>();
-        public List<SelectableIngredient> Slot2 = new List<SelectableIngredient>();
-        public List<SelectableIngredient> Slot3 = new List<SelectableIngredient>();
-        public List<SelectableIngredient> Slot4 = new List<SelectableIngredient>();
+        public List<SelectableIngredient> Slot1 = [];
+        public List<SelectableIngredient> Slot2 = [];
+        public List<SelectableIngredient> Slot3 = [];
+        public List<SelectableIngredient> Slot4 = [];
     }
 }

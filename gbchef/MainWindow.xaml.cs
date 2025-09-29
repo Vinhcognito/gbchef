@@ -54,8 +54,7 @@ namespace gbchef
                     {
                         recipe.Image = ssService.GetSprite(possibleImageName);
                     }
-                    catch (Exception ex)
-                    {
+                    catch (Exception) {
                         Debug.WriteLine($"Missing recipe image for: {recipe.Name}. Tried: {possibleImageName}");
                     }
                 }
@@ -63,14 +62,15 @@ namespace gbchef
                 var ingredients = await GetAllIngredients(dbService);
                 AddSelectionChangedHandlerInRecipes(recipes, ingredients);
 
-                _mainViewModel = new MainViewModel(recipes);
-                _mainViewModel.Vegetables = new ObservableCollection<SelectableIngredient>(ingredients.Where(x => x.Category == "Vegetables"));
-                _mainViewModel.Fruits = new ObservableCollection<SelectableIngredient>(ingredients.Where(x => x.Category == "Fruits"));
-                _mainViewModel.Products = new ObservableCollection<SelectableIngredient>(ingredients.Where(x => x.Category == "Products"));
-                _mainViewModel.Forageables = new ObservableCollection<SelectableIngredient>(ingredients.Where(x => x.Category == "Forageables"));
-                _mainViewModel.Fish = new ObservableCollection<SelectableIngredient>(ingredients.Where(x => x.Category == "Fish"));
-                _mainViewModel.Recipes = new ObservableCollection<SelectableIngredient>(ingredients.Where(x => x.Category == "Recipes"));
-                _mainViewModel.Others = new ObservableCollection<SelectableIngredient>(ingredients.Where(x => x.Category == "Others"));
+                _mainViewModel = new MainViewModel(recipes) {
+                    Vegetables = new ObservableCollection<SelectableIngredient>(ingredients.Where(x => x.Category == "Vegetables")),
+                    Fruits = new ObservableCollection<SelectableIngredient>(ingredients.Where(x => x.Category == "Fruits")),
+                    Products = new ObservableCollection<SelectableIngredient>(ingredients.Where(x => x.Category == "Products")),
+                    Forageables = new ObservableCollection<SelectableIngredient>(ingredients.Where(x => x.Category == "Forageables")),
+                    Fish = new ObservableCollection<SelectableIngredient>(ingredients.Where(x => x.Category == "Fish")),
+                    Recipes = new ObservableCollection<SelectableIngredient>(ingredients.Where(x => x.Category == "Recipes")),
+                    Others = new ObservableCollection<SelectableIngredient>(ingredients.Where(x => x.Category == "Others"))
+                };
 
                 AddRecipeAsIngredientReference(recipes, _mainViewModel.Recipes);
 
@@ -80,23 +80,23 @@ namespace gbchef
 
         }
 
-        private void AddRecipeAsIngredientReference(List<Recipe> recipes, ObservableCollection<SelectableIngredient> ingredients)
+        private static void AddRecipeAsIngredientReference(List<Recipe> recipes, ObservableCollection<SelectableIngredient> ingredients)
         {
-            Dictionary<string, SelectableIngredient> map = new Dictionary<string, SelectableIngredient>();
+            Dictionary<string, SelectableIngredient> map = [];
             foreach (SelectableIngredient ingredient in ingredients)
             {
                 map[ingredient.Name] = ingredient;
             }
 
             foreach (Recipe recipe in recipes) {
-                if (map.ContainsKey(recipe.Name))
+                if (map.TryGetValue(recipe.Name, out SelectableIngredient? value))
                 {
-                    recipe.AsIngredient = map[recipe.Name];
+                    recipe.AsIngredient = value;
                 }
             }
         }
 
-        private void AddSelectionChangedHandlerInRecipes(List<Recipe> recipes, List<SelectableIngredient> ingredients)
+        private static void AddSelectionChangedHandlerInRecipes(List<Recipe> recipes, List<SelectableIngredient> ingredients)
         {
             foreach (SelectableIngredient ingredient in ingredients)
             {
@@ -129,7 +129,7 @@ namespace gbchef
             }
         }
 
-        private async Task<List<SelectableIngredient>> GetAllIngredients(DatabaseService dbService)
+        private static async Task<List<SelectableIngredient>> GetAllIngredients(DatabaseService dbService)
         {
             var results = await dbService.ExecuteSelectAllAsync("Items");
             var ingredients = results.Select(row => new SelectableIngredient(Convert.ToInt32(row[0]), (string)row[1], false) { Category = (string)row[2] }).ToList();
