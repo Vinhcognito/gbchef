@@ -11,11 +11,12 @@ namespace gbchef.Models
     public class SelectableIngredient : INotifyPropertyChanged
     {
         public int Id { get; set; }
-        public string Name { get; set; }        
-        public string Category { get; set; }
-        public IEnumerable<Tuple<int, int>> RecipeIdSlotMap { get; set; }
+        public string Name { get; set; }
+        public string? Category { get; set; }
+        public IEnumerable<Tuple<int, int>> RecipeIdSlotMap { get; set; } = new List<Tuple<int, int>>();
 
-        private bool isSelected;
+        private bool isSelected = false;
+        private bool isAutoSelected = false;
 
 
         public SelectableIngredient(int id, string name, bool isSelected)
@@ -41,6 +42,19 @@ namespace gbchef.Models
                 {
                     isSelected = value;
                     OnPropertyChanged(nameof(IsSelected));
+                }
+            }
+        }
+
+        public bool IsAutoSelected
+        {
+            get => isAutoSelected;
+            set
+            {
+                if (value != isAutoSelected)
+                {
+                    isAutoSelected = value;
+                    OnPropertyChanged(nameof(IsAutoSelected));
                 }
             }
         }

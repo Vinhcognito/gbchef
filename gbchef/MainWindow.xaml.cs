@@ -72,19 +72,35 @@ namespace gbchef
                 _mainViewModel.Recipes = new ObservableCollection<SelectableIngredient>(ingredients.Where(x => x.Category == "Recipes"));
                 _mainViewModel.Others = new ObservableCollection<SelectableIngredient>(ingredients.Where(x => x.Category == "Others"));
 
+                AddRecipeAsIngredientReference(recipes, _mainViewModel.Recipes);
+
             }
 
             DataContext = _mainViewModel;
 
         }
 
+        private void AddRecipeAsIngredientReference(List<Recipe> recipes, ObservableCollection<SelectableIngredient> ingredients)
+        {
+            Dictionary<string, SelectableIngredient> map = new Dictionary<string, SelectableIngredient>();
+            foreach (SelectableIngredient ingredient in ingredients)
+            {
+                map[ingredient.Name] = ingredient;
+            }
 
+            foreach (Recipe recipe in recipes) {
+                if (map.ContainsKey(recipe.Name))
+                {
+                    recipe.AsIngredient = map[recipe.Name];
+                }
+            }
+        }
 
         private void AddSelectionChangedHandlerInRecipes(List<Recipe> recipes, List<SelectableIngredient> ingredients)
         {
             foreach (SelectableIngredient ingredient in ingredients)
             {
-                foreach (var (recipeId,  slot) in ingredient.RecipeIdSlotMap)
+                foreach (var (recipeId, slot) in ingredient.RecipeIdSlotMap)
                 {
                     int recipeIndex = recipeId - 1;
                     Recipe recipe = recipes[recipeIndex];
@@ -127,13 +143,27 @@ namespace gbchef
 
         private void ShowPartial_Click(object sender, RoutedEventArgs e)
         {
-            _mainViewModel.ShowIncompleRecipes = ShowPartial.IsChecked;
+            _mainViewModel.ShowPartiallySatisfiedRecipes = ShowPartial.IsChecked;
             _mainViewModel.ApplyFilter();
         }
 
         private void ShowAll_Click(object sender, RoutedEventArgs e)
         {
             _mainViewModel.ShowAllRecipes = ShowAll.IsChecked;
+            _mainViewModel.ApplyFilter();
+        }
+
+        private void IncludeRelatedRecipesCheckBox_Click(object sender, RoutedEventArgs e)
+        {
+            _mainViewModel.ShowAutoSelected = IncludeRelatedRecipesCheckBox.IsChecked;
+            
+            if (IncludeRelatedRecipesCheckBox.IsChecked == false)
+            {
+                foreach (SelectableIngredient ingredient in _mainViewModel.Recipes)
+                {
+                    ingredient.IsAutoSelected = false;
+                }
+            }
             _mainViewModel.ApplyFilter();
         }
     }

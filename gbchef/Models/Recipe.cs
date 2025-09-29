@@ -25,6 +25,8 @@ namespace gbchef.Models
         public string Unlock { get; set; }
         public string Festival { get; set; }
 
+        public SelectableIngredient? AsIngredient { get; set; }
+
         public bool is1Filled;
         public bool is2Filled;
         public bool is3Filled;
@@ -38,10 +40,10 @@ namespace gbchef.Models
         public bool IsPartiallySatisfied
         {
             get {
-                return Slot1.Any(item => item.IsSelected)
-                    || Slot2.Any(item => item.IsSelected)
-                    || Slot3.Any(item => item.IsSelected)
-                    || Slot4.Any(item => item.IsSelected);
+                return Slot1.Any(item => item.IsSelected || item.IsAutoSelected)
+                    || Slot2.Any(item => item.IsSelected || item.IsAutoSelected)
+                    || Slot3.Any(item => item.IsSelected || item.IsAutoSelected)
+                    || Slot4.Any(item => item.IsSelected || item.IsAutoSelected);
             }
         }
 
@@ -139,22 +141,22 @@ namespace gbchef.Models
 
         internal void HandleSlot1Changed(object? sender, PropertyChangedEventArgs e)
         {
-            Is1Filled = Slot1.Any(item => item.IsSelected);
+            Is1Filled = Slot1.Any(item => item.IsSelected || item.IsAutoSelected);
         }
 
         internal void HandleSlot2Changed(object? sender, PropertyChangedEventArgs e)
         {
-            Is2Filled = Slot2.Any(item => item.IsSelected);
+            Is2Filled = Slot2.Any(item => item.IsSelected || item.IsAutoSelected);
         }
 
         internal void HandleSlot3Changed(object? sender, PropertyChangedEventArgs e)
         {
-            Is3Filled = Slot3.Any(item => item.IsSelected);
+            Is3Filled = Slot3.Any(item => item.IsSelected || item.IsAutoSelected);
         }
 
         internal void HandleSlot4Changed(object? sender, PropertyChangedEventArgs e)
         {
-            Is4Filled = Slot4.Any(item => item.IsSelected);
+            Is4Filled = Slot4.Any(item => item.IsSelected || item.IsAutoSelected);
         }
 
         public List<SelectableIngredient> Slot1 = new List<SelectableIngredient>();

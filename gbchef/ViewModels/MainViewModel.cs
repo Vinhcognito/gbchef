@@ -14,8 +14,10 @@ namespace gbchef.ViewModels
 {
     public class MainViewModel
     {
-        public bool? ShowIncompleRecipes = false;
+        public bool? ShowPartiallySatisfiedRecipes = false;
         public bool? ShowAllRecipes = false;
+        public bool? ShowAutoSelected = false;
+
         public ObservableCollection<SelectableIngredient> Vegetables { get; set; } = new()
         {
             new SelectableIngredient("Radish",false),
@@ -69,13 +71,21 @@ namespace gbchef.ViewModels
                     return true;
                 }
                 var recipe = item as Recipe;
-                if (ShowIncompleRecipes == true)
-                {
-                    return recipe.IsPartiallySatisfied;
-                }
-                return recipe.IsSatisfied;
+                var show = ShowPartiallySatisfiedRecipes == true ? recipe.IsPartiallySatisfied : recipe.IsSatisfied;
+                UpdateAutoSelection(recipe, show);
+                return show;
             };
+
             ViewSource.View.Refresh();
+        }
+
+        private async Task UpdateAutoSelection(Recipe? recipe, bool show)
+        {
+            var recipeAsIngredient = recipe?.AsIngredient;
+            if (recipeAsIngredient != null)
+            {
+                recipeAsIngredient.IsAutoSelected = ShowAutoSelected == true ? show : false;
+            }
         }
 
         private void HandleRecipeChanged(object? sender, PropertyChangedEventArgs e)
