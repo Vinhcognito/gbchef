@@ -18,36 +18,14 @@ namespace gbchef.ViewModels
         public bool? ShowAllRecipes = false;
         public bool? ShowAutoSelected = false;
 
-        public ObservableCollection<SelectableIngredient> Vegetables { get; set; } = new()
-        {
-            new SelectableIngredient("Radish",false),
-            new SelectableIngredient("Tomato",false),
-            new SelectableIngredient("Corn",false),
-            new SelectableIngredient("Cucumber",false),
-            new SelectableIngredient("Onion",false),
-            new SelectableIngredient("Carrot",false),
-            new SelectableIngredient("Avocado",false),
-            new SelectableIngredient("1",false),
-            new SelectableIngredient("2",false),
-            new SelectableIngredient("3",false),
-            new SelectableIngredient("4",false),
-            new SelectableIngredient("5",false),
-
-        };
-
+        public ObservableCollection<SelectableIngredient> Vegetables { get; set; }
         public ObservableCollection<SelectableIngredient> Fruits { get; set; }
-
         public ObservableCollection<SelectableIngredient> Products { get; set; }
-
         public ObservableCollection<SelectableIngredient> Forageables { get; set; }
-
         public ObservableCollection<SelectableIngredient> Fish { get; set; }
-
         public ObservableCollection<SelectableIngredient> Others { get; set; }
-
         // This is recipes that are also an ingredient
         public ObservableCollection<SelectableIngredient> Recipes { get; set; }
-
 
         public CollectionViewSource ViewSource { get; } = new();
 
@@ -79,11 +57,10 @@ namespace gbchef.ViewModels
             ViewSource.View.Refresh();
         }
 
-        private async Task UpdateAutoSelection(Recipe? recipe, bool show)
+        private void UpdateAutoSelection(Recipe? recipe, bool show)
         {
             var recipeAsIngredient = recipe?.AsIngredient;
-            if (recipeAsIngredient != null)
-            {
+            if (recipeAsIngredient != null) {
                 recipeAsIngredient.IsAutoSelected = ShowAutoSelected == true ? show : false;
             }
         }
