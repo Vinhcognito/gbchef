@@ -130,5 +130,11 @@ namespace gbchef
             _mainViewModel.ShowIncompleRecipes = ShowPartial.IsChecked;
             _mainViewModel.ApplyFilter();
         }
+
+        private void ShowAll_Click(object sender, RoutedEventArgs e)
+        {
+            _mainViewModel.ShowAllRecipes = ShowAll.IsChecked;
+            _mainViewModel.ApplyFilter();
+        }
     }
 }

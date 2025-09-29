@@ -28,11 +28,17 @@
             </StackPanel>
         </ScrollViewer>
 
-        <CheckBox Grid.Row="1"
-            Content="Show Partially Satisfied Recipes"
-             x:Name="ShowPartial" 
-             Margin="10 0 0 0"
-             Click="ShowPartial_Click" />
+        <StackPanel Grid.Row="1" Orientation="Horizontal"
+            VerticalAlignment="Center">
+            <CheckBox Content="Show Partially Satisfied Recipes"
+                 x:Name="ShowPartial" 
+                 Margin="10 0 0 0"
+                 Click="ShowPartial_Click" />
+            <CheckBox Content="Show All"
+                 x:Name="ShowAll" 
+                 Margin="10 0 0 0"
+                 Click="ShowAll_Click" />
+        </StackPanel>
         <DataGrid Grid.Row="2"
             x:Name="resultsDataGrid" 
             AutoGenerateColumns="False" 

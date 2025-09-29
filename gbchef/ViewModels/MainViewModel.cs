@@ -15,6 +15,7 @@ namespace gbchef.ViewModels
     public class MainViewModel
     {
         public bool? ShowIncompleRecipes = false;
+        public bool? ShowAllRecipes = false;
         public ObservableCollection<SelectableIngredient> Vegetables { get; set; } = new()
         {
             new SelectableIngredient("Radish",false),
@@ -63,6 +64,10 @@ namespace gbchef.ViewModels
         {
             ViewSource.View.Filter = item =>
             {
+                if (ShowAllRecipes == true)
+                {
+                    return true;
+                }
                 var recipe = item as Recipe;
                 if (ShowIncompleRecipes == true)
                 {
