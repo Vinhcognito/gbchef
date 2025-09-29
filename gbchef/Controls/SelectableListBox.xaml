@@ -33,8 +33,7 @@
 
         <ListBox Grid.Row="1" 
              x:Name="InnerListBox" 
-             ItemsSource="{Binding Items, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"
-             MouseLeftButtonUp="ListBox_MouseLeftButtonUp">
+             ItemsSource="{Binding Items, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}" MinHeight="20" PreviewMouseLeftButtonDown="InnerListBox_PreviewMouseLeftButtonDown" PreviewMouseMove="InnerListBox_PreviewMouseMove" PreviewMouseLeftButtonUp="InnerListBox_PreviewMouseLeftButtonUp" >
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <TextBlock Text="{Binding Name}">
