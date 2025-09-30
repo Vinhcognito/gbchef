@@ -25,6 +25,7 @@ namespace gbchef
             var jsonPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", jsonFileName);
 
             _spriteImg = new BitmapImage(new Uri(imgPath));
+            _spriteImg.CacheOption = BitmapCacheOption.OnLoad;
             _spriteRects = LoadSpriteRectsFromJson(jsonPath);
             Debug.WriteLine(_spriteRects);
         }
