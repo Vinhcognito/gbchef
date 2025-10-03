@@ -36,7 +36,9 @@ namespace gbchef.ViewModels
             }
 
             ViewSource.Source = recipes;
-
+            ViewSource.SortDescriptions.Clear();
+            ViewSource.SortDescriptions.Add(new SortDescription("IsSatisfied", ListSortDirection.Descending));  // true values first
+            ViewSource.SortDescriptions.Add(new SortDescription("BaseValue", ListSortDirection.Descending));
             ApplyFilter();
         }
 
