@@ -33,7 +33,7 @@
             <CheckBox Content="Show Partially Satisfied Recipes"
                  x:Name="ShowPartial" 
                  Margin="10 0 0 0"
-                 Click="ShowPartial_Click" />
+                 Click="ShowPartial_Click" IsChecked="True" />
             <CheckBox Content="Show All"
                  x:Name="ShowAll" 
                  Margin="10 0 0 0"
@@ -42,7 +42,7 @@
                  x:Name="IncludeRelatedRecipesCheckBox"
                  ToolTip="Also include recipes that use any of the found recipes as their ingredients." 
                  Margin="10 0 0 0"
-                 Click="IncludeRelatedRecipesCheckBox_Click"/>
+                 Click="IncludeRelatedRecipesCheckBox_Click" IsChecked="True"/>
         </StackPanel>
 
         <DataGrid Grid.Row="2"

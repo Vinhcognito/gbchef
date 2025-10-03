@@ -14,9 +14,9 @@ namespace gbchef.ViewModels
 {
     public class MainViewModel
     {
-        public bool? ShowPartiallySatisfiedRecipes = false;
+        public bool? ShowPartiallySatisfiedRecipes = true;
         public bool? ShowAllRecipes = false;
-        public bool? ShowAutoSelected = false;
+        public bool? ShowAutoSelected = true;
 
         public ObservableCollection<SelectableIngredient> Vegetables { get; } = [];
         public ObservableCollection<SelectableIngredient> Fruits { get; } = [];
