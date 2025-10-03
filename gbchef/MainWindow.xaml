@@ -25,6 +25,9 @@
                 <uc:SelectableListBox x:Name="Fish" Items="{Binding Fish}" />
                 <uc:SelectableListBox x:Name="Others" Items="{Binding Others}" />
                 <uc:SelectableListBox x:Name="Recipes" Items="{Binding Recipes}" />
+                <uc:FilterListBox x:Name="Effects" Items="{Binding Effects}" SelectedItems="{Binding SelectedEffects, Mode=TwoWay}" />
+                <uc:FilterListBox x:Name="Festivals" Items="{Binding Festivals}" SelectedItems="{Binding SelectedFestivals, Mode=TwoWay}" />
+                <uc:FilterListBox x:Name="Unlocks" Items="{Binding Unlocks}" SelectedItems="{Binding SelectedUnlocks, Mode=TwoWay}" />
             </StackPanel>
         </ScrollViewer>
 
@@ -65,11 +68,12 @@
 
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
-                                <Condition Binding="{Binding IsSatisfied}" Value="True"/>
+                                <Condition Binding="{Binding IsSatisfied}" Value="False"/>
+                                <Condition Binding="{Binding IsPartiallySatisfied}" Value="False"/>
                             </MultiDataTrigger.Conditions>
-                            <Setter Property="Background" Value="#FF78CE53"/>
+                            <Setter Property="Background" Value="LightGray"/>
                         </MultiDataTrigger>
-
+                        
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
                                 <Condition Binding="{Binding IsSatisfied}" Value="False"/>
@@ -80,10 +84,9 @@
 
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
-                                <Condition Binding="{Binding IsSatisfied}" Value="False"/>
-                                <Condition Binding="{Binding IsPartiallySatisfied}" Value="False"/>
+                                <Condition Binding="{Binding IsSatisfied}" Value="True"/>
                             </MultiDataTrigger.Conditions>
-                            <Setter Property="Background" Value="LightGray"/>
+                            <Setter Property="Background" Value="#FF78CE53"/>
                         </MultiDataTrigger>
 
                     </Style.Triggers>

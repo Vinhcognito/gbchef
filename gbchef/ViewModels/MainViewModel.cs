@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
@@ -27,18 +28,46 @@ namespace gbchef.ViewModels
         // This is recipes that are also an ingredient
         public ObservableCollection<SelectableIngredient> Recipes { get; } = [];
 
+        public IEnumerable<string> Effects { get; set; }
+        public ObservableCollection<string> SelectedEffects { get; set; }
+        public IEnumerable<string> Unlocks { get; set; }
+        public ObservableCollection<string> SelectedUnlocks { get; set; }
+        public IEnumerable<string> Festivals { get; set; }
+        public ObservableCollection<string> SelectedFestivals { get; set; }
+
         public CollectionViewSource ViewSource { get; } = new();
 
         public MainViewModel(IEnumerable<Recipe> recipes)
         {
-            foreach (var recipe in recipes) {
+            foreach (var recipe in recipes)
+            {
                 recipe.PropertyChanged += HandleRecipeChanged;
             }
+
+            Effects = [.. recipes.Where(r => !string.IsNullOrWhiteSpace(r.Effect))
+                .Select(r => r.Effect).Distinct().Order()];
+            SelectedEffects = new ObservableCollection<string>(Effects);
+            SelectedEffects.CollectionChanged += HandleOtherFilters;
+
+            Unlocks = [.. recipes.Where(r => !string.IsNullOrWhiteSpace(r.Unlock))
+                .Select(r => r.Unlock).Distinct().Order()];
+            SelectedUnlocks = new ObservableCollection<string>(Unlocks);
+            SelectedUnlocks.CollectionChanged += HandleOtherFilters;
+
+            Festivals = [.. recipes.Where(r => !string.IsNullOrWhiteSpace(r.Festival))
+                .Select(r => r.Festival).Distinct().Order()];
+            SelectedFestivals = new ObservableCollection<string>(Festivals);
+            SelectedFestivals.CollectionChanged += HandleOtherFilters;
 
             ViewSource.Source = recipes;
             ViewSource.SortDescriptions.Clear();
             ViewSource.SortDescriptions.Add(new SortDescription("IsSatisfied", ListSortDirection.Descending));  // true values first
             ViewSource.SortDescriptions.Add(new SortDescription("BaseValue", ListSortDirection.Descending));
+            ApplyFilter();
+        }
+
+        private void HandleOtherFilters(object? sender, NotifyCollectionChangedEventArgs e)
+        {
             ApplyFilter();
         }
 
@@ -50,9 +79,28 @@ namespace gbchef.ViewModels
                 {
                     return true;
                 }
+
                 var recipe = item as Recipe;
                 bool show = ShowPartiallySatisfiedRecipes == true ? recipe.IsPartiallySatisfied : recipe.IsSatisfied;
                 UpdateAutoSelection(recipe, show);
+                if (show)
+                {
+                    if (!SelectedEffects.Any(x => x == recipe.Effect))
+                    {
+                        return false;
+                    }
+
+                    if (!SelectedUnlocks.Any(x => x == recipe.Unlock))
+                    {
+                        return false;
+                    }
+
+                    if (!string.IsNullOrWhiteSpace(recipe.Festival) && !SelectedFestivals.Any(x => x == recipe.Festival))
+                    {
+                        return false;
+                    }
+                }
+
                 return show;
             };
 

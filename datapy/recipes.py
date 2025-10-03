@@ -51,7 +51,7 @@ def clean_ingredients_data():
         with sqlite3.connect('app.db') as conn:
             # create a cursor
             cursor = conn.cursor()
-            cursor.execute("CREATE TABLE items (id INTEGER PRIMARY KEY, name type UNIQUE NOT NULL)")
+            cursor.execute("CREATE TABLE items (id INTEGER PRIMARY KEY, name type UNIQUE NOT NULL, category)")
             conn.commit()
 
             # execute statements
@@ -201,7 +201,7 @@ def _get_item_id_by_name(name, cursor):
     id = cursor.fetchone()[0]
     return id
 
-def create_filter_categories():
+def create_category_csv():
     # Vegetables, Fruits, Products, Forageable, Fish, Others
     try:
         with sqlite3.connect('app.db') as conn:
@@ -223,13 +223,34 @@ def create_filter_categories():
         pprint.pprint(e)
     pass
 
+def update_db_set_categories():
+    # Vegetables, Fruits, Products, Forageable, Fish, Others
+    try:
+        with sqlite3.connect('app.db') as conn:
+            # create a cursor
+            cursor = conn.cursor()
+            with open('category.csv', 'r', encoding='utf-8') as file:
+                dr = csv.DictReader(file)
+                print (dr)
+
+                for i in dr:
+                    update_sql = f"UPDATE items SET category = \"{i['category']}\" WHERE name = \"{i['name']}\""
+                    cursor.execute(update_sql)
+                    conn.commit()    
+
+    except sqlite3.OperationalError as e:
+        pprint.pprint(e)
+    pass
+
 
 if __name__ == "__main__":
-    # create_db_from_datacsv()
+    # create_category_csv()
+
+    create_db_from_datacsv()
     # print_db()
-    # clean_ingredients_data()
-    # map_recipes_to_items()
-    # create_filter_categories()
+    clean_ingredients_data()
+    map_recipes_to_items()
+    update_db_set_categories()
 
     # todo: create script to apply categries to items table if needed
     pass
