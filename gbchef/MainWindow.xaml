@@ -68,12 +68,11 @@
 
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
-                                <Condition Binding="{Binding IsSatisfied}" Value="False"/>
-                                <Condition Binding="{Binding IsPartiallySatisfied}" Value="False"/>
+                                <Condition Binding="{Binding IsSatisfied}" Value="True"/>
                             </MultiDataTrigger.Conditions>
-                            <Setter Property="Background" Value="LightGray"/>
+                            <Setter Property="Background" Value="#FF78CE53"/>
                         </MultiDataTrigger>
-                        
+
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
                                 <Condition Binding="{Binding IsSatisfied}" Value="False"/>
@@ -84,9 +83,10 @@
 
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
-                                <Condition Binding="{Binding IsSatisfied}" Value="True"/>
+                                <Condition Binding="{Binding IsSatisfied}" Value="False"/>
+                                <Condition Binding="{Binding IsPartiallySatisfied}" Value="False"/>
                             </MultiDataTrigger.Conditions>
-                            <Setter Property="Background" Value="#FF78CE53"/>
+                            <Setter Property="Background" Value="LightGray"/>
                         </MultiDataTrigger>
 
                     </Style.Triggers>
