@@ -13,7 +13,7 @@ namespace gbchef.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string? Category { get; set; }
-        public IEnumerable<Tuple<int, int>> RecipeIdSlotMap { get; set; } = new List<Tuple<int, int>>();
+        public IEnumerable<Tuple<int, int>> RecipeIdSlotMap { get; set; } = [];
 
         private bool isSelected = false;
         private bool isAutoSelected = false;

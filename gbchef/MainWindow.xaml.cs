@@ -62,15 +62,17 @@ namespace gbchef
                 var ingredients = await GetAllIngredients(dbService);
                 AddSelectionChangedHandlerInRecipes(recipes, ingredients);
 
-                _mainViewModel = new MainViewModel(recipes) {
-                    Vegetables = new ObservableCollection<SelectableIngredient>(ingredients.Where(x => x.Category == "Vegetables")),
-                    Fruits = new ObservableCollection<SelectableIngredient>(ingredients.Where(x => x.Category == "Fruits")),
-                    Products = new ObservableCollection<SelectableIngredient>(ingredients.Where(x => x.Category == "Products")),
-                    Forageables = new ObservableCollection<SelectableIngredient>(ingredients.Where(x => x.Category == "Forageables")),
-                    Fish = new ObservableCollection<SelectableIngredient>(ingredients.Where(x => x.Category == "Fish")),
-                    Recipes = new ObservableCollection<SelectableIngredient>(ingredients.Where(x => x.Category == "Recipes")),
-                    Others = new ObservableCollection<SelectableIngredient>(ingredients.Where(x => x.Category == "Others"))
-                };
+                _mainViewModel = new MainViewModel(recipes);
+                foreach (SelectableIngredient ingredient in ingredients)
+                {
+                    if (ingredient.Category == nameof(MainViewModel.Vegetables)) _mainViewModel.Vegetables.Add(ingredient);
+                    if (ingredient.Category == nameof(MainViewModel.Fruits)) _mainViewModel.Fruits.Add(ingredient);
+                    if (ingredient.Category == nameof(MainViewModel.Products)) _mainViewModel.Products.Add(ingredient);
+                    if (ingredient.Category == nameof(MainViewModel.Forageables)) _mainViewModel.Forageables.Add(ingredient);
+                    if (ingredient.Category == nameof(MainViewModel.Fish)) _mainViewModel.Fish.Add(ingredient);
+                    if (ingredient.Category == nameof(MainViewModel.Others)) _mainViewModel.Others.Add(ingredient);
+                    if (ingredient.Category == nameof(MainViewModel.Recipes)) _mainViewModel.Recipes.Add(ingredient);
+                }
 
                 AddRecipeAsIngredientReference(recipes, _mainViewModel.Recipes);
 

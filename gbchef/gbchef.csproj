@@ -13,12 +13,18 @@
       <UseWPF>true</UseWPF>
 	  <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
 	  <IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
+	  <ApplicationIcon>Resources\gbchef.ico</ApplicationIcon>
+	  <AssemblyName>Grand Bazaar Chef</AssemblyName>
   </PropertyGroup>
 
     <ItemGroup>
       <None Remove="Resources\app.db" />
       <None Remove="Resources\sprite_sheet.json" />
       <None Remove="Resources\sprite_sheet.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="Resources\gbchef.ico" />
     </ItemGroup>
 
     <ItemGroup>

@@ -27,71 +27,39 @@ namespace gbchef.Models
 
         public SelectableIngredient? AsIngredient { get; set; }
 
-        private bool is1Filled;
-        private bool is2Filled;
-        private bool is3Filled;
-        private bool is4Filled;
+        public List<SelectableIngredient> Slot1 = [];
+        public List<SelectableIngredient> Slot2 = [];
+        public List<SelectableIngredient> Slot3 = [];
+        public List<SelectableIngredient> Slot4 = [];
 
+        public bool Is1Filled;
+        public bool Is2Filled;
+        public bool Is3Filled;
+        public bool Is4Filled;
+
+        private bool isSatisfied = false;
         public bool IsSatisfied
         {
-            get => Is1Filled && Is2Filled && Is3Filled && Is4Filled;
+            get => isSatisfied;
+            set
+            {
+                if (value != isSatisfied)
+                {
+                    isSatisfied = value;
+                    OnPropertyChanged(nameof(IsSatisfied));
+                }
+            }
         }
-
+        private bool isPartiallySatisfied = false;
         public bool IsPartiallySatisfied
         {
-            get {
-                return Slot1.Any(item => item.IsSelected || item.IsAutoSelected)
-                    || Slot2.Any(item => item.IsSelected || item.IsAutoSelected)
-                    || Slot3.Any(item => item.IsSelected || item.IsAutoSelected)
-                    || Slot4.Any(item => item.IsSelected || item.IsAutoSelected);
-            }
-        }
-
-        public bool Is1Filled
-        {
-            get => is1Filled;
+            get => isPartiallySatisfied;
             set
             {
-                if (value != is1Filled)
+                if (value != isPartiallySatisfied)
                 {
-                    is1Filled = value;
-                    OnPropertyChanged(nameof(Is1Filled));
-                }
-            }
-        }
-        public bool Is2Filled
-        {
-            get => is2Filled;
-            set
-            {
-                if (value != is2Filled)
-                {
-                    is2Filled = value;
-                    OnPropertyChanged(nameof(Is2Filled));
-                }
-            }
-        }
-        public bool Is3Filled
-        {
-            get => is3Filled;
-            set
-            {
-                if (value != is3Filled)
-                {
-                    is3Filled = value;
-                    OnPropertyChanged(nameof(Is3Filled));
-                }
-            }
-        }
-        public bool Is4Filled
-        {
-            get => is4Filled;
-            set
-            {
-                if (value != is4Filled)
-                {
-                    is4Filled = value;
-                    OnPropertyChanged(nameof(Is4Filled));
+                    isPartiallySatisfied = value;
+                    OnPropertyChanged(nameof(IsPartiallySatisfied));
                 }
             }
         }
@@ -142,26 +110,34 @@ namespace gbchef.Models
         internal void HandleSlot1Changed(object? sender, PropertyChangedEventArgs e)
         {
             Is1Filled = Slot1.Any(item => item.IsSelected || item.IsAutoSelected);
+            UpdateIngredientsSatisfaction();
         }
 
         internal void HandleSlot2Changed(object? sender, PropertyChangedEventArgs e)
         {
             Is2Filled = Slot2.Any(item => item.IsSelected || item.IsAutoSelected);
+            UpdateIngredientsSatisfaction();
         }
 
         internal void HandleSlot3Changed(object? sender, PropertyChangedEventArgs e)
         {
             Is3Filled = Slot3.Any(item => item.IsSelected || item.IsAutoSelected);
+            UpdateIngredientsSatisfaction();
         }
 
         internal void HandleSlot4Changed(object? sender, PropertyChangedEventArgs e)
         {
             Is4Filled = Slot4.Any(item => item.IsSelected || item.IsAutoSelected);
+            UpdateIngredientsSatisfaction();
         }
 
-        public List<SelectableIngredient> Slot1 = [];
-        public List<SelectableIngredient> Slot2 = [];
-        public List<SelectableIngredient> Slot3 = [];
-        public List<SelectableIngredient> Slot4 = [];
+        private void UpdateIngredientsSatisfaction()
+        {
+            IsSatisfied = Is1Filled && Is2Filled && Is3Filled && Is4Filled;
+            IsPartiallySatisfied = Is1Filled 
+                || (Is2Filled && Slot2.Count > 0)
+                || (Is3Filled && Slot3.Count > 0)
+                || (Is4Filled && Slot4.Count > 0);
+        }
     }
 }

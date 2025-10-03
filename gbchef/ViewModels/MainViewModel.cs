@@ -18,14 +18,14 @@ namespace gbchef.ViewModels
         public bool? ShowAllRecipes = false;
         public bool? ShowAutoSelected = false;
 
-        public ObservableCollection<SelectableIngredient> Vegetables { get; set; }
-        public ObservableCollection<SelectableIngredient> Fruits { get; set; }
-        public ObservableCollection<SelectableIngredient> Products { get; set; }
-        public ObservableCollection<SelectableIngredient> Forageables { get; set; }
-        public ObservableCollection<SelectableIngredient> Fish { get; set; }
-        public ObservableCollection<SelectableIngredient> Others { get; set; }
+        public ObservableCollection<SelectableIngredient> Vegetables { get; } = [];
+        public ObservableCollection<SelectableIngredient> Fruits { get; } = [];
+        public ObservableCollection<SelectableIngredient> Products { get; } = [];
+        public ObservableCollection<SelectableIngredient> Forageables { get; } = [];
+        public ObservableCollection<SelectableIngredient> Fish { get; } = [];
+        public ObservableCollection<SelectableIngredient> Others { get; } = [];
         // This is recipes that are also an ingredient
-        public ObservableCollection<SelectableIngredient> Recipes { get; set; }
+        public ObservableCollection<SelectableIngredient> Recipes { get; } = [];
 
         public CollectionViewSource ViewSource { get; } = new();
 
@@ -49,7 +49,7 @@ namespace gbchef.ViewModels
                     return true;
                 }
                 var recipe = item as Recipe;
-                var show = ShowPartiallySatisfiedRecipes == true ? recipe.IsPartiallySatisfied : recipe.IsSatisfied;
+                bool show = ShowPartiallySatisfiedRecipes == true ? recipe.IsPartiallySatisfied : recipe.IsSatisfied;
                 UpdateAutoSelection(recipe, show);
                 return show;
             };

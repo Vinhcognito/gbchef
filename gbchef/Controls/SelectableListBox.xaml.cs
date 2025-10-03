@@ -25,7 +25,7 @@ namespace gbchef.Controls
         private bool _selectionState = false;
         private bool _isDragging;
         private Point _startPosition;
-        private readonly HashSet<SelectableIngredient> _processedItems = new();
+        private readonly HashSet<SelectableIngredient> _processedItems = [];
 
         public static readonly DependencyProperty ItemsProperty =
             DependencyProperty.Register(nameof(Items), typeof(ObservableCollection<SelectableIngredient>),

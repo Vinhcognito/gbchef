@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:gbchef"
         xmlns:uc="clr-namespace:gbchef.Controls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="720" Width="1280" Initialized="Window_Initialized">
+        Title="Grand Bazaar Chef" Height="720" Width="1280" Initialized="Window_Initialized">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -44,13 +44,14 @@
                  Margin="10 0 0 0"
                  Click="IncludeRelatedRecipesCheckBox_Click"/>
         </StackPanel>
+
         <DataGrid Grid.Row="2"
             x:Name="resultsDataGrid" 
             AutoGenerateColumns="False" 
             ItemsSource="{Binding ViewSource.View}"
             CanUserAddRows="False"
             CanUserDeleteRows="False" 
-            IsReadOnly="True" 
+            IsReadOnly="True"
             HorizontalGridLinesBrush="#FFE6E6E6" 
             VerticalGridLinesBrush="#FFE6E6E6">
             <DataGrid.Columns>
@@ -87,28 +88,28 @@
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
 
-                <DataGridTextColumn Header="Ingredient 1" Width="*" MaxWidth="200" Binding="{Binding Ingredient1}">
+                <DataGridTextColumn Header="Ingredient 1" Width="120" Binding="{Binding Ingredient1}">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
                             <Setter Property="TextWrapping" Value="Wrap"/>
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="Ingredient 2" Width="*" MaxWidth="200" Binding="{Binding Ingredient2}">
+                <DataGridTextColumn Header="Ingredient 2" Width="120" Binding="{Binding Ingredient2}">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
                             <Setter Property="TextWrapping" Value="Wrap"/>
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="Ingredient 3" Width="*" MaxWidth="200" Binding="{Binding Ingredient3}">
+                <DataGridTextColumn Header="Ingredient 3" Width="120" Binding="{Binding Ingredient3}">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
                             <Setter Property="TextWrapping" Value="Wrap"/>
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="Ingredient 4" Width="*" MaxWidth="200" Binding="{Binding Ingredient4}">
+                <DataGridTextColumn Header="Ingredient 4" Width="120" Binding="{Binding Ingredient4}">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
                             <Setter Property="TextWrapping" Value="Wrap"/>
@@ -117,7 +118,7 @@
                 </DataGridTextColumn>
                 
                 <DataGridTextColumn Header="Festival" Binding="{Binding Festival}" />
-                <DataGridTextColumn Header="How to Unlock" Width="*" MaxWidth="220" Binding="{Binding Unlock}">
+                <DataGridTextColumn Header="How to Unlock" Binding="{Binding Unlock}">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
                             <Setter Property="TextWrapping" Value="Wrap"/>
