@@ -23,11 +23,11 @@
                     Margin="0,0,3,0"
                     Name="SelectAllButton"
                     Click="SelectAllButton_ClickHandler"
-                    FontSize="10" Padding="3,0,3,1" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FF505050" />
+                    FontSize="10" Padding="3,2,3,1" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FF505050" />
             <Button Content="Clear"
                     Name="ClearButton"
                     Click="ClearButton_ClickHandler"
-                    FontSize="10" Padding="3,1,3,1" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FF505050" />
+                    FontSize="10" Padding="3,2,3,1" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FF505050" />
         </StackPanel>
         
 
