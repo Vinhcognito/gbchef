@@ -41,7 +41,7 @@
                             <Style TargetType="TextBlock">
                                 <Style.Triggers>
                                     <DataTrigger Binding="{Binding IsSelected}" Value="False">
-                                        <Setter Property="Foreground" Value="Red"/>
+                                        <Setter Property="Foreground" Value="Black"/>
                                     </DataTrigger>
                                     <DataTrigger Binding="{Binding IsAutoSelected}" Value="True">
                                         <Setter Property="Foreground" Value="Purple"/>

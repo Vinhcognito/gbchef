@@ -32,10 +32,50 @@ namespace gbchef.Models
         public List<SelectableIngredient> Slot3 = [];
         public List<SelectableIngredient> Slot4 = [];
 
-        public bool Is1Filled;
-        public bool Is2Filled;
-        public bool Is3Filled;
-        public bool Is4Filled;
+        private bool is1Filled;
+        public bool Is1Filled {
+            get => is1Filled;
+            set {
+                if (value != is1Filled) {
+                    is1Filled = value;
+                    OnPropertyChanged(nameof(Is1Filled));
+                }
+            }
+        }
+
+        private bool is2Filled;
+        public bool Is2Filled {
+            get => is2Filled;
+            set {
+                if (value != is2Filled) {
+                    is2Filled = value;
+                    OnPropertyChanged(nameof(Is2Filled));
+                }
+            }
+        }
+
+        private bool is3Filled;
+        public bool Is3Filled {
+            get => is3Filled;
+            set {
+                if (value != is3Filled) {
+                    is3Filled = value;
+                    OnPropertyChanged(nameof(Is3Filled));
+                }
+            }
+        }
+
+        private bool is4Filled;
+        public bool Is4Filled {
+            get => is4Filled;
+            set {
+                if (value != is4Filled) {
+                    is4Filled = value;
+                    OnPropertyChanged(nameof(Is4Filled));
+                }
+            }
+        }
+
 
         private bool isSatisfied = false;
         public bool IsSatisfied
