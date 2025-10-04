@@ -155,18 +155,5 @@ namespace gbchef
             _mainViewModel.ApplyFilter();
         }
 
-        private void IncludeRelatedRecipesCheckBox_Click(object sender, RoutedEventArgs e)
-        {
-            _mainViewModel.ShowAutoSelected = IncludeRelatedRecipesCheckBox.IsChecked;
-            
-            if (IncludeRelatedRecipesCheckBox.IsChecked == false)
-            {
-                foreach (SelectableIngredient ingredient in _mainViewModel.Recipes)
-                {
-                    ingredient.IsAutoSelected = false;
-                }
-            }
-            _mainViewModel.ApplyFilter();
-        }
     }
 }

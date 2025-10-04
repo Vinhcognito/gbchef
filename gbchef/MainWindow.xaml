@@ -41,11 +41,6 @@
                  x:Name="ShowAll" 
                  Margin="10 0 0 0"
                  Click="ShowAll_Click" />
-            <CheckBox Content="Include Related Recipes"
-                 x:Name="IncludeRelatedRecipesCheckBox"
-                 ToolTip="Also include recipes that use any of the found recipes as their ingredients." 
-                 Margin="10 0 0 0"
-                 Click="IncludeRelatedRecipesCheckBox_Click" IsChecked="True"/>
         </StackPanel>
 
         <DataGrid Grid.Row="2"
