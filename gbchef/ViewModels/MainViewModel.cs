@@ -121,8 +121,11 @@ namespace gbchef.ViewModels
             {
                 throw new InvalidOperationException("Handle Recipes only.");
             }
-            
-            ApplyFilter();
+
+            if (e.PropertyName == nameof(Recipe.IsSatisfied) || e.PropertyName == nameof(Recipe.IsPartiallySatisfied))
+            {
+                ApplyFilter();
+            }
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;
