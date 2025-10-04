@@ -155,5 +155,20 @@ namespace gbchef
             _mainViewModel.ApplyFilter();
         }
 
+        private void AutoSort_Click(object sender, RoutedEventArgs e)
+        {
+            if (AutoSort.IsChecked ?? false) {
+                // clears the sorting arrow
+                foreach (DataGridColumn column in resultsDataGrid.Columns) {
+                    column.SortDirection = null;
+                }
+                _mainViewModel.EnableAutoSort();
+            }
+        }
+
+        private void resultsDataGrid_Sorting(object sender, DataGridSortingEventArgs e)
+        {
+            AutoSort.IsChecked = false;
+        }
     }
 }

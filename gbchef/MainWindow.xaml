@@ -31,17 +31,33 @@
             </StackPanel>
         </ScrollViewer>
 
-        <StackPanel Grid.Row="1" Orientation="Horizontal"
-            VerticalAlignment="Center">
-            <CheckBox Content="Show Partially Satisfied Recipes"
-                 x:Name="ShowPartial" 
-                 Margin="10 0 0 0"
-                 Click="ShowPartial_Click" IsChecked="True" />
+        <DockPanel Grid.Row="1" Height="25" LastChildFill="False">
             <CheckBox Content="Show All"
-                 x:Name="ShowAll" 
-                 Margin="10 0 0 0"
-                 Click="ShowAll_Click" />
-        </StackPanel>
+             x:Name="ShowAll" 
+             Margin="10 0 10 0"
+             FontSize="14"
+             Click="ShowAll_Click"
+             VerticalAlignment="Center"
+             DockPanel.Dock="Left"/>
+            
+            <CheckBox Content="Show Partially Satisfied Recipes"
+             x:Name="ShowPartial" 
+             Margin="10 0 10 0"
+             Click="ShowPartial_Click" 
+             IsChecked="True"
+             FontSize="14"
+             VerticalAlignment="Center"
+             DockPanel.Dock="Left"/>
+            
+            <CheckBox Content="AutoSort"
+             x:Name="AutoSort" 
+             Margin="10 0 10 0"
+             Click="AutoSort_Click" 
+             IsChecked="True"
+             FontSize="14"
+             VerticalAlignment="Center"
+             DockPanel.Dock="Right"/>
+        </DockPanel>
 
         <DataGrid Grid.Row="2"
             x:Name="resultsDataGrid" 
@@ -53,7 +69,7 @@
             HorizontalGridLinesBrush="#FFE6E6E6" 
             VerticalGridLinesBrush="#FFE6E6E6"
             FontSize="14"
-            FontFamily="Segoe UI">
+            FontFamily="Segoe UI" Sorting="resultsDataGrid_Sorting">
 
 
 
