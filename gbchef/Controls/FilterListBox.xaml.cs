@@ -20,6 +20,18 @@ namespace gbchef.Controls
 {
     public partial class FilterListBox : UserControl
     {
+        public static readonly DependencyProperty DisplayNameProperty = DependencyProperty.Register(
+            nameof(DisplayName),
+            typeof(string),
+            typeof(FilterListBox),
+            new PropertyMetadata("")
+        );
+
+        public string DisplayName
+        {
+            get => (string)GetValue(DisplayNameProperty);
+            set => SetValue(DisplayNameProperty, value);
+        }
 
         public static readonly DependencyProperty ItemsProperty = DependencyProperty.Register(
             nameof(Items),

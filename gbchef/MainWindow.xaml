@@ -24,10 +24,7 @@
                 <uc:SelectableListBox x:Name="Forageables" Items="{Binding Forageables}" />
                 <uc:SelectableListBox x:Name="Fish" Items="{Binding Fish}" />
                 <uc:SelectableListBox x:Name="Others" Items="{Binding Others}" />
-                <uc:SelectableListBox x:Name="Recipes" Items="{Binding Recipes}" />
-                <uc:FilterListBox x:Name="Effects" Items="{Binding Effects}" SelectedItems="{Binding SelectedEffects, Mode=TwoWay}" />
-                <uc:FilterListBox x:Name="Festivals" Items="{Binding Festivals}" SelectedItems="{Binding SelectedFestivals, Mode=TwoWay}" />
-                <uc:FilterListBox x:Name="Unlocks" Items="{Binding Unlocks}" SelectedItems="{Binding SelectedUnlocks, Mode=TwoWay}" />
+                <uc:FilterListBox Margin="10 0 0 0" x:Name="Exclusions" DisplayName="Filter Results"  Items="{Binding Exclusions}" SelectedItems="{Binding SelectedExclusions, Mode=TwoWay}" />
             </StackPanel>
         </ScrollViewer>
 

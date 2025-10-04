@@ -17,7 +17,7 @@
              Orientation="Horizontal"
              VerticalAlignment="Center">
 
-            <Label Content="{Binding Name, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}" 
+            <Label Content="{Binding DisplayName, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}" 
                 Margin="5" 
                 Width="Auto"
                 MinWidth="80"
@@ -59,7 +59,7 @@
                                 <ControlTemplate.Triggers>
                                     <Trigger Property="IsSelected" Value="True">
                                         <Setter TargetName="Border" Property="Background" Value="Transparent"/>
-                                        <Setter Property="Foreground" Value="Green"/>
+                                        <Setter Property="Foreground" Value="DarkRed"/>
                                         <Setter Property="FontWeight" Value="Bold"/>
                                     </Trigger>
                                     <Trigger Property="IsSelected" Value="False">

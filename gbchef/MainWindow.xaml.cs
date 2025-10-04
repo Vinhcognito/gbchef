@@ -146,13 +146,13 @@ namespace gbchef
         private void ShowPartial_Click(object sender, RoutedEventArgs e)
         {
             _mainViewModel.ShowPartiallySatisfiedRecipes = ShowPartial.IsChecked;
-            _mainViewModel.ApplyFilter();
+            _mainViewModel.RefreshView();
         }
 
         private void ShowAll_Click(object sender, RoutedEventArgs e)
         {
             _mainViewModel.ShowAllRecipes = ShowAll.IsChecked;
-            _mainViewModel.ApplyFilter();
+            _mainViewModel.RefreshView();
         }
 
         private void AutoSort_Click(object sender, RoutedEventArgs e)

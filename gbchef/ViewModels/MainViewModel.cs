@@ -29,12 +29,9 @@ namespace gbchef.ViewModels
         // This is recipes that are also an ingredient
         public ObservableCollection<SelectableIngredient> Recipes { get; } = [];
 
-        public IEnumerable<string> Effects { get; set; }
-        public ObservableCollection<string> SelectedEffects { get; set; }
-        public IEnumerable<string> Unlocks { get; set; }
-        public ObservableCollection<string> SelectedUnlocks { get; set; }
-        public IEnumerable<string> Festivals { get; set; }
-        public ObservableCollection<string> SelectedFestivals { get; set; }
+        public IEnumerable<string> Exclusions { get; set; }
+        public ObservableCollection<string> SelectedExclusions { get; set; }
+        private Dictionary<string, Exclusion> _exclusionMap { get; set; } = [];
 
         public CollectionViewSource ViewSource { get; } = new();
 
@@ -44,21 +41,7 @@ namespace gbchef.ViewModels
             {
                 recipe.PropertyChanged += HandleRecipeChanged;
             }
-
-            Effects = [.. recipes.Where(r => !string.IsNullOrWhiteSpace(r.Effect))
-                .Select(r => r.Effect).Distinct().Order()];
-            SelectedEffects = new ObservableCollection<string>(Effects);
-            SelectedEffects.CollectionChanged += HandleOtherFilters;
-
-            Unlocks = [.. recipes.Where(r => !string.IsNullOrWhiteSpace(r.Unlock))
-                .Select(r => r.Unlock).Distinct().Order()];
-            SelectedUnlocks = new ObservableCollection<string>(Unlocks);
-            SelectedUnlocks.CollectionChanged += HandleOtherFilters;
-
-            Festivals = [.. recipes.Where(r => !string.IsNullOrWhiteSpace(r.Festival))
-                .Select(r => r.Festival).Distinct().Order()];
-            SelectedFestivals = new ObservableCollection<string>(Festivals);
-            SelectedFestivals.CollectionChanged += HandleOtherFilters;
+            InitExclusionsFilterBoxData();
 
             ViewSource.Source = recipes;
             EnableAutoSort();
@@ -74,45 +57,35 @@ namespace gbchef.ViewModels
             ApplyFilter();
         }
 
-        private void HandleOtherFilters(object? sender, NotifyCollectionChangedEventArgs e)
+        public void RefreshView()
         {
-            ApplyFilter();
+            ViewSource.View.Refresh();
         }
 
-        public void ApplyFilter()
+        private void ApplyFilter()
         {
             ViewSource.View.Filter = item =>
             {
+                var recipe = item as Recipe;
+                bool show = false;
                 if (ShowAllRecipes == true)
                 {
-                    return true;
+                    show = true;
+                }
+                else
+                {
+                    show = ShowPartiallySatisfiedRecipes == true ? recipe.IsPartiallySatisfied : recipe.IsSatisfied;
+                    UpdateAutoSelection(recipe, show);
                 }
 
-                var recipe = item as Recipe;
-                bool show = ShowPartiallySatisfiedRecipes == true ? recipe.IsPartiallySatisfied : recipe.IsSatisfied;
-                UpdateAutoSelection(recipe, show);
                 if (show)
                 {
-                    if (!SelectedEffects.Any(x => x == recipe.Effect))
-                    {
-                        return false;
-                    }
-
-                    if (!SelectedUnlocks.Any(x => x == recipe.Unlock))
-                    {
-                        return false;
-                    }
-
-                    if (!string.IsNullOrWhiteSpace(recipe.Festival) && !SelectedFestivals.Any(x => x == recipe.Festival))
-                    {
-                        return false;
-                    }
+                    show = !SelectedExclusions.Any(x => _exclusionMap[x].Evaluate(recipe));
                 }
-
+                    
                 return show;
             };
 
-            ViewSource.View.Refresh();
         }
 
         private void UpdateAutoSelection(Recipe? recipe, bool show)
@@ -132,8 +105,55 @@ namespace gbchef.ViewModels
 
             if (e.PropertyName == nameof(Recipe.IsSatisfied) || e.PropertyName == nameof(Recipe.IsPartiallySatisfied))
             {
-                ApplyFilter();
+                RefreshView();
             }
+        }
+
+        private void InitExclusionsFilterBoxData()
+        {
+            var noEffect = new Exclusion {
+                Name = "No Effect",
+                Evaluate = (Recipe? recipe) => { if (recipe?.Effect == "None") return true; return false; } };
+
+            var hasEffect = new Exclusion { 
+                Name = "Has Effect", 
+                Evaluate = (Recipe? recipe) => { if (recipe?.Effect != "None") return true; return false; } };
+
+            var unlockAtStart = new Exclusion { 
+                Name = "Available at the start", 
+                Evaluate = (Recipe? recipe) => { if (recipe.Unlock.Contains("Available at the start")) return true; return false; }};
+
+            var unlockCafeMadeleine = new Exclusion { 
+                Name = "Café Madeleine", 
+                Evaluate = (Recipe? recipe) => { if (recipe.Unlock.Contains("Café Madeleine")) return true; return false; } };
+
+            var unlockClara = new Exclusion { 
+                Name = "Clara's Diner", 
+                Evaluate = (Recipe? recipe) => { if (recipe.Unlock.Contains("Clara's Diner")) return true; return false; } };
+
+            var unlockMiniMadeleine = new Exclusion { 
+                Name = "Mini Madeleine", 
+                Evaluate = (Recipe? recipe) => { if (recipe.Unlock.Contains("Mini Madeleine")) return true; return false; } };
+
+            var unlockNadine = new Exclusion { 
+                Name = "Nadine's Bistro", 
+                Evaluate = (Recipe? recipe) => { if (recipe.Unlock.Contains("Nadine's Bistro")) return true; return false; } };
+
+            _exclusionMap[noEffect.Name] = noEffect;
+            _exclusionMap[hasEffect.Name] = hasEffect;
+            _exclusionMap[unlockAtStart.Name] = unlockAtStart;
+            _exclusionMap[unlockCafeMadeleine.Name] = unlockCafeMadeleine;
+            _exclusionMap[unlockClara.Name] = unlockClara;
+            _exclusionMap[unlockMiniMadeleine.Name] = unlockMiniMadeleine;
+            _exclusionMap[unlockNadine.Name] = unlockNadine;
+
+            Exclusions = [.. _exclusionMap.Keys];
+            SelectedExclusions = [];
+            SelectedExclusions.CollectionChanged += HandleExclusions;
+        }
+        private void HandleExclusions(object? sender, NotifyCollectionChangedEventArgs e)
+        {
+            RefreshView();
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;
